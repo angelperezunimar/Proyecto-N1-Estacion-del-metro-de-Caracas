@@ -35,27 +35,54 @@ clrscr();
 begin
 		writeln ('Eliga el tipo de boleto:'); {existen gran variedad de boletos, cada uno con un color, precio y cobertura}
 		
-		writeln('a.simple-------->Color:amarillo');
-		writeln ('');
-		writeln ('b.integral-------->Color:amarillo');
-		writeln('');
-		writeln ('c.ida y vuelta-------->Color:amarillo');
-		writeln('');
-		writeln ('d.ida y vuelta integrado-------->Color:amarillo');
-		writeln('');
-		writeln('e.multiabono-------->Color:naranja');
-		writeln('');
-		writeln('f.multiabono integrado-------->Color:naranja');
-		writeln('');
-		writeln ('g.Estudiantil simple-------->Color:azul');
-		writeln('');
-		writeln( 'h.estudiantil integrado-------->Color:azul');
-		writeln('');
-		writeln('i.metro Tarjeta-------->Color:rojo');
-		writeln('');
-		writeln ('j.metro Tarjeta integrado-------->Color:rojo');
-		writeln('');
-		readln(boletos); {agregando boletos}
+				writeln('|----------------------------|--------------|----------------------------|');
+				writeln('|          Boleto            |     Color    |        Propiedades         |');
+				writeln('|----------------------------|--------------|----------------------------|');
+				writeln('|  a. Simple                 |   Amarillo   |     1 Viaje en metro       |');
+				writeln('|----------------------------|--------------|----------------------------|');
+				writeln('|                            |              |                            |');
+				writeln('|  b. Integrado              |   Amarillo   |     1 Viaje en metro       |');
+				writeln('|                            |              |   1 Viaje en metrobus      |');
+				writeln('|----------------------------|--------------|----------------------------|');
+				writeln('|  c. Ida y Vuelta           |   Amarillo   |     2 Viajes en metro      |');
+				writeln('|----------------------------|--------------|----------------------------|');
+				writeln('|                            |              |                            |');
+				writeln('|  d. Ida y vuelta integrado |   Amarillo   |     2 Viajes en metro      |');
+				writeln('|                            |              |   2 Viajes en metrobus     |');
+				writeln('|----------------------------|--------------|----------------------------|');
+		
+				writeln('Si no encuentra su boleto deseado presione la tecla 1');
+				readln(seleccion);
+		
+					if seleccion = 1 then
+		
+					begin
+					writeln('|----------------------------|--------------|----------------------------|');
+					writeln('|  e. MultiAbono             |    Naranja   |    10 Viajes en metro      |');
+					writeln('|----------------------------|--------------|----------------------------|');
+					writeln('|                            |              |                            |');
+					writeln('|  f. MultiAbono integrado   |    Naranja   |     10 Viajes en metro     |');
+					writeln('|                            |              |   10 Viajes en metrobus    |');
+					writeln('|----------------------------|--------------|----------------------------|');
+					writeln('|  g. Estudiantil simple     |     Azul     |    10 Viajes en metro      |');
+					writeln('|----------------------------|--------------|----------------------------|');
+					writeln('|                            |              |                            |');
+					writeln('|  h. Estudiantil integrado  |     Azul     |     10 Viajes en metro     |');
+					writeln('|                            |              |   20 Viajes en metrobus    |');
+					writeln('|----------------------------|--------------|----------------------------|');
+					writeln('|                            |              |    20 Viajes en metro      |');
+					writeln('|  i. Metrotarjeta           |     Rojo     |    30 Viajes en metro      |');
+					writeln('|                            |              |    40 Viajes en metro      |');
+					writeln('|----------------------------|--------------|----------------------------|');
+					writeln('|                            |              | 20 Viajes(metro y metrobus)|');
+					writeln('|  j. Metrotarjeta integrado |     Rojo     | 30 Viajes(metro y metrobus)|');
+					writeln('|                            |              | 40 Viajes(metro y metrobus)|');
+					writeln('|----------------------------|--------------|----------------------------|');
+		
+	
+					end
+					else 
+		
 
         case boletos of {sistema de compra de boletos}
 		'a': begin 
