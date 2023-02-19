@@ -15,3 +15,20 @@ p8 = 9;
 p9 = 10;
 p10 = 11; {se agregaron las variables y constantes}
 
+BEGIN
+clrscr();
+	writeln('Bienvenido a la estacion de metro de Caracas');
+	writeln ('Desea comprar un boleto? teclee el numero 1, de ser el caso contrario teclee el numero 2');
+	readln (a);
+	case a of
+	1: begin
+	begin
+		writeln ('ingrese sus datos');
+		writeln ('cedula:');
+			readln (cedula);
+		writeln('Nombre:');
+			readln(nombre);
+		writeln ('apellido:');
+			readln(apellido);
+	end; {Sistema para ingresar datos}
+
