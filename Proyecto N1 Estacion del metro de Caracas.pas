@@ -13,78 +13,80 @@ p6 = 7;
 p7 = 8;
 p8 = 9;
 p9 = 10;
-p10 = 11; {se agregaron las variables y constantes}
+p10 = 11;
+
 
 BEGIN
 clrscr();
-	writeln('Bienvenido a la estacion de metro de Caracas');
-	writeln ('Desea comprar un boleto? teclee el numero 1, de ser el caso contrario teclee el numero 2');
-	readln (a);
+writeln('Bienvenido a la estacion de metro de Caracas');
+writeln ('Desea comprar un boleto? teclee el numero 1, de ser el caso contrario teclee el numero 2');
+readln (a);
 	case a of
-	1: begin
-	begin
-		writeln ('ingrese sus datos');
-		writeln ('cedula:');
+	1:  
+		begin
+			begin
+			writeln ('ingrese sus datos');
+			writeln ('cedula:');
 			readln (cedula);
-		writeln('Nombre:');
+			writeln('Nombre:');
 			readln(nombre);
-		writeln ('apellido:');
+			writeln ('apellido:');
 			readln(apellido);
-	end; {Sistema para ingresar datos}
-
-begin
-		writeln ('Eliga el tipo de boleto:'); {existen gran variedad de boletos, cada uno con un color, precio y cobertura}
-		
-				writeln('|----------------------------|--------------|----------------------------|');
-				writeln('|          Boleto            |     Color    |        Propiedades         |');
-				writeln('|----------------------------|--------------|----------------------------|');
-				writeln('|  a. Simple                 |   Amarillo   |     1 Viaje en metro       |');
-				writeln('|----------------------------|--------------|----------------------------|');
-				writeln('|                            |              |                            |');
-				writeln('|  b. Integrado              |   Amarillo   |     1 Viaje en metro       |');
-				writeln('|                            |              |   1 Viaje en metrobus      |');
-				writeln('|----------------------------|--------------|----------------------------|');
-				writeln('|  c. Ida y Vuelta           |   Amarillo   |     2 Viajes en metro      |');
-				writeln('|----------------------------|--------------|----------------------------|');
-				writeln('|                            |              |                            |');
-				writeln('|  d. Ida y vuelta integrado |   Amarillo   |     2 Viajes en metro      |');
-				writeln('|                            |              |   2 Viajes en metrobus     |');
-				writeln('|----------------------------|--------------|----------------------------|');
-		
-				writeln('Si no encuentra su boleto deseado presione la tecla 1');
-				readln(seleccion);
-		
-					if seleccion = 1 then
-		
-					begin
+			end;
+				begin
+					writeln ('Eliga el tipo de boleto:'); {existen gran variedad de boletos, cada uno con un color, precio y cobertura}
+			
 					writeln('|----------------------------|--------------|----------------------------|');
-					writeln('|  e. MultiAbono             |    Naranja   |    10 Viajes en metro      |');
+					writeln('|          Boleto            |     Color    |        Propiedades         |');
+					writeln('|----------------------------|--------------|----------------------------|');
+					writeln('|  a. Simple                 |   Amarillo   |     1 Viaje en metro       |');
 					writeln('|----------------------------|--------------|----------------------------|');
 					writeln('|                            |              |                            |');
-					writeln('|  f. MultiAbono integrado   |    Naranja   |     10 Viajes en metro     |');
-					writeln('|                            |              |   10 Viajes en metrobus    |');
+					writeln('|  b. Integrado              |   Amarillo   |     1 Viaje en metro       |');
+					writeln('|                            |              |   1 Viaje en metrobus      |');
 					writeln('|----------------------------|--------------|----------------------------|');
-					writeln('|  g. Estudiantil simple     |     Azul     |    10 Viajes en metro      |');
+					writeln('|  c. Ida y Vuelta           |   Amarillo   |     2 Viajes en metro      |');
 					writeln('|----------------------------|--------------|----------------------------|');
 					writeln('|                            |              |                            |');
-					writeln('|  h. Estudiantil integrado  |     Azul     |     10 Viajes en metro     |');
-					writeln('|                            |              |   20 Viajes en metrobus    |');
+					writeln('|  d. Ida y vuelta integrado |   Amarillo   |     2 Viajes en metro      |');
+					writeln('|                            |              |   2 Viajes en metrobus     |');
 					writeln('|----------------------------|--------------|----------------------------|');
-					writeln('|                            |              |    20 Viajes en metro      |');
-					writeln('|  i. Metrotarjeta           |     Rojo     |    30 Viajes en metro      |');
-					writeln('|                            |              |    40 Viajes en metro      |');
-					writeln('|----------------------------|--------------|----------------------------|');
-					writeln('|                            |              | 20 Viajes(metro y metrobus)|');
-					writeln('|  j. Metrotarjeta integrado |     Rojo     | 30 Viajes(metro y metrobus)|');
-					writeln('|                            |              | 40 Viajes(metro y metrobus)|');
-					writeln('|----------------------------|--------------|----------------------------|');
+			
+					writeln('Si no encuentra su boleto deseado presione la tecla 1');
+					readln(seleccion);
+			
+						if seleccion = 1 then
+			
+						begin
+						writeln('|----------------------------|--------------|----------------------------|');
+						writeln('|  e. MultiAbono             |    Naranja   |    10 Viajes en metro      |');
+						writeln('|----------------------------|--------------|----------------------------|');
+						writeln('|                            |              |                            |');
+						writeln('|  f. MultiAbono integrado   |    Naranja   |     10 Viajes en metro     |');
+						writeln('|                            |              |   10 Viajes en metrobus    |');
+						writeln('|----------------------------|--------------|----------------------------|');
+						writeln('|  g. Estudiantil simple     |     Azul     |    10 Viajes en metro      |');
+						writeln('|----------------------------|--------------|----------------------------|');
+						writeln('|                            |              |                            |');
+						writeln('|  h. Estudiantil integrado  |     Azul     |     10 Viajes en metro     |');
+						writeln('|                            |              |   20 Viajes en metrobus    |');
+						writeln('|----------------------------|--------------|----------------------------|');
+						writeln('|                            |              |    20 Viajes en metro      |');
+						writeln('|  i. Metrotarjeta           |     Rojo     |    30 Viajes en metro      |');
+						writeln('|                            |              |    40 Viajes en metro      |');
+						writeln('|----------------------------|--------------|----------------------------|');
+						writeln('|                            |              | 20 Viajes(metro y metrobus)|');
+						writeln('|  j. Metrotarjeta integrado |     Rojo     | 30 Viajes(metro y metrobus)|');
+						writeln('|                            |              | 40 Viajes(metro y metrobus)|');
+						writeln('|----------------------------|--------------|----------------------------|');
+			
+						readln(boletos); {agregando boletos}
+			
+						end
+						else 
 		
-	
-					end
-					else 
-		
-
-        case boletos of
+			readln(boletos);
+					case boletos of
 					'a': begin 
 						writeln('El boleto simple tiene una cobertura de: 1 viaje en metro');
 						writeln('cuantos boletos quiere comprar?');
@@ -215,12 +217,91 @@ begin
 						else
 						writeln('hasta luego tenga feliz dia'); {:D}
 						end;
-	end;
-	
-	
-	
-END;
+					end;
+						
+						Writeln('Una vez elegido el tipo de boleto que desea comprar');
+						Writeln('Debe seleccionar la linea en la cual desea viajar');
+						Writeln('Las lineas seran mostradas a continuacion');
+						readln();
+					
+					writeln('Linea 1');
+					writeln('|-----------------|------------------|-----------------|-----------------|');
+					writeln('|-Propatria       |-Capitolio        |-Plaza Venezuela |-Miranda         |');
+					writeln('|-Perez Bonald    |-La Hoyada        |-Sabana Grande   |-Los Dos Caminos |');
+					writeln('|-Plaza Sucre     |-Parque Carabobo  |-Chacaito        |-Los Cortijos    |');
+					writeln('|-Gato Negro      |-Bellas Artes     |-Chacao          |-La California   |');
+					writeln('|-Agua Salud      |-Colegio de Ing.  |-Altamira        |-Petare          |');
+					writeln('|-Cano Amarillo   |                  |                 |-Palo Verde      |');		
+					writeln('|-----------------|------------------|-----------------|-----------------|');
+					writeln('');
+					writeln('Linea 2');
+					writeln('|--------------------|---------------------|--------------------------|');
+					writeln('|-El Silencio        |-La Paz              |-Mamera                   |');
+					writeln('|-Capuchinos         |-La Yaguara          |-Caricuao                 |');
+					writeln('|-Maternidad         |-Carapita            |-Zoologico                |');
+					writeln('|-Artiguas           |-Antimano            |-Ruiz Pineda/Las adjuntas |');	
+					writeln('|--------------------|---------------------|--------------------------|');
+					writeln('');
+					writeln('Linea 3');
+					writeln('|----------------------|-----------------------|-----------------------|');
+					writeln('|-Plaza Venezuela      |-La Bandera            |-Coche                 |');
+					writeln('|-Ciudad Universitaria |-El Valle              |-Mercado               |');
+					writeln('|-Los Simbolos         |-Los Jardines          |-La Rinconada          |');
+					writeln('|----------------------|-----------------------|-----------------------|');
+					writeln('');
+					writeln('Linea 4');
+					writeln('|----------------------|-----------------------|-----------------------|');
+					writeln('|-Zona Rental          |-Maternidad            |-Antiman               |');
+					writeln('|-Parque Central       |-Artigas               |-Mamera                |');
+					writeln('|-Nuevo Circo          |-La Paz                |-Ruiz Pineda/ Las      |');
+					writeln('|-Teatros              |-La Yaragua            | Adjuntas              |');
+					writeln('|-Capuchinos           |-Carapita              |                       |');
+					writeln('|----------------------|-----------------------|-----------------------|');
+					writeln('');
+					writeln('Linea 5');
+					writeln('|----------------------|-----------------------|-----------------------|');
+					writeln('|-Bello Monte          |-Bello Campo           |-Boleita               |');
+					writeln('|-Las Mercedes         |-Hugo Chaves           |-El Marquez            |');
+					writeln('|-Parque Simon Bolivar |-Montecristo           |-Warairarepano         |');
+					writeln('|----------------------|-----------------------|-----------------------|');
+					writeln('');
+					writeln('Linea 6');
+					writeln('|----------------------|-----------------------|');
+					writeln('|-Zoologico            |-La Rinconada          |');
+					writeln('|----------------------|-----------------------|');
+					writeln('');
+					writeln('Linea 7');
+					writeln('|--------------------|---------------------|--------------------------|');
+					writeln('|-Las Flores         |-El Cristo           |-Roosevelt                |');
+					writeln('|-Panteon            |-Roca Tarpeya        |-La Bandera               |');
+					writeln('|-Socorro            |-Presidente Medina   |-Los Ilustres             |');
+					writeln('|-La Hoyada          |-INCES               |                          |');	
+					writeln('|--------------------|---------------------|--------------------------|');
+					writeln('');
+					writeln('CLABETREN');
+					writeln('|--------------------|---------------------|--------------------------|');
+					writeln('|-Petare 2           |-5 de Julio          |-Warairarepano            |');
+					writeln('|-19 de Abril        |-24 de Julio         |-Caricuao                 |');
+					writeln('|--------------------|---------------------|--------------------------|');
+					writeln('');
+					
+					
+					
+					
+			
+					writeln('Si no encuentra su boleto deseado presione la tecla 1');
+					readln(seleccion);
+		
+					if seleccion = 1 then
+		
+		
+		
+					else
+						
+						
+				END;
 
-end;
-end;
+		end;
+	end;
+
 end.
