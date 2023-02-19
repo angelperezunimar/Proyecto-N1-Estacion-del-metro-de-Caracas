@@ -1,7 +1,7 @@
 program Compra_de_boletos;
 uses crt;
-var a,c,d,e,f,g,h,i,j,k,l,cedula,precio,precio2,precio3,precio4,precio5,precio6,precio7,precio8,precio9:integer;
-nombre, apellido, boletos, si: char;
+var a,c,d,e,f,g,h,i,j,k,l,cedula,precio,precio2,precio3,precio4,precio5,precio6,precio7,precio8,precio9,seleccion:integer;
+nombre, apellido, boletos, si, tipodeviaje: char;
 
 const 
 b = 2;
