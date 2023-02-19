@@ -1,10 +1,17 @@
-program untitled;
-
+program Compra_de_boletos;
 uses crt;
-var i : byte;
+var a,c,d,e,f,g,h,i,j,k,l,cedula,precio,precio2,precio3,precio4,precio5,precio6,precio7,precio8,precio9:integer;
+nombre, apellido, boletos, si: char;
 
-BEGIN
-	
-	
-END.
+const 
+b = 2;
+p2 = 3;
+p3 = 4;
+p4 = 5;
+p5 = 6;
+p6 = 7;
+p7 = 8;
+p8 = 9;
+p9 = 10;
+p10 = 11; {se agregaron las variables y constantes}
 
