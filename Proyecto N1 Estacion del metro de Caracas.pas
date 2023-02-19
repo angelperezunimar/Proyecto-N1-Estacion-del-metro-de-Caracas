@@ -32,3 +32,27 @@ clrscr();
 			readln(apellido);
 	end; {Sistema para ingresar datos}
 
+begin
+		writeln ('Eliga el tipo de boleto:'); {existen gran variedad de boletos, cada uno con un color, precio y cobertura}
+		
+		writeln('a.simple-------->Color:amarillo');
+		writeln ('');
+		writeln ('b.integral-------->Color:amarillo');
+		writeln('');
+		writeln ('c.ida y vuelta-------->Color:amarillo');
+		writeln('');
+		writeln ('d.ida y vuelta integrado-------->Color:amarillo');
+		writeln('');
+		writeln('e.multiabono-------->Color:naranja');
+		writeln('');
+		writeln('f.multiabono integrado-------->Color:naranja');
+		writeln('');
+		writeln ('g.Estudiantil simple-------->Color:azul');
+		writeln('');
+		writeln( 'h.estudiantil integrado-------->Color:azul');
+		writeln('');
+		writeln('i.metro Tarjeta-------->Color:rojo');
+		writeln('');
+		writeln ('j.metro Tarjeta integrado-------->Color:rojo');
+		writeln('');
+		readln(boletos); {agregando boletos}
