@@ -34,8 +34,7 @@ readln (a);
 			readln(apellido);
 			end;
 				begin
-					writeln ('Eliga el tipo de boleto:'); {existen gran variedad de boletos, cada uno con un color, precio y cobertura}
-			
+					writeln ('Estos son los tipos de boletos disponibles, existen otras opciones en la seccion 2'); {existen gran variedad de boletos, cada uno con un color, precio y cobertura}
 					writeln('|----------------------------|--------------|----------------------------|');
 					writeln('|          Boleto            |     Color    |        Propiedades         |');
 					writeln('|----------------------------|--------------|----------------------------|');
@@ -51,10 +50,10 @@ readln (a);
 					writeln('|  d. Ida y vuelta integrado |   Amarillo   |     2 Viajes en metro      |');
 					writeln('|                            |              |   2 Viajes en metrobus     |');
 					writeln('|----------------------------|--------------|----------------------------|');
-			
-					writeln('Si no encuentra su boleto deseado presione la tecla 1');
+					
+					writeln('Si no encuentra su boleto deseado presione la tecla 1, en caso contrario presione cualquier otro numero');
 					readln(seleccion);
-			
+						
 						if seleccion = 1 then
 			
 						begin
@@ -79,13 +78,18 @@ readln (a);
 						writeln('|  j. Metrotarjeta integrado |     Rojo     | 30 Viajes(metro y metrobus)|');
 						writeln('|                            |              | 40 Viajes(metro y metrobus)|');
 						writeln('|----------------------------|--------------|----------------------------|');
-			
-						readln(boletos); {agregando boletos}
-			
+			            
+			            writeln ('Seleccione el tipo de boleto que desea escribiendo la letra que lo clasifica y pulsando [Enter]');
+			            
+						{agregando boletos}
+						readln();
 						end
 						else 
-		
-			readln(boletos);
+					writeln ('Seleccione el tipo de boleto que desea escribiendo la letra que lo clasifica y pulsando [Enter]');
+					readln(boletos); {agregando boletos}
+			        
+			        
+			        
 					case boletos of
 					'a': begin 
 						writeln('El boleto simple tiene una cobertura de: 1 viaje en metro');
