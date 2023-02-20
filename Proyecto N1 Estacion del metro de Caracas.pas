@@ -34,6 +34,7 @@ readln (a);
 			readln(nombre);
 			writeln ('apellido:');
 			readln(apellido);
+			clrscr();
 			end;
 				begin
 					writeln ('Estos son los tipos de boletos disponibles, existen otras opciones en la seccion 2'); {existen gran variedad de boletos, cada uno con un color, precio y cobertura}
@@ -59,6 +60,7 @@ readln (a);
 						if seleccion = 1 then
 			
 						begin
+						clrscr();
 						writeln('|----------------------------|--------------|----------------------------|');
 						writeln('|  e. MultiAbono             |    Naranja   |    10 Viajes en metro      |');
 						writeln('|----------------------------|--------------|----------------------------|');
@@ -88,7 +90,7 @@ readln (a);
 						else writeln ('Seleccione el tipo de boleto que desea escribiendo la letra que lo clasifica y pulsando [Enter]');
 												
 						readln(boletos); {agregando boletos}
-			        
+						clrscr();
 			        
 			        
 					case boletos of
@@ -223,7 +225,7 @@ readln (a);
 						writeln('hasta luego tenga feliz dia'); {:D}
 						end;
 					end;
-						
+						clrscr();
 						Writeln('Una vez elegido el tipo de boleto que desea comprar');
 						Writeln('Debe seleccionar la linea en la cual desea viajar');
 						Writeln('Las lineas seran mostradas a continuacion');
@@ -311,7 +313,7 @@ readln (a);
 						else writeln ('Seleccione la linea que desea escribiendo el numero que lo clasifica y pulsando [Enter]');
 						
 							readln(seleccionlinea);
-																		
+							clrscr();											
 					end;
 					
 					case seleccionlinea of
@@ -338,7 +340,16 @@ readln (a);
 					  
 						repeat 
 						begin
-						
+						writeln('Estas son las estaciones disponibles:');
+						writeln('|-----------------|------------------|-----------------|-----------------|');
+						writeln('|-Propatria       |-Capitolio        |-Plaza Venezuela |-Miranda         |');
+						writeln('|-Perez Bonald    |-La Hoyada        |-Sabana Grande   |-Los Dos Caminos |');
+						writeln('|-Plaza Sucre     |-Parque Carabobo  |-Chacaito        |-Los Cortijos    |');
+						writeln('|-Gato Negro      |-Bellas Artes     |-Chacao          |-La California   |');
+					    writeln('|-Agua Salud      |-Colegio de Ing.  |-Altamira        |-Petare          |');
+						writeln('|-Cano Amarillo   |                  |                 |-Palo Verde      |');		
+						writeln('|-----------------|------------------|-----------------|-----------------|');
+						writeln('');
 						writeln('Seleccione la sub estación de salida');
 						readln(subestacionsalida);
 						writeln('Seleccione la sub estación de destino');
@@ -359,44 +370,326 @@ readln (a);
 						
 					 end;
 					2:begin
-					
+					  writeln('Su linea seleccionada ha sido la "LINEA 2"');
+					  writeln('Estas son sus estaciones:');
+					  writeln('|--------------------|---------------------|--------------------------|');
+					  writeln('|-El Silencio        |-La Paz              |-Mamera                   |');
+					  writeln('|-Capuchinos         |-La Yaguara          |-Caricuao                 |');
+					  writeln('|-Maternidad         |-Carapita            |-Zoologico                |');
+					  writeln('|-Artiguas           |-Antimano            |-Ruiz Pineda/Las adjuntas |');	
+					  writeln('|--------------------|---------------------|--------------------------|');
+					  writeln('');
+					  writeln('La cantidad de boletos comprados son ',c);
+					  writeln('');
+					  writeln('Debera asignar una sub estacion de salida y una subestacion de destino por cada boleto que compro');
+					  writeln('');
+					  writeln('Presione [Enter] para iniciar el proceso');
+					  writeln('');
+					  Readln();
+					  
+					  
+						repeat 
+						begin
+						writeln('Estas son las estaciones disponibles:');
+						writeln('|--------------------|---------------------|--------------------------|');
+					    writeln('|-El Silencio        |-La Paz              |-Mamera                   |');
+					    writeln('|-Capuchinos         |-La Yaguara          |-Caricuao                 |');
+					    writeln('|-Maternidad         |-Carapita            |-Zoologico                |');
+					    writeln('|-Artiguas           |-Antimano            |-Ruiz Pineda/Las adjuntas |');	
+					    writeln('|--------------------|---------------------|--------------------------|');
+						writeln('');
+						writeln('Seleccione la sub estación de salida');
+						readln(subestacionsalida);
+						writeln('Seleccione la sub estación de destino');
+						readln(subestaciondestino);
+						writeln('Estaciones asignadas correctamente');
+						writeln('');
+						writeln('Siguiente boleto');
+						writeln('');
+						c := c - 1
+						
+						end
+											  
+						until c = 0 ;
+						
+						writeln('Los boletos han sido asignados con sus subestaciones correctamente');
 					
 					
 					  end;
 					  
 					3:begin
-					
+					  writeln('Su linea seleccionada ha sido la "LINEA 3"');
+					  writeln('Estas son sus estaciones:');
+					  writeln('|----------------------|-----------------------|-----------------------|');
+					  writeln('|-Plaza Venezuela      |-La Bandera            |-Coche                 |');
+					  writeln('|-Ciudad Universitaria |-El Valle              |-Mercado               |');
+					  writeln('|-Los Simbolos         |-Los Jardines          |-La Rinconada          |');
+					  writeln('|----------------------|-----------------------|-----------------------|');
+					  writeln('');
+					  writeln('La cantidad de boletos comprados son ',c);
+					  writeln('');
+					  writeln('Debera asignar una sub estacion de salida y una subestacion de destino por cada boleto que compro');
+					  writeln('');
+					  writeln('Presione [Enter] para iniciar el proceso');
+					  writeln('');
+					  Readln();
+					  
+					  
+						repeat 
+						begin
+						writeln('Estas son las estaciones disponibles:');
+						writeln('|----------------------|-----------------------|-----------------------|');
+					    writeln('|-Plaza Venezuela      |-La Bandera            |-Coche                 |');
+					    writeln('|-Ciudad Universitaria |-El Valle              |-Mercado               |');
+					    writeln('|-Los Simbolos         |-Los Jardines          |-La Rinconada          |');
+					    writeln('|----------------------|-----------------------|-----------------------|');
+						writeln('');
+						writeln('Seleccione la sub estación de salida');
+						readln(subestacionsalida);
+						writeln('Seleccione la sub estación de destino');
+						readln(subestaciondestino);
+						writeln('Estaciones asignadas correctamente');
+						writeln('');
+						writeln('Siguiente boleto');
+						writeln('');
+						c := c - 1
+						
+						end
+											  
+						until c = 0 ;
+						
+						writeln('Los boletos han sido asignados con sus subestaciones correctamente');
 					
 					
 					  end;
 					  
 					4:begin
-					
+					  writeln('Su linea seleccionada ha sido la "LINEA 4"');
+					  writeln('Estas son sus estaciones:');
+					  writeln('|----------------------|-----------------------|-----------------------|');
+					  writeln('|-Zona Rental          |-Maternidad            |-Antiman               |');
+					  writeln('|-Parque Central       |-Artigas               |-Mamera                |');
+					  writeln('|-Nuevo Circo          |-La Paz                |-Ruiz Pineda/ Las      |');
+				      writeln('|-Teatros              |-La Yaragua            | Adjuntas              |');
+					  writeln('|-Capuchinos           |-Carapita              |                       |');
+					  writeln('|----------------------|-----------------------|-----------------------|');
+					  writeln('');
+					  writeln('La cantidad de boletos comprados son ',c);
+					  writeln('');
+					  writeln('Debera asignar una sub estacion de salida y una subestacion de destino por cada boleto que compro');
+					  writeln('');
+					  writeln('Presione [Enter] para iniciar el proceso');
+					  writeln('');
+					  Readln();
+					  
+					  
+						repeat 
+						begin
+						writeln('Estas son las estaciones disponibles:');
+						writeln('|----------------------|-----------------------|-----------------------|');
+						writeln('|-Zona Rental          |-Maternidad            |-Antiman               |');
+						writeln('|-Parque Central       |-Artigas               |-Mamera                |');
+						writeln('|-Nuevo Circo          |-La Paz                |-Ruiz Pineda/ Las      |');
+						writeln('|-Teatros              |-La Yaragua            | Adjuntas              |');
+						writeln('|-Capuchinos           |-Carapita              |                       |');
+						writeln('|----------------------|-----------------------|-----------------------|');
+						writeln('');
+						writeln('Seleccione la sub estación de salida');
+						readln(subestacionsalida);
+						writeln('Seleccione la sub estación de destino');
+						readln(subestaciondestino);
+						writeln('Estaciones asignadas correctamente');
+						writeln('');
+						writeln('Siguiente boleto');
+						writeln('');
+						c := c - 1
+						
+						end
+											  
+						until c = 0 ;
+						
+						writeln('Los boletos han sido asignados con sus subestaciones correctamente');
 					
 					
 					  end;
 					  
 					5:begin
-					
+					  writeln('Su linea seleccionada ha sido la "LINEA 5"');
+					  writeln('Estas son sus estaciones:');
+					  writeln('|----------------------|-----------------------|-----------------------|');
+					  writeln('|-Bello Monte          |-Bello Campo           |-Boleita               |');
+					  writeln('|-Las Mercedes         |-Hugo Chaves           |-El Marquez            |');
+					  writeln('|-Parque Simon Bolivar |-Montecristo           |-Warairarepano         |');
+					  writeln('|----------------------|-----------------------|-----------------------|');
+					  writeln('');
+					  writeln('La cantidad de boletos comprados son ',c);
+					  writeln('');
+					  writeln('Debera asignar una sub estacion de salida y una subestacion de destino por cada boleto que compro');
+					  writeln('');
+					  writeln('Presione [Enter] para iniciar el proceso');
+					  writeln('');
+					  Readln();
+					  
+					  
+						repeat 
+						begin
+						writeln('Estas son las estaciones disponibles:');
+						writeln('|----------------------|-----------------------|-----------------------|');
+						writeln('|-Bello Monte          |-Bello Campo           |-Boleita               |');
+						writeln('|-Las Mercedes         |-Hugo Chaves           |-El Marquez            |');
+						writeln('|-Parque Simon Bolivar |-Montecristo           |-Warairarepano         |');
+						writeln('|----------------------|-----------------------|-----------------------|');
+						writeln('');
+						writeln('Seleccione la sub estación de salida');
+						readln(subestacionsalida);
+						writeln('Seleccione la sub estación de destino');
+						readln(subestaciondestino);
+						writeln('Estaciones asignadas correctamente');
+						writeln('');
+						writeln('Siguiente boleto');
+						writeln('');
+						c := c - 1
+						
+						end
+											  
+						until c = 0 ;
+						
+						writeln('Los boletos han sido asignados con sus subestaciones correctamente');
 					
 					
 					  end;
 					  
 					  
 					6:begin
-					
+					  writeln('Su linea seleccionada ha sido la "LINEA 6"');
+					  writeln('Estas son sus estaciones:');
+					  writeln('|----------------------|-----------------------|');
+					  writeln('|-Zoologico            |-La Rinconada          |');
+					  writeln('|----------------------|-----------------------|');
+					  writeln('');
+					  writeln('La cantidad de boletos comprados son ',c);
+					  writeln('');
+					  writeln('Debera asignar una sub estacion de salida y una subestacion de destino por cada boleto que compro');
+					  writeln('');
+					  writeln('Presione [Enter] para iniciar el proceso');
+					  writeln('');
+					  Readln();
+					  
+					  
+						repeat 
+						begin
+						writeln('Estas son las estaciones disponibles:');
+						writeln('|----------------------|-----------------------|');
+					    writeln('|-Zoologico            |-La Rinconada          |');
+					    writeln('|----------------------|-----------------------|');
+						writeln('');
+						writeln('Seleccione la sub estación de salida');
+						readln(subestacionsalida);
+						writeln('Seleccione la sub estación de destino');
+						readln(subestaciondestino);
+						writeln('Estaciones asignadas correctamente');
+						writeln('');
+						writeln('Siguiente boleto');
+						writeln('');
+						c := c - 1
+						
+						end
+											  
+						until c = 0 ;
+						
+						writeln('Los boletos han sido asignados con sus subestaciones correctamente');
 					
 					
 					  end;
 					  
 					7:begin
-					
+					  writeln('Su linea seleccionada ha sido la "LINEA 7"');
+					  writeln('Estas son sus estaciones:');
+					  writeln('|--------------------|---------------------|--------------------------|');
+					  writeln('|-Las Flores         |-El Cristo           |-Roosevelt                |');
+					  writeln('|-Panteon            |-Roca Tarpeya        |-La Bandera               |');
+					  writeln('|-Socorro            |-Presidente Medina   |-Los Ilustres             |');
+					  writeln('|-La Hoyada          |-INCES               |                          |');	
+					  writeln('|--------------------|---------------------|--------------------------|');
+					  writeln('');
+					  writeln('La cantidad de boletos comprados son ',c);
+					  writeln('');
+					  writeln('Debera asignar una sub estacion de salida y una subestacion de destino por cada boleto que compro');
+					  writeln('');
+					  writeln('Presione [Enter] para iniciar el proceso');
+					  writeln('');
+					  Readln();
+					  
+					  
+						repeat 
+						begin
+						writeln('Estas son las estaciones disponibles:');
+						writeln('|--------------------|---------------------|--------------------------|');
+					    writeln('|-Las Flores         |-El Cristo           |-Roosevelt                |');
+					    writeln('|-Panteon            |-Roca Tarpeya        |-La Bandera               |');
+					    writeln('|-Socorro            |-Presidente Medina   |-Los Ilustres             |');
+					    writeln('|-La Hoyada          |-INCES               |                          |');	
+					    writeln('|--------------------|---------------------|--------------------------|');
+						writeln('');
+						writeln('Seleccione la sub estación de salida');
+						readln(subestacionsalida);
+						writeln('Seleccione la sub estación de destino');
+						readln(subestaciondestino);
+						writeln('Estaciones asignadas correctamente');
+						writeln('');
+						writeln('Siguiente boleto');
+						writeln('');
+						c := c - 1
+						
+						end
+											  
+						until c = 0 ;
+						
+						writeln('Los boletos han sido asignados con sus subestaciones correctamente');
 					
 					
 					  end;
 					  
 					8:begin
-					
+					  writeln('Su linea seleccionada ha sido la "CLABETREN"');
+					  writeln('Estas son sus estaciones:');
+					  writeln('|--------------------|---------------------|--------------------------|');
+					  writeln('|-Petare 2           |-5 de Julio          |-Warairarepano            |');
+					  writeln('|-19 de Abril        |-24 de Julio         |-Caricuao                 |');
+					  writeln('|--------------------|---------------------|--------------------------|');
+					  writeln('');
+					  writeln('La cantidad de boletos comprados son ',c);
+					  writeln('');
+					  writeln('Debera asignar una sub estacion de salida y una subestacion de destino por cada boleto que compro');
+					  writeln('');
+					  writeln('Presione [Enter] para iniciar el proceso');
+					  writeln('');
+					  Readln();
+					  
+					  
+						repeat 
+						begin
+						writeln('Estas son las estaciones disponibles:');
+						writeln('|--------------------|---------------------|--------------------------|');
+					    writeln('|-Petare 2           |-5 de Julio          |-Warairarepano            |');
+						writeln('|-19 de Abril        |-24 de Julio         |-Caricuao                 |');
+						writeln('|--------------------|---------------------|--------------------------|');
+						writeln('');
+						writeln('Seleccione la sub estación de salida');
+						readln(subestacionsalida);
+						writeln('Seleccione la sub estación de destino');
+						readln(subestaciondestino);
+						writeln('Estaciones asignadas correctamente');
+						writeln('');
+						writeln('Siguiente boleto');
+						writeln('');
+						c := c - 1
+						
+						end
+											  
+						until c = 0 ;
+						
+						writeln('Los boletos han sido asignados con sus subestaciones correctamente');
 					
 					
 					  end;
