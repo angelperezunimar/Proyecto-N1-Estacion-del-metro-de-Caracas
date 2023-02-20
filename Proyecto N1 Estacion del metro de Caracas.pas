@@ -1,6 +1,6 @@
 program Compra_de_boletos;
 uses crt;
-var a,c,d,e,f,g,h,i,j,k,l,cedula,precio,seleccion:integer;
+var a,c,d,e,f,g,h,i,j,k,l,cedula,precio,seleccion, seleccionlinea1, seleccionlinea2, seleccionlinea:integer;
 nombre, apellido, boletos, si, tipodeviaje: char;
 
 const 
@@ -51,7 +51,7 @@ readln (a);
 					writeln('|                            |              |   2 Viajes en metrobus     |');
 					writeln('|----------------------------|--------------|----------------------------|');
 					
-					writeln('Si no encuentra su boleto deseado presione la tecla 1, en caso contrario presione cualquier otro numero');
+					writeln('Si no encuentra su boleto deseado presione la tecla 1 y pulse [Enter], en caso contrario presione cualquier otro numero');
 					readln(seleccion);
 						
 						if seleccion = 1 then
@@ -225,9 +225,13 @@ readln (a);
 						Writeln('Una vez elegido el tipo de boleto que desea comprar');
 						Writeln('Debe seleccionar la linea en la cual desea viajar');
 						Writeln('Las lineas seran mostradas a continuacion');
+						Writeln('Presione [Enter] para visualizarlas ');
 						readln();
-					
-					writeln('Linea 1');
+						Writeln('');
+						writeln ('Estas son las opciones de lineas disponibles, existen otras opciones en la seccion 2 y 3');
+						Writeln('');
+					begin
+					writeln('Linea 1 (1)');
 					writeln('|-----------------|------------------|-----------------|-----------------|');
 					writeln('|-Propatria       |-Capitolio        |-Plaza Venezuela |-Miranda         |');
 					writeln('|-Perez Bonald    |-La Hoyada        |-Sabana Grande   |-Los Dos Caminos |');
@@ -237,7 +241,7 @@ readln (a);
 					writeln('|-Cano Amarillo   |                  |                 |-Palo Verde      |');		
 					writeln('|-----------------|------------------|-----------------|-----------------|');
 					writeln('');
-					writeln('Linea 2');
+					writeln('Linea 2 (2)');
 					writeln('|--------------------|---------------------|--------------------------|');
 					writeln('|-El Silencio        |-La Paz              |-Mamera                   |');
 					writeln('|-Capuchinos         |-La Yaguara          |-Caricuao                 |');
@@ -245,61 +249,72 @@ readln (a);
 					writeln('|-Artiguas           |-Antimano            |-Ruiz Pineda/Las adjuntas |');	
 					writeln('|--------------------|---------------------|--------------------------|');
 					writeln('');
-					writeln('Linea 3');
+					writeln('Linea 3 (3)');
 					writeln('|----------------------|-----------------------|-----------------------|');
 					writeln('|-Plaza Venezuela      |-La Bandera            |-Coche                 |');
 					writeln('|-Ciudad Universitaria |-El Valle              |-Mercado               |');
 					writeln('|-Los Simbolos         |-Los Jardines          |-La Rinconada          |');
 					writeln('|----------------------|-----------------------|-----------------------|');
 					writeln('');
-					writeln('Linea 4');
-					writeln('|----------------------|-----------------------|-----------------------|');
-					writeln('|-Zona Rental          |-Maternidad            |-Antiman               |');
-					writeln('|-Parque Central       |-Artigas               |-Mamera                |');
-					writeln('|-Nuevo Circo          |-La Paz                |-Ruiz Pineda/ Las      |');
-					writeln('|-Teatros              |-La Yaragua            | Adjuntas              |');
-					writeln('|-Capuchinos           |-Carapita              |                       |');
-					writeln('|----------------------|-----------------------|-----------------------|');
-					writeln('');
-					writeln('Linea 5');
-					writeln('|----------------------|-----------------------|-----------------------|');
-					writeln('|-Bello Monte          |-Bello Campo           |-Boleita               |');
-					writeln('|-Las Mercedes         |-Hugo Chaves           |-El Marquez            |');
-					writeln('|-Parque Simon Bolivar |-Montecristo           |-Warairarepano         |');
-					writeln('|----------------------|-----------------------|-----------------------|');
-					writeln('');
-					writeln('Linea 6');
-					writeln('|----------------------|-----------------------|');
-					writeln('|-Zoologico            |-La Rinconada          |');
-					writeln('|----------------------|-----------------------|');
-					writeln('');
-					writeln('Linea 7');
-					writeln('|--------------------|---------------------|--------------------------|');
-					writeln('|-Las Flores         |-El Cristo           |-Roosevelt                |');
-					writeln('|-Panteon            |-Roca Tarpeya        |-La Bandera               |');
-					writeln('|-Socorro            |-Presidente Medina   |-Los Ilustres             |');
-					writeln('|-La Hoyada          |-INCES               |                          |');	
-					writeln('|--------------------|---------------------|--------------------------|');
-					writeln('');
-					writeln('CLABETREN');
-					writeln('|--------------------|---------------------|--------------------------|');
-					writeln('|-Petare 2           |-5 de Julio          |-Warairarepano            |');
-					writeln('|-19 de Abril        |-24 de Julio         |-Caricuao                 |');
-					writeln('|--------------------|---------------------|--------------------------|');
-					writeln('');
 					
+					writeln('Si no encuentra su linea deseada presione la tecla 1 [Enter], en caso contrario presione cualquier otro numero');
+					readln(seleccionlinea1);
 					
+						if seleccionlinea1 = 1 then
+						begin
+						writeln('Linea 4 (4)');
+						writeln('|----------------------|-----------------------|-----------------------|');
+						writeln('|-Zona Rental          |-Maternidad            |-Antiman               |');
+						writeln('|-Parque Central       |-Artigas               |-Mamera                |');
+						writeln('|-Nuevo Circo          |-La Paz                |-Ruiz Pineda/ Las      |');
+						writeln('|-Teatros              |-La Yaragua            | Adjuntas              |');
+						writeln('|-Capuchinos           |-Carapita              |                       |');
+						writeln('|----------------------|-----------------------|-----------------------|');
+						writeln('');
+						writeln('Linea 5 (5)');
+						writeln('|----------------------|-----------------------|-----------------------|');
+						writeln('|-Bello Monte          |-Bello Campo           |-Boleita               |');
+						writeln('|-Las Mercedes         |-Hugo Chaves           |-El Marquez            |');
+						writeln('|-Parque Simon Bolivar |-Montecristo           |-Warairarepano         |');
+						writeln('|----------------------|-----------------------|-----------------------|');
+						writeln('');
+						writeln('Linea 6 (6)');
+						writeln('|----------------------|-----------------------|');
+						writeln('|-Zoologico            |-La Rinconada          |');
+						writeln('|----------------------|-----------------------|');
+						writeln('');
+						
+						writeln('Si no encuentra su linea deseada presione la tecla 2 [Enter], en caso contrario presione cualquier otro numero');
+						readln(seleccionlinea2);
+						end;
+							if seleccionlinea2 = 2 then 
+							begin
+							writeln('Linea 7 (7)');
+							writeln('|--------------------|---------------------|--------------------------|');
+							writeln('|-Las Flores         |-El Cristo           |-Roosevelt                |');
+							writeln('|-Panteon            |-Roca Tarpeya        |-La Bandera               |');
+							writeln('|-Socorro            |-Presidente Medina   |-Los Ilustres             |');
+							writeln('|-La Hoyada          |-INCES               |                          |');	
+							writeln('|--------------------|---------------------|--------------------------|');
+							writeln('');
+							writeln('CLABETREN (8)');
+							writeln('|--------------------|---------------------|--------------------------|');
+							writeln('|-Petare 2           |-5 de Julio          |-Warairarepano            |');
+							writeln('|-19 de Abril        |-24 de Julio         |-Caricuao                 |');
+							writeln('|--------------------|---------------------|--------------------------|');
+							writeln('');
+							writeln ('Seleccione la linea que desea escribiendo el numero que lo clasifica y pulsando [Enter]');
+							end
 					
+						else writeln ('Seleccione la linea que desea escribiendo el numero que lo clasifica y pulsando [Enter]');
+						
+							readln(seleccionlinea);
+																		
+					end;
 					
-			
-					writeln('Si no encuentra su boleto deseado presione la tecla 1');
-					readln(seleccion);
-		
-					if seleccion = 1 then
-		
-		
-		
-					else
+					case seleccionlinea of
+					1:
+					end;			
 						
 						
 				END;
