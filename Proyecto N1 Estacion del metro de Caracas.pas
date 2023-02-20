@@ -1,6 +1,6 @@
 program Compra_de_boletos;
 uses crt;
-var a,c,d,e,f,g,h,i,j,k,l,cedula,precio,precio2,precio3,precio4,precio5,precio6,precio7,precio8,precio9,seleccion:integer;
+var a,c,d,e,f,g,h,i,j,k,l,cedula,precio,seleccion:integer;
 nombre, apellido, boletos, si, tipodeviaje: char;
 
 const 
@@ -108,9 +108,9 @@ readln (a);
 						readln(tipodeviaje);
 						writeln ('cuantos boletos quiere comprar?');
 						readln (d);
-						precio2:=d*p2;
+						precio:=d*p2;
 						if d>0 then
-						writeln ('su coste es de:',precio2,'-dolares')
+						writeln ('su coste es de:',precio,'-dolares')
 						else
 						writeln ('hasta luego, tenga feliz dia.');
 						end;
@@ -118,9 +118,9 @@ readln (a);
 						writeln('El boleto ida y vuelta tiene una cobertura de: 2 viajes en metro');
 						writeln ('cuantos boletos quiere comprar?');
 						readln (e);
-						precio2:=e*p3;
+						precio:=e*p3;
 						if e>0 then
-						writeln ('su coste es de:',precio3,'-dolares')
+						writeln ('su coste es de:',precio,'-dolares')
 						else
 						writeln ('hasta luego, tenga feliz dia.');
 						end;
@@ -132,9 +132,9 @@ readln (a);
 						readln(tipodeviaje);
 						writeln ('cuantos boletos quiere comprar?');
 						readln (f);
-						precio3:=f*p4;
+						precio:=f*p4;
 						if f>0 then
-						writeln ('su coste es de:',precio3,'-dolares')
+						writeln ('su coste es de:',precio,'-dolares')
 						else
 						writeln ('hasta luego, tenga feliz dia.');
 						end;
@@ -142,9 +142,9 @@ readln (a);
 						writeln('El boleto multiabono tiene una cobertura de: 10 viajes en metro');
 						writeln ('cuantos boletos desea comprar?');
 						readln (g);
-						precio4:=g*p5;
+						precio:=g*p5;
 						if g>0 then
-						writeln ('su coste es de:',precio4,'-dolares')
+						writeln ('su coste es de:',precio,'-dolares')
 						else
 						writeln('hasta luego, tenga feliz dia.');
 				
@@ -157,9 +157,9 @@ readln (a);
 						readln(tipodeviaje);
 						writeln('cuantos boletos desea comprar?');
 						readln (h);
-						precio5:=h*p6;
+						precio:=h*p6;
 						if h>0 then
-						writeln ('su coste es de:',precio5,'-dolares')
+						writeln ('su coste es de:',precio,'-dolares')
 						else
 						writeln ('hasta luego, tenga feliz dia.');
 				
@@ -168,9 +168,9 @@ readln (a);
 						writeln('El boleto estudiantil simple tiene una cobertura de: 10 viajes en metro');
 						writeln('cuantos boletos quiere comprar?');
 						readln(i);
-						precio6:=i*p7;
+						precio:=i*p7;
 						if i>0 then
-						writeln ('su coste es de:',precio6,'-dolares')
+						writeln ('su coste es de:',precio,'-dolares')
 						else
 						writeln('hasta luego, tenga feliz dia.');
 						end;
@@ -182,9 +182,9 @@ readln (a);
 						readln(tipodeviaje);
 						writeln('cuantos boletos quiere comprar?');
 						readln(j);
-						precio7:=j*p8;
+						precio:=j*p8;
 						if j>0 then
-						writeln ('su coste es de:',precio7,'-dolares')
+						writeln ('su coste es de:',precio,'-dolares')
 						else
 						writeln('hasta luego, tenga feliz dia');
 						end;
@@ -197,9 +197,9 @@ readln (a);
 						readln(tipodeviaje);
 						writeln('cuantos boletos quiere comprar?');
 						readln(k);
-						precio8:=k*p9;
+						precio:=k*p9;
 						if k>0 then
-						writeln('su coste es de:',precio8,'-dolares')
+						writeln('su coste es de:',precio,'-dolares')
 						else
 						writeln('hasta luego, tenga feliz dia');
 						end;
@@ -214,9 +214,9 @@ readln (a);
 						readln(tipodeviaje);
 						writeln ('cuantos boletos quiere comprar?');
 						readln(l);
-						precio9:=l*p10;
+						precio:=l*p10;
 						if l>0 then
-						writeln ('su coste es de:',precio9,'-dolares')
+						writeln ('su coste es de:',precio,'-dolares')
 						else
 						writeln('hasta luego tenga feliz dia'); {:D}
 						end;
