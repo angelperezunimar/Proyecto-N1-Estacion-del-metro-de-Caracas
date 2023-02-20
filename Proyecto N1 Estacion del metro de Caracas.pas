@@ -313,7 +313,56 @@ readln (a);
 					end;
 					
 					case seleccionlinea of
-					1:
+					1:begin
+					  writeln('Su linea seleccionada ha sido la "LINEA 1"');
+					
+					
+					  end;
+					
+					2:begin
+					
+					
+					
+					  end;
+					  
+					3:begin
+					
+					
+					
+					  end;
+					  
+					4:begin
+					
+					
+					
+					  end;
+					  
+					5:begin
+					
+					
+					
+					  end;
+					  
+					  
+					6:begin
+					
+					
+					
+					  end;
+					  
+					7:begin
+					
+					
+					
+					  end;
+					  
+					8:begin
+					
+					
+					
+					  end;
+					  
+						
 					end;			
 						
 						
