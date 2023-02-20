@@ -1,7 +1,7 @@
 program Compra_de_boletos;
 uses crt;
 var 
-a,c,d,e,f,g,h,i,j,k,l,cedula,precio,seleccion, seleccionlinea1, seleccionlinea2, seleccionlinea, csub:integer;
+a,c,d,e,f,g,h,i,j,k,l,cedula,precio,seleccion, seleccionlinea1, seleccionlinea2, seleccionlinea, csub, ndeboleto:integer;
 nombre, apellido, boletos, si, tipodeviaje: char;
 subestacionsalida, subestaciondestino: string;
 
@@ -313,11 +313,13 @@ readln (a);
 						else writeln ('Seleccione la linea que desea escribiendo el numero que lo clasifica y pulsando [Enter]');
 						
 							readln(seleccionlinea);
-							clrscr();											
+							clrscr();	
+							ndeboleto := 0										
 					end;
 					
 					case seleccionlinea of
 					1:begin
+					  
 					  writeln('Su linea seleccionada ha sido la "LINEA 1"');
 					  writeln('Estas son sus estaciones:');
 					  writeln('|-----------------|------------------|-----------------|-----------------|');
@@ -340,6 +342,7 @@ readln (a);
 					  
 						repeat 
 						begin
+						ndeboleto := ndeboleto + 1;
 						writeln('Estas son las estaciones disponibles:');
 						writeln('|-----------------|------------------|-----------------|-----------------|');
 						writeln('|-Propatria       |-Capitolio        |-Plaza Venezuela |-Miranda         |');
@@ -349,6 +352,8 @@ readln (a);
 					    writeln('|-Agua Salud      |-Colegio de Ing.  |-Altamira        |-Petare          |');
 						writeln('|-Cano Amarillo   |                  |                 |-Palo Verde      |');		
 						writeln('|-----------------|------------------|-----------------|-----------------|');
+						writeln('');
+						writeln('Para el boleto N°', ndeboleto);
 						writeln('');
 						writeln('Seleccione la sub estación de salida');
 						readln(subestacionsalida);
@@ -390,6 +395,7 @@ readln (a);
 					  
 						repeat 
 						begin
+						ndeboleto := ndeboleto + 1;
 						writeln('Estas son las estaciones disponibles:');
 						writeln('|--------------------|---------------------|--------------------------|');
 					    writeln('|-El Silencio        |-La Paz              |-Mamera                   |');
@@ -437,6 +443,7 @@ readln (a);
 					  
 						repeat 
 						begin
+						ndeboleto := ndeboleto + 1;
 						writeln('Estas son las estaciones disponibles:');
 						writeln('|----------------------|-----------------------|-----------------------|');
 					    writeln('|-Plaza Venezuela      |-La Bandera            |-Coche                 |');
@@ -485,6 +492,7 @@ readln (a);
 					  
 						repeat 
 						begin
+						ndeboleto := ndeboleto + 1;
 						writeln('Estas son las estaciones disponibles:');
 						writeln('|----------------------|-----------------------|-----------------------|');
 						writeln('|-Zona Rental          |-Maternidad            |-Antiman               |');
@@ -533,6 +541,7 @@ readln (a);
 					  
 						repeat 
 						begin
+						ndeboleto := ndeboleto + 1;
 						writeln('Estas son las estaciones disponibles:');
 						writeln('|----------------------|-----------------------|-----------------------|');
 						writeln('|-Bello Monte          |-Bello Campo           |-Boleita               |');
@@ -578,6 +587,7 @@ readln (a);
 					  
 						repeat 
 						begin
+						ndeboleto := ndeboleto + 1;
 						writeln('Estas son las estaciones disponibles:');
 						writeln('|----------------------|-----------------------|');
 					    writeln('|-Zoologico            |-La Rinconada          |');
@@ -623,6 +633,7 @@ readln (a);
 					  
 						repeat 
 						begin
+						ndeboleto := ndeboleto + 1;
 						writeln('Estas son las estaciones disponibles:');
 						writeln('|--------------------|---------------------|--------------------------|');
 					    writeln('|-Las Flores         |-El Cristo           |-Roosevelt                |');
@@ -669,6 +680,7 @@ readln (a);
 					  
 						repeat 
 						begin
+						ndeboleto := ndeboleto + 1;
 						writeln('Estas son las estaciones disponibles:');
 						writeln('|--------------------|---------------------|--------------------------|');
 					    writeln('|-Petare 2           |-5 de Julio          |-Warairarepano            |');
