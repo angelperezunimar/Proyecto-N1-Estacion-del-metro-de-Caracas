@@ -81,12 +81,11 @@ readln (a);
 			            
 			            writeln ('Seleccione el tipo de boleto que desea escribiendo la letra que lo clasifica y pulsando [Enter]');
 			            
-						{agregando boletos}
-						readln();
+						
 						end
-						else 
-					writeln ('Seleccione el tipo de boleto que desea escribiendo la letra que lo clasifica y pulsando [Enter]');
-					readln(boletos); {agregando boletos}
+						else writeln ('Seleccione el tipo de boleto que desea escribiendo la letra que lo clasifica y pulsando [Enter]');
+												
+						readln(boletos); {agregando boletos}
 			        
 			        
 			        
