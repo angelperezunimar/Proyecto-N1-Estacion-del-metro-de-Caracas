@@ -1,7 +1,9 @@
 program Compra_de_boletos;
 uses crt;
-var a,c,d,e,f,g,h,i,j,k,l,cedula,precio,seleccion, seleccionlinea1, seleccionlinea2, seleccionlinea:integer;
+var 
+a,c,d,e,f,g,h,i,j,k,l,cedula,precio,seleccion, seleccionlinea1, seleccionlinea2, seleccionlinea, csub:integer;
 nombre, apellido, boletos, si, tipodeviaje: char;
+subestacionsalida, subestaciondestino: string;
 
 const 
 b = 2;
@@ -107,9 +109,9 @@ readln (a);
 						writeln('b. 1 Viaje en metrobus');
 						readln(tipodeviaje);
 						writeln ('cuantos boletos quiere comprar?');
-						readln (d);
-						precio:=d*p2;
-						if d>0 then
+						readln (c);
+						precio:=c*p2;
+						if c>0 then
 						writeln ('su coste es de:',precio,'-dolares')
 						else
 						writeln ('hasta luego, tenga feliz dia.');
@@ -117,9 +119,9 @@ readln (a);
 					'c':begin
 						writeln('El boleto ida y vuelta tiene una cobertura de: 2 viajes en metro');
 						writeln ('cuantos boletos quiere comprar?');
-						readln (e);
-						precio:=e*p3;
-						if e>0 then
+						readln (c);
+						precio:=c*p3;
+						if c>0 then
 						writeln ('su coste es de:',precio,'-dolares')
 						else
 						writeln ('hasta luego, tenga feliz dia.');
@@ -131,9 +133,9 @@ readln (a);
 						writeln('b. 2 Viajes en metrobus');
 						readln(tipodeviaje);
 						writeln ('cuantos boletos quiere comprar?');
-						readln (f);
-						precio:=f*p4;
-						if f>0 then
+						readln (c);
+						precio:=c*p4;
+						if c>0 then
 						writeln ('su coste es de:',precio,'-dolares')
 						else
 						writeln ('hasta luego, tenga feliz dia.');
@@ -141,9 +143,9 @@ readln (a);
 					'e':begin
 						writeln('El boleto multiabono tiene una cobertura de: 10 viajes en metro');
 						writeln ('cuantos boletos desea comprar?');
-						readln (g);
-						precio:=g*p5;
-						if g>0 then
+						readln (c);
+						precio:=c*p5;
+						if c>0 then
 						writeln ('su coste es de:',precio,'-dolares')
 						else
 						writeln('hasta luego, tenga feliz dia.');
@@ -156,9 +158,9 @@ readln (a);
 						writeln('b. 10 Viajes en metrobus');
 						readln(tipodeviaje);
 						writeln('cuantos boletos desea comprar?');
-						readln (h);
-						precio:=h*p6;
-						if h>0 then
+						readln (c);
+						precio:=c*p6;
+						if c>0 then
 						writeln ('su coste es de:',precio,'-dolares')
 						else
 						writeln ('hasta luego, tenga feliz dia.');
@@ -167,9 +169,9 @@ readln (a);
 					'g':begin
 						writeln('El boleto estudiantil simple tiene una cobertura de: 10 viajes en metro');
 						writeln('cuantos boletos quiere comprar?');
-						readln(i);
-						precio:=i*p7;
-						if i>0 then
+						readln(c);
+						precio:=c*p7;
+						if c>0 then
 						writeln ('su coste es de:',precio,'-dolares')
 						else
 						writeln('hasta luego, tenga feliz dia.');
@@ -181,9 +183,9 @@ readln (a);
 						writeln('b. 20 Viajes en metrobus');
 						readln(tipodeviaje);
 						writeln('cuantos boletos quiere comprar?');
-						readln(j);
-						precio:=j*p8;
-						if j>0 then
+						readln(c);
+						precio:=c*p8;
+						if c>0 then
 						writeln ('su coste es de:',precio,'-dolares')
 						else
 						writeln('hasta luego, tenga feliz dia');
@@ -196,9 +198,9 @@ readln (a);
 						writeln('c. 40 Viajes en metro');
 						readln(tipodeviaje);
 						writeln('cuantos boletos quiere comprar?');
-						readln(k);
-						precio:=k*p9;
-						if k>0 then
+						readln(c);
+						precio:=c*p9;
+						if c>0 then
 						writeln('su coste es de:',precio,'-dolares')
 						else
 						writeln('hasta luego, tenga feliz dia');
@@ -213,9 +215,9 @@ readln (a);
 						writeln('f. 40 Viajes en metrobus');
 						readln(tipodeviaje);
 						writeln ('cuantos boletos quiere comprar?');
-						readln(l);
-						precio:=l*p10;
-						if l>0 then
+						readln(c);
+						precio:=c*p10;
+						if c>0 then
 						writeln ('su coste es de:',precio,'-dolares')
 						else
 						writeln('hasta luego tenga feliz dia'); {:D}
@@ -315,10 +317,47 @@ readln (a);
 					case seleccionlinea of
 					1:begin
 					  writeln('Su linea seleccionada ha sido la "LINEA 1"');
+					  writeln('Estas son sus estaciones:');
+					  writeln('|-----------------|------------------|-----------------|-----------------|');
+					  writeln('|-Propatria       |-Capitolio        |-Plaza Venezuela |-Miranda         |');
+					  writeln('|-Perez Bonald    |-La Hoyada        |-Sabana Grande   |-Los Dos Caminos |');
+					  writeln('|-Plaza Sucre     |-Parque Carabobo  |-Chacaito        |-Los Cortijos    |');
+					  writeln('|-Gato Negro      |-Bellas Artes     |-Chacao          |-La California   |');
+					  writeln('|-Agua Salud      |-Colegio de Ing.  |-Altamira        |-Petare          |');
+					  writeln('|-Cano Amarillo   |                  |                 |-Palo Verde      |');		
+					  writeln('|-----------------|------------------|-----------------|-----------------|');
+					  writeln('');
+					  writeln('La cantidad de boletos comprados son ',c);
+					  writeln('');
+					  writeln('Debera asignar una sub estacion de salida y una subestacion de destino por cada boleto que compro');
+					  writeln('');
+					  writeln('Presione [Enter] para iniciar el proceso');
+					  writeln('');
+					  Readln();
+					  
+					  
+						repeat 
+						begin
+						
+						writeln('Seleccione la sub estación de salida');
+						readln(subestacionsalida);
+						writeln('Seleccione la sub estación de destino');
+						readln(subestaciondestino);
+						writeln('Estaciones asignadas correctamente');
+						writeln('');
+						writeln('Siguiente boleto');
+						writeln('');
+						c := c - 1
+						
+						end
+											  
+						until c = 0 ;
+						
+						writeln('Los boletos han sido asignados con sus subestaciones correctamente');
 					
-					
-					  end;
-					
+						
+						
+					 end;
 					2:begin
 					
 					
