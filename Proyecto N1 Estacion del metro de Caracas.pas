@@ -3,7 +3,7 @@ uses crt;
 var 
 a,c,d,e,f,g,h,i,j,k,l,cedula,precio,seleccion, seleccionlinea1, seleccionlinea2, seleccionlinea, csub, ndeboleto:integer;
 nombre, apellido, boletos, si, tipodeviaje: char;
-subestacionsalida, subestaciondestino: string;
+subestacionsalida, subestaciondestino, subestacionsalidatotal, subestaciondestinototal: string;
 
 const 
 b = 2;
@@ -19,6 +19,9 @@ p10 = 11;
 
 
 BEGIN
+
+subestacionsalidatotal := '';
+subestaciondestinototal := '';
 clrscr();
 writeln('Bienvenido a la estacion de metro de Caracas');
 writeln ('Desea comprar un boleto? teclee el numero 1, de ser el caso contrario teclee el numero 2');
@@ -342,6 +345,7 @@ readln (a);
 					  
 						repeat 
 						begin
+						clrscr();
 						ndeboleto := ndeboleto + 1;
 						writeln('Estas son las estaciones disponibles:');
 						writeln('|-----------------|------------------|-----------------|-----------------|');
@@ -363,7 +367,10 @@ readln (a);
 						writeln('');
 						writeln('Siguiente boleto');
 						writeln('');
-						c := c - 1
+						c := c - 1;
+						subestacionsalidatotal := subestacionsalidatotal + ' -' + subestacionsalida;
+						
+						subestaciondestinototal := subestaciondestinototal + ' -' + subestaciondestino;
 						
 						end
 											  
@@ -395,6 +402,7 @@ readln (a);
 					  
 						repeat 
 						begin
+						clrscr();
 						ndeboleto := ndeboleto + 1;
 						writeln('Estas son las estaciones disponibles:');
 						writeln('|--------------------|---------------------|--------------------------|');
@@ -404,6 +412,8 @@ readln (a);
 					    writeln('|-Artiguas           |-Antimano            |-Ruiz Pineda/Las adjuntas |');	
 					    writeln('|--------------------|---------------------|--------------------------|');
 						writeln('');
+						writeln('Para el boleto N°', ndeboleto);
+						writeln('');
 						writeln('Seleccione la sub estación de salida');
 						readln(subestacionsalida);
 						writeln('Seleccione la sub estación de destino');
@@ -412,7 +422,10 @@ readln (a);
 						writeln('');
 						writeln('Siguiente boleto');
 						writeln('');
-						c := c - 1
+						c := c - 1;
+						subestacionsalidatotal := subestacionsalidatotal + ' -' + subestacionsalida;
+						
+						subestaciondestinototal := subestaciondestinototal + ' -' + subestaciondestino;
 						
 						end
 											  
@@ -443,6 +456,7 @@ readln (a);
 					  
 						repeat 
 						begin
+						clrscr();
 						ndeboleto := ndeboleto + 1;
 						writeln('Estas son las estaciones disponibles:');
 						writeln('|----------------------|-----------------------|-----------------------|');
@@ -450,6 +464,8 @@ readln (a);
 					    writeln('|-Ciudad Universitaria |-El Valle              |-Mercado               |');
 					    writeln('|-Los Simbolos         |-Los Jardines          |-La Rinconada          |');
 					    writeln('|----------------------|-----------------------|-----------------------|');
+						writeln('');
+						writeln('Para el boleto N°', ndeboleto);
 						writeln('');
 						writeln('Seleccione la sub estación de salida');
 						readln(subestacionsalida);
@@ -459,7 +475,10 @@ readln (a);
 						writeln('');
 						writeln('Siguiente boleto');
 						writeln('');
-						c := c - 1
+						c := c - 1;
+						subestacionsalidatotal := subestacionsalidatotal + ' -' + subestacionsalida;
+						
+						subestaciondestinototal := subestaciondestinototal + ' -' + subestaciondestino;
 						
 						end
 											  
@@ -492,6 +511,7 @@ readln (a);
 					  
 						repeat 
 						begin
+						clrscr();
 						ndeboleto := ndeboleto + 1;
 						writeln('Estas son las estaciones disponibles:');
 						writeln('|----------------------|-----------------------|-----------------------|');
@@ -502,6 +522,8 @@ readln (a);
 						writeln('|-Capuchinos           |-Carapita              |                       |');
 						writeln('|----------------------|-----------------------|-----------------------|');
 						writeln('');
+						writeln('Para el boleto N°', ndeboleto);
+						writeln('');
 						writeln('Seleccione la sub estación de salida');
 						readln(subestacionsalida);
 						writeln('Seleccione la sub estación de destino');
@@ -510,7 +532,10 @@ readln (a);
 						writeln('');
 						writeln('Siguiente boleto');
 						writeln('');
-						c := c - 1
+						c := c - 1;
+						subestacionsalidatotal := subestacionsalidatotal + ' -' + subestacionsalida;
+						
+						subestaciondestinototal := subestaciondestinototal + ' -' + subestaciondestino;
 						
 						end
 											  
@@ -541,6 +566,7 @@ readln (a);
 					  
 						repeat 
 						begin
+						clrscr();
 						ndeboleto := ndeboleto + 1;
 						writeln('Estas son las estaciones disponibles:');
 						writeln('|----------------------|-----------------------|-----------------------|');
@@ -548,6 +574,8 @@ readln (a);
 						writeln('|-Las Mercedes         |-Hugo Chaves           |-El Marquez            |');
 						writeln('|-Parque Simon Bolivar |-Montecristo           |-Warairarepano         |');
 						writeln('|----------------------|-----------------------|-----------------------|');
+						writeln('');
+						writeln('Para el boleto N°', ndeboleto);
 						writeln('');
 						writeln('Seleccione la sub estación de salida');
 						readln(subestacionsalida);
@@ -557,7 +585,10 @@ readln (a);
 						writeln('');
 						writeln('Siguiente boleto');
 						writeln('');
-						c := c - 1
+						c := c - 1;
+						subestacionsalidatotal := subestacionsalidatotal + ' -' + subestacionsalida;
+						
+						subestaciondestinototal := subestaciondestinototal + ' -' + subestaciondestino;
 						
 						end
 											  
@@ -587,11 +618,14 @@ readln (a);
 					  
 						repeat 
 						begin
+						clrscr();
 						ndeboleto := ndeboleto + 1;
 						writeln('Estas son las estaciones disponibles:');
 						writeln('|----------------------|-----------------------|');
 					    writeln('|-Zoologico            |-La Rinconada          |');
 					    writeln('|----------------------|-----------------------|');
+						writeln('');
+						writeln('Para el boleto N°', ndeboleto);
 						writeln('');
 						writeln('Seleccione la sub estación de salida');
 						readln(subestacionsalida);
@@ -601,7 +635,10 @@ readln (a);
 						writeln('');
 						writeln('Siguiente boleto');
 						writeln('');
-						c := c - 1
+						c := c - 1;
+						subestacionsalidatotal := subestacionsalidatotal + ' -' + subestacionsalida;
+						
+						subestaciondestinototal := subestaciondestinototal + ' -' + subestaciondestino;
 						
 						end
 											  
@@ -633,6 +670,7 @@ readln (a);
 					  
 						repeat 
 						begin
+						clrscr();
 						ndeboleto := ndeboleto + 1;
 						writeln('Estas son las estaciones disponibles:');
 						writeln('|--------------------|---------------------|--------------------------|');
@@ -642,6 +680,8 @@ readln (a);
 					    writeln('|-La Hoyada          |-INCES               |                          |');	
 					    writeln('|--------------------|---------------------|--------------------------|');
 						writeln('');
+						writeln('Para el boleto N°', ndeboleto);
+						writeln('');
 						writeln('Seleccione la sub estación de salida');
 						readln(subestacionsalida);
 						writeln('Seleccione la sub estación de destino');
@@ -650,7 +690,10 @@ readln (a);
 						writeln('');
 						writeln('Siguiente boleto');
 						writeln('');
-						c := c - 1
+						c := c - 1;
+						subestacionsalidatotal := subestacionsalidatotal + ' -' + subestacionsalida;
+						
+						subestaciondestinototal := subestaciondestinototal + ' -' + subestaciondestino;
 						
 						end
 											  
@@ -680,12 +723,15 @@ readln (a);
 					  
 						repeat 
 						begin
+						clrscr();
 						ndeboleto := ndeboleto + 1;
 						writeln('Estas son las estaciones disponibles:');
 						writeln('|--------------------|---------------------|--------------------------|');
 					    writeln('|-Petare 2           |-5 de Julio          |-Warairarepano            |');
 						writeln('|-19 de Abril        |-24 de Julio         |-Caricuao                 |');
 						writeln('|--------------------|---------------------|--------------------------|');
+						writeln('');
+						writeln('Para el boleto N°', ndeboleto);
 						writeln('');
 						writeln('Seleccione la sub estación de salida');
 						readln(subestacionsalida);
@@ -695,20 +741,25 @@ readln (a);
 						writeln('');
 						writeln('Siguiente boleto');
 						writeln('');
-						c := c - 1
+						c := c - 1;
+						subestacionsalidatotal := subestacionsalidatotal + ' -' + subestacionsalida;
+						
+						subestaciondestinototal := subestaciondestinototal + ' -' + subestaciondestino;
 						
 						end
 											  
 						until c = 0 ;
 						
 						writeln('Los boletos han sido asignados con sus subestaciones correctamente');
+						
 					
 					
 					  end;
-					  
+					
 						
 					end;			
 						
+						  writeln(subestacionsalidatotal,', ', subestaciondestinototal);
 						
 				END;
 
