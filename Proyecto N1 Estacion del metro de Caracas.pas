@@ -23,23 +23,31 @@ BEGIN
 subestacionsalidatotal := '';
 subestaciondestinototal := '';
 clrscr();
-writeln('Bienvenido a la estacion de metro de Caracas');
-writeln ('Desea comprar un boleto? teclee el numero 1, de ser el caso contrario teclee el numero 2');
+textcolor(green);
+	gotoxy(35,1);writeln('============================================');
+gotoxy(35,2);writeln('Bienvenido a la estacion de metro de Caracas');
+	gotoxy(35,3);writeln('============================================');
+write ('Desea comprar un boleto? teclee el numero 1, de ser el caso contrario teclee el numero 2:');
 readln (a);
 	case a of
 	1:  
 		begin
 			begin
-			writeln ('ingrese sus datos');
-			writeln ('cedula:');
+			textcolor(white);
+			gotoxy(10,6);writeln ('***** Porfavor ingrese sus datos *****');
+			repeat
+			write ('-Cedula:');
 			readln (cedula);
-			writeln('Nombre:');
+			if cedula<=0 then writeln('cedula invalida, intente nuevamente');
+			until cedula>0;
+			write('--Nombre:');
 			readln(nombre);
-			writeln ('apellido:');
+			write('---apellido:');
 			readln(apellido);
 			clrscr();
 			end;
 				begin
+					textcolor(green);
 					writeln ('Estos son los tipos de boletos disponibles, existen otras opciones en la seccion 2'); {existen gran variedad de boletos, cada uno con un color, precio y cobertura}
 					writeln('|----------------------------|--------------|----------------------------|');
 					writeln('|          Boleto            |     Color    |        Propiedades         |');
@@ -56,7 +64,7 @@ readln (a);
 					writeln('|  d. Ida y vuelta integrado |   Amarillo   |     2 Viajes en metro      |');
 					writeln('|                            |              |   2 Viajes en metrobus     |');
 					writeln('|----------------------------|--------------|----------------------------|');
-					
+					textcolor(white);
 					writeln('Si no encuentra su boleto deseado presione la tecla 1 y pulse [Enter], en caso contrario presione cualquier otro numero');
 					readln(seleccion);
 						
@@ -64,6 +72,7 @@ readln (a);
 			
 						begin
 						clrscr();
+						textcolor(green);
 						writeln('|----------------------------|--------------|----------------------------|');
 						writeln('|  e. MultiAbono             |    Naranja   |    10 Viajes en metro      |');
 						writeln('|----------------------------|--------------|----------------------------|');
@@ -85,7 +94,7 @@ readln (a);
 						writeln('|  j. Metrotarjeta integrado |     Rojo     | 30 Viajes(metro y metrobus)|');
 						writeln('|                            |              | 40 Viajes(metro y metrobus)|');
 						writeln('|----------------------------|--------------|----------------------------|');
-			            
+			            textcolor(white);
 			            writeln ('Seleccione el tipo de boleto que desea escribiendo la letra que lo clasifica y pulsando [Enter]');
 			            
 						
