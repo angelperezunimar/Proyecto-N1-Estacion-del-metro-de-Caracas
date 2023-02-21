@@ -1,7 +1,7 @@
 program compra_de_boletos;
 uses crt;
 var 
-a,c,d,e,f,g,h,i,j,k,l,precio,seleccion, seleccionlinea1,cedula2,codigobanco,numtelefono,pp,vuelto, seleccionlinea2, seleccionlinea, csub, ndeboleto:integer;
+a,c,d,e,f,g,h,i,j,k,l,precio,seleccion, seleccionlinea1,cedula2,codigobanco,numtelefono,pp,vuelto, seleccionlinea2, seleccionlinea, csub, ndeboleto, seleccionsistema, usarboleto:integer;
  boletos,nombre,apellido,si, tipodeviaje: char;
 subestacionsalida, subestaciondestino, subestacionsalidatotal, subestaciondestinototal: string;
 cedula: real;
@@ -850,10 +850,54 @@ readln (a);
 				writeln ('saldo insuficiente')
 				else writeln('su vuelto es de:',vuelto,'-dolares');
 				end;
-			2:writeln('hasta luego, tenga feliz dia.');
-		
+			2:begin
+			writeln('hasta luego, tenga feliz dia.');
+			end;
 		end;
 	    
+	   clrscr();
+	   writeln('¿Que desea hacer ahora?');
+	   writeln('');
+	   writeln('Seleccione alguna de las siguientes opciones');
+	   writeln('');
+	   writeln('1.Salir de sistemas');
+	   writeln('');
+	   writeln('2.Utilizar Boleto');
+	   writeln('');
+	   writeln('3.Ver sistema');
+	   writeln('');
+	   readln(seleccionsistema);
+		
+		case seleccionsistema of
+		1:begin
+		writeln('Tenga buen dia');
+		end;
+		
+		2:begin
+		writeln('UTILIZAR BOLETO');
+		writeln('');
+		writeln('¿Desea utilizar un boleto?');
+		writeln('');
+		writeln('1.Si');
+	    writeln('');
+	    writeln('2.No');
+	    writeln('');
+	    readln(usarboleto);
+		
+			if usarboleto = 1 then
+			begin 
+			
+			
+		
+		
+		end;
+		
+		3:begin
+		writeln('Tenga buen dia');
+		end;
+		
+		end;
+	   
 	
 	end;
 	
