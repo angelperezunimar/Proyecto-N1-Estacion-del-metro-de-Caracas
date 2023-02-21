@@ -1,8 +1,8 @@
-program Compra_de_boletos;
+program compra_de_boletos;
 uses crt;
 var 
-a,c,d,e,f,g,h,i,j,k,l,precio,seleccion, seleccionlinea1, seleccionlinea2, seleccionlinea, csub, ndeboleto:integer;
-nombre, apellido, boletos, si, tipodeviaje: char;
+a,c,d,e,f,g,h,i,j,k,l,precio,seleccion, seleccionlinea1,cedula2,codigobanco,numtelefono,pp,vuelto, seleccionlinea2, seleccionlinea, csub, ndeboleto:integer;
+ boletos,nombre,apellido,si, tipodeviaje: char;
 subestacionsalida, subestaciondestino, subestacionsalidatotal, subestaciondestinototal: string;
 cedula: real;
 
@@ -853,7 +853,8 @@ case seleccion of
 		else writeln('su vuelto es de:',vuelto,'-dolares');
 		
 end;
-2:writeln('hasta luego, tenga feliz dia.')
+2:writeln('hasta luego, tenga feliz dia.');
+end;
+
+
 end.
-
-
