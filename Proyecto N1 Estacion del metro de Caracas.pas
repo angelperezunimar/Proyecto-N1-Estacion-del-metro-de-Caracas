@@ -1,10 +1,10 @@
 program compra_de_boletos;
 uses crt;
 var 
-a,c,d,e,f,g,h,i,j,k,l,precio,seleccion, seleccionlinea1,cedula2,codigobanco,numtelefono,pp,vuelto, seleccionlinea2, seleccionlinea, csub, ndeboleto, seleccionsistema, usarboleto:integer;
+a,c,d,e,f,g,h,i,j,k,l,precio,seleccion, seleccionlinea1,codigobanco,numtelefono,pp,vuelto, seleccionlinea2, seleccionlinea, csub, ndeboleto, seleccionsistema, usarboleto, cfinal, faltante, cboletosrestantes, seleccionboletosrestantes:integer;
  boletos,nombre,apellido,si, tipodeviaje: char;
 subestacionsalida, subestaciondestino, subestacionsalidatotal, subestaciondestinototal: string;
-cedula: real;
+cedula, cedulacompra, cedula2: real;
 
 const 
 b = 2;
@@ -258,6 +258,7 @@ readln (a);
 						writeln('hasta luego tenga feliz dia'); {:D}
 						end;
 					end; 
+						cfinal := c;
 						writeln('===================================================');
 						Writeln('Una vez elegido el tipo de boleto que desea comprar');
 						Writeln('Debe seleccionar la linea en la cual desea viajar');
@@ -836,19 +837,53 @@ readln (a);
 		readln(seleccion);
 		case seleccion of
 			1: begin writeln ('el monto total a pagar es de:',precio,'-dolares..');
-				writeln('ingrese sus datos para realizar el pago');
-				writeln('cedula:');
-				readln (cedula2);
-				writeln('ingrese el codigo del banco:');
-				readln(codigobanco);
-				writeln('ingrese el numero de telefono:');
-				readln(numtelefono);
-				writeln ('ingrese el monto a pagar:');
-				readln (pp);
-				vuelto:=pp-precio;
-				if precio<pp then
-				writeln ('saldo insuficiente')
-				else writeln('su vuelto es de:',vuelto,'-dolares');
+					writeln('ingrese sus datos para realizar el pago');
+					writeln('cedula:');
+					readln (cedula2);
+					writeln('ingrese el codigo del banco:');
+					readln(codigobanco);
+					writeln('ingrese el numero de telefono:');
+					readln(numtelefono);
+					writeln ('ingrese el monto a pagar:');
+					readln(pp);
+					vuelto:=pp-precio;
+					
+						if precio>pp then
+							begin
+							repeat
+							begin
+							writeln ('saldo insuficiente');
+							readln();
+							writeln('Ingrese el faltante');
+							readln(faltante);
+							
+							pp := pp + faltante
+							
+							end
+							
+							until pp >= precio;
+								
+								if  pp > precio then
+									begin
+									vuelto:=pp-precio;
+									writeln('su vuelto es de:',vuelto,'-dolares');
+									readln();
+									end
+								
+								else 
+								
+									begin
+									writeln('Pago efectuado con exito');
+									readln();
+									end;
+							end
+						else 
+							begin
+							writeln('su vuelto es de:',vuelto,'-dolares');
+							writeln('Pago efectuado con exito');
+							readln();
+							end
+							
 				end;
 			2:begin
 			writeln('hasta luego, tenga feliz dia.');
@@ -860,7 +895,7 @@ readln (a);
 	   writeln('');
 	   writeln('Seleccione alguna de las siguientes opciones');
 	   writeln('');
-	   writeln('1.Salir de sistemas');
+	   writeln('1.Salir del sistema');
 	   writeln('');
 	   writeln('2.Utilizar Boleto');
 	   writeln('');
@@ -885,10 +920,61 @@ readln (a);
 	    readln(usarboleto);
 		
 			if usarboleto = 1 then
-			begin 
-			
-			
-		
+				begin 
+				cboletosrestantes := cfinal;
+				writeln('sus boletos son ', cfinal);				
+				writeln('');
+				
+				repeat
+				
+				writeln('Ingrese el numero de cedula con el cual compro su boleto');
+				writeln('');
+				readln(cedulacompra);
+				
+				if cedulacompra <> cedula2 then
+					begin
+					
+					writeln('La cedula ingresada es distinta de la cedula con la cual fue comprado el boleto');
+					writeln('');
+					writeln('Vuelva a ingresar la cedula');
+					writeln('');
+					
+					end
+				else
+				
+				until cedulacompra = cedula2;
+				
+				begin
+				repeat
+				cboletosrestantes := cboletosrestantes - 1;
+				writeln('');
+				writeln('El boleto ha sido usado correctamente');
+				writeln('');
+				writeln('Le quedan ', cboletosrestantes, ' boletos');
+				writeln('');
+				writeln('¿Desea usar otro boleto?');
+				writeln('');
+				writeln('1.Si');
+				writeln('');
+				writeln('2.No');
+				writeln('');
+				readln(seleccionboletosrestantes);
+				
+				
+				until seleccionboletosrestantes = 2;
+				
+				end;
+				
+				if cboletosrestantes <= 0 then
+				
+					begin
+					writeln('No le quedan mas boletos');
+					
+					end;
+				
+				end
+				
+			else
 		
 		end;
 		
