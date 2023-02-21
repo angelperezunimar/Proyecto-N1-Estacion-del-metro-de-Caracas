@@ -1,9 +1,10 @@
 program Compra_de_boletos;
 uses crt;
 var 
-a,c,d,e,f,g,h,i,j,k,l,cedula,precio,seleccion, seleccionlinea1, seleccionlinea2, seleccionlinea, csub, ndeboleto:integer;
+a,c,d,e,f,g,h,i,j,k,l,precio,seleccion, seleccionlinea1, seleccionlinea2, seleccionlinea, csub, ndeboleto:integer;
 nombre, apellido, boletos, si, tipodeviaje: char;
 subestacionsalida, subestaciondestino, subestacionsalidatotal, subestaciondestinototal: string;
+cedula: real;
 
 const 
 b = 2;
@@ -107,86 +108,97 @@ readln (a);
 			        
 					case boletos of
 					'a': begin 
-						writeln('El boleto simple tiene una cobertura de: 1 viaje en metro');
-						writeln('cuantos boletos quiere comprar?');
+						gotoxy(35,1);writeln('=========================================================');
+						gotoxy(35,2);writeln('El boleto simple tiene una cobertura de: 1 viaje en metro');
+						gotoxy(35,3);writeln('=========================================================');
+						gotoxy(5,4);write('Indique cuantos boletos desea comprar:');
 						readln (c);
 						precio:= c*b;
 						if c>0 then
-						writeln('su coste es de:',precio,'-dolares')
+						writeln('///Su coste es de:',precio,'-dolares///')
 						else
 						writeln ('hasta luego, tenga feliz dia.');
 						end;
 					'b': begin
-						writeln('El boleto integrado tiene una cobertura de: 1 viaje en metro o 1 viaje en metrobus');
-						writeln('¿Que desea hacer?');
+						gotoxy(20,1);writeln('==================================================================================');
+						gotoxy(20,2);writeln('El boleto integrado tiene una cobertura de: 1 viaje en metro o 1 viaje en metrobus');
+						gotoxy(20,3);writeln('==================================================================================');
+						gotoxy(5,5);writeln('Que desea hacer?');
 						writeln('a. 1 Viaje en metro');
 						writeln('b. 1 Viaje en metrobus');
 						readln(tipodeviaje);
-						writeln ('cuantos boletos quiere comprar?');
+						gotoxy(10,9);write ('///Indique cuantos boletos desea comprar///:');
 						readln (c);
 						precio:=c*p2;
-						if c>0 then
-						writeln ('su coste es de:',precio,'-dolares')
+						if c>0 then  writeln ('Su coste es de:',precio,'-Dolares')
 						else
 						writeln ('hasta luego, tenga feliz dia.');
 						end;
 					'c':begin
-						writeln('El boleto ida y vuelta tiene una cobertura de: 2 viajes en metro');
-						writeln ('cuantos boletos quiere comprar?');
+					    gotoxy(35,1);writeln('================================================================');
+						gotoxy(35,2);writeln('El boleto ida y vuelta tiene una cobertura de: 2 viajes en metro');
+						gotoxy(35,3);writeln('================================================================');
+						gotoxy(5,5);write ('///Indique cuantos boletos desea comprar///:');
 						readln (c);
 						precio:=c*p3;
 						if c>0 then
-						writeln ('su coste es de:',precio,'-dolares')
+						writeln ('Su coste es de:',precio,'-Dolares')
 						else
-						writeln ('hasta luego, tenga feliz dia.');
+						writeln ('Hasta luego, tenga feliz dia.');
 						end;
 					'd':begin 
-						writeln ('el boleto ida y vuelta integrado tiene una cobertura de: 2 viajes en metro o 2 viajes en metrobus');
-						writeln('¿Que desea hacer?');
+						writeln('==================================================================================================');
+						writeln ('El boleto ida y vuelta integrado tiene una cobertura de: 2 viajes en metro o 2 viajes en metrobus');
+						writeln('==================================================================================================');
+						gotoxy(10,5);writeln('¿Que desea hacer?');
 						writeln('a. 2 Viajes en metro');
 						writeln('b. 2 Viajes en metrobus');
 						readln(tipodeviaje);
-						writeln ('cuantos boletos quiere comprar?');
+						gotoxy(10,9);write ('///Indique cuantos boletos desea comprar///:');
 						readln (c);
 						precio:=c*p4;
 						if c>0 then
-						writeln ('su coste es de:',precio,'-dolares')
+						writeln ('Su coste es de:',precio,'-Dolares')
 						else
 						writeln ('hasta luego, tenga feliz dia.');
 						end;
 					'e':begin
-						writeln('El boleto multiabono tiene una cobertura de: 10 viajes en metro');
-						writeln ('cuantos boletos desea comprar?');
+						gotoxy(35,1);writeln('===============================================================');
+						gotoxy(35,2);writeln('El boleto multiabono tiene una cobertura de: 10 viajes en metro');
+						gotoxy(35,3);writeln('===============================================================');
+						gotoxy(5,5);write ('///Indique cuantos boletos desea comprar///:');
 						readln (c);
 						precio:=c*p5;
 						if c>0 then
-						writeln ('su coste es de:',precio,'-dolares')
+						writeln ('Su coste es de:',precio,'-Dolares')
 						else
 						writeln('hasta luego, tenga feliz dia.');
 				
 						end;
 					'f':begin
-						writeln('El boleto multiabono integrado tiene una cobertura de: 10 viajes en metro o 10 viajes en metrobus');
-						writeln('¿Que desea hacer?');
+						gotoxy(15,1);writeln('=================================================================================================');
+						gotoxy(15,2);writeln('El boleto multiabono integrado tiene una cobertura de: 10 viajes en metro o 10 viajes en metrobus');
+						gotoxy(15,3);writeln('=================================================================================================');
+						gotoxy(5,5);writeln('Que desea hacer?');
 						writeln('a. 10 Viajes en metro');
 						writeln('b. 10 Viajes en metrobus');
 						readln(tipodeviaje);
-						writeln('cuantos boletos desea comprar?');
+						gotoxy(10,9);write ('///Indique cuantos boletos desea comprar///:');
 						readln (c);
 						precio:=c*p6;
 						if c>0 then
-						writeln ('su coste es de:',precio,'-dolares')
+						writeln ('Su coste es de:',precio,'-Dolares')
 						else
 						writeln ('hasta luego, tenga feliz dia.');
 				
 						end;
 					'g':begin
 						writeln('El boleto estudiantil simple tiene una cobertura de: 10 viajes en metro');
-						writeln('cuantos boletos quiere comprar?');
+						write ('///Indique cuantos boletos desea comprar///:');
 						readln(c);
 						precio:=c*p7;
 						if c>0 then
-						writeln ('su coste es de:',precio,'-dolares')
+						writeln ('Su coste es de:',precio,'-Dolares')
 						else
 						writeln('hasta luego, tenga feliz dia.');
 						end;
@@ -196,11 +208,11 @@ readln (a);
 						writeln('a. 10 Viajes en metro');
 						writeln('b. 20 Viajes en metrobus');
 						readln(tipodeviaje);
-						writeln('cuantos boletos quiere comprar?');
+						write ('///Indique cuantos boletos desea comprar///:');
 						readln(c);
 						precio:=c*p8;
 						if c>0 then
-						writeln ('su coste es de:',precio,'-dolares')
+						writeln ('Su coste es de:',precio,'-Dolares')
 						else
 						writeln('hasta luego, tenga feliz dia');
 						end;
@@ -211,11 +223,11 @@ readln (a);
 						writeln('b. 30 Viajes en metro');
 						writeln('c. 40 Viajes en metro');
 						readln(tipodeviaje);
-						writeln('cuantos boletos quiere comprar?');
+						write ('///Indique cuantos boletos desea comprar///:');
 						readln(c);
 						precio:=c*p9;
 						if c>0 then
-						writeln('su coste es de:',precio,'-dolares')
+						writeln('Su coste es de:',precio,'-Dolares')
 						else
 						writeln('hasta luego, tenga feliz dia');
 						end;
@@ -228,16 +240,16 @@ readln (a);
 						writeln('e. 30 Viajes en metrobus');
 						writeln('f. 40 Viajes en metrobus');
 						readln(tipodeviaje);
-						writeln ('cuantos boletos quiere comprar?');
+						write ('///Indique cuantos boletos desea comprar///:');
 						readln(c);
 						precio:=c*p10;
 						if c>0 then
-						writeln ('su coste es de:',precio,'-dolares')
+						writeln ('Su coste es de:',precio,'-Dolares')
 						else
 						writeln('hasta luego tenga feliz dia'); {:D}
 						end;
-					end;
-						clrscr();
+					end; 
+						
 						Writeln('Una vez elegido el tipo de boleto que desea comprar');
 						Writeln('Debe seleccionar la linea en la cual desea viajar');
 						Writeln('Las lineas seran mostradas a continuacion');
