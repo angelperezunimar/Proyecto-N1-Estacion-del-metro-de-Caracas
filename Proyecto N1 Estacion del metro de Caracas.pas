@@ -833,5 +833,27 @@ readln (a);
 
 		end;
 	end;
-
+	writeln('');
+writeln ('esta seguro de su compra? presione 1 si esta de acuerdo, de lo contrario presione 2');
+readln(seleccion);
+case seleccion of
+1: begin writeln ('el monto total a pagar es de:',precio,'-dolares..');
+		writeln('ingrese sus datos para realizar el pago');
+		writeln('cedula:');
+		readln (cedula2);
+		writeln('ingrese el codigo del banco:');
+		readln(codigobanco);
+		writeln('ingrese el numero de telefono:');
+		readln(numtelefono);
+		writeln ('ingrese el monto a pagar:');
+		readln (pp);
+		vuelto:=pp-precio;
+		if precio<pp then
+		writeln ('saldo insuficiente')
+		else writeln('su vuelto es de:',vuelto,'-dolares');
+		
+end;
+2:writeln('hasta luego, tenga feliz dia.')
 end.
+
+
