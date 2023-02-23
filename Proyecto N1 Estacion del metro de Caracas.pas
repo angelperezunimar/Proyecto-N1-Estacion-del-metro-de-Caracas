@@ -1,7 +1,7 @@
 program compra_de_boletos;
 uses crt;
 var 
-a,c,d,e,f,g,h,i,j,k,l,precio,seleccion, seleccionlinea1,codigobanco,numtelefono,pp,vuelto, seleccionlinea2, seleccionlinea, csub, ndeboleto, seleccionsistema, usarboleto, cfinal, faltante, cboletosrestantes, seleccionboletosrestantes:integer;
+a,c,d,e,f,g,h,i,j,k,l,precio,seleccion, seleccionlinea1,codigobanco,numtelefono,pp,vuelto, seleccionlinea2, seleccionlinea, csub, ndeboleto, seleccionsistema, usarboleto, cfinal, faltante, cboletosrestantes, seleccionboletosrestantes, bucletotalseleccion:integer;
  boletos,nombre,apellido,si, tipodeviaje: char;
 subestacionsalida, subestaciondestino, subestacionsalidatotal, subestaciondestinototal: string;
 cedula, cedulacompra, cedula2: real;
@@ -20,14 +20,14 @@ p10 = 11;
 
 
 BEGIN
-
+repeat
 subestacionsalidatotal := '';
 subestaciondestinototal := '';
 clrscr();
 textcolor(green);
-	gotoxy(35,1);writeln('============================================');
+gotoxy(35,1);writeln('============================================');
 gotoxy(35,2);writeln('Bienvenido a la estacion de metro de Caracas');
-	gotoxy(35,3);writeln('============================================');
+gotoxy(35,3);writeln('============================================');
 write ('Desea comprar un boleto? teclee el numero 1, de ser el caso contrario teclee el numero 2:');
 readln (a);
 	case a of
@@ -853,7 +853,6 @@ readln (a);
 							repeat
 							begin
 							writeln ('saldo insuficiente');
-							readln();
 							writeln('Ingrese el faltante');
 							readln(faltante);
 							
@@ -938,6 +937,7 @@ readln (a);
 					writeln('');
 					writeln('Vuelva a ingresar la cedula');
 					writeln('');
+					readln();
 					
 					end
 				else
@@ -945,6 +945,14 @@ readln (a);
 				until cedulacompra = cedula2;
 				
 				begin
+				if cboletosrestantes <= 0 then
+				
+					begin
+					writeln('No tiene boletos');
+					readln();
+					
+					end
+				else
 				repeat
 				cboletosrestantes := cboletosrestantes - 1;
 				writeln('');
@@ -960,21 +968,31 @@ readln (a);
 				writeln('');
 				readln(seleccionboletosrestantes);
 				
+				if cboletosrestantes <= 0 then
+				
+					begin
+					writeln('No le quedan mas boletos');
+					seleccionboletosrestantes := 2;
+					end
+				
+				
+				else
+				
 				
 				until seleccionboletosrestantes = 2;
 				
 				end;
 				
-				if cboletosrestantes <= 0 then
+				clrscr();
+				writeln('¿Desea comprar boletos?');
+				writeln('');
+				writeln('1.Si');
+				writeln('');
+				writeln('2.No');
+				readln(bucletotalseleccion);
+
+				end;
 				
-					begin
-					writeln('No le quedan mas boletos');
-					
-					end;
-				
-				end
-				
-			else
 		
 		end;
 		
@@ -983,7 +1001,10 @@ readln (a);
 		end;
 		
 		end;
-	   
+		
+
+
+	  
 	
 	end;
 	
@@ -991,5 +1012,6 @@ readln (a);
 		
 end;
 
+until bucletotalseleccion = 2;
 
 end.
