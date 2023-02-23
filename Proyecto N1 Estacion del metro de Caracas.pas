@@ -1,9 +1,22 @@
 program compra_de_boletos;
+
 uses crt;
+
 var 
-a,c,d,e,f,g,h,i,j,k,l,precio,seleccion, seleccionlinea1,codigobanco,numtelefono,pp,vuelto, seleccionlinea2, seleccionlinea, csub, ndeboleto, seleccionsistema, usarboleto, cfinal, faltante, cboletosrestantes, seleccionboletosrestantes, bucletotalseleccion:integer;
- boletos,nombre,apellido,si, tipodeviaje: char;
+a, c, d, e, f, g, h, i, j, k, l, precio, seleccion, seleccionlinea1, codigobanco, numtelefono, pp, vuelto, seleccionlinea2, seleccionlinea, csub, 
+ndeboleto, seleccionsistema, usarboleto, cfinal, faltante, cboletosrestantes, seleccionboletosrestantes, bucletotalseleccion, cdepersonasl1, cdepersonasl2, 
+cdepersonasl3, cdepersonasl4, cdepersonasl5, cdepersonasl6, cdepersonasl7, cdepersonasl8, cdeboletosusados, cdeboletosl1, cdeboletosl2, cdeboletosl3, 
+cdeboletosl4, cdeboletosl5, cdeboletosl6, cdeboletosl7, cdeboletosl8, cdeboletosl1d2, cdeboletosl1d3, cdeboletosl1d4, cdeboletosl1d5, cdeboletosl1d6, cdeboletosl1d7,
+cdeboletosl2d2, cdeboletosl2d3, cdeboletosl2d4, cdeboletosl2d5, cdeboletosl2d6, cdeboletosl2d7, cdeboletosl3d2, cdeboletosl3d3, cdeboletosl3d4, cdeboletosl3d5, 
+cdeboletosl3d6, cdeboletosl3d7, cdeboletosl4d2, cdeboletosl4d3, cdeboletosl4d4, cdeboletosl4d5, cdeboletosl4d6, cdeboletosl4d7, cdeboletosl5d2, cdeboletosl5d3,
+cdeboletosl5d4, cdeboletosl5d5, cdeboletosl5d6, cdeboletosl5d7, cdeboletosl6d2, cdeboletosl6d3, cdeboletosl6d4, cdeboletosl6d5, cdeboletosl6d6, 
+cdeboletosl6d7, cdeboletosl7d2, cdeboletosl7d3, cdeboletosl7d4, cdeboletosl7d5, cdeboletosl7d6, cdeboletosl7d7, cdeboletosl8d2, cdeboletosl8d3, cdeboletosl8d4,
+cdeboletosl8d5, cdeboletosl8d6, cdeboletosl8d7:integer;
+
+boletos,nombre,apellido,si, tipodeviaje: char;
+ 
 subestacionsalida, subestaciondestino, subestacionsalidatotal, subestaciondestinototal: string;
+
 cedula, cedulacompra, cedula2: real;
 
 const 
@@ -20,6 +33,101 @@ p10 = 11;
 
 
 BEGIN
+
+	{
+	* esto generará numeros aleatorios para simular el funcionamiento de un sistema de datos que almacene
+	* la cantidad de personas  que han ingresado por línea, el promedio de ventas de cada estación y la 
+	* cantidad de boletos utilizados
+	}
+		randomize;
+			   
+	cdepersonasl1:= random(300000) + 1;
+	cdepersonasl2:= random(300000) + 1;
+	cdepersonasl3:= random(300000) + 1;
+	cdepersonasl4:= random(300000) + 1;
+	cdepersonasl5:= random(300000) + 1;
+	cdepersonasl6:= random(300000) + 1;
+	cdepersonasl7:= random(300000) + 1;
+	cdepersonasl8:= random(300000) + 1;
+	cdeboletosusados:= random(2000000) + 1;
+	{
+	* Se generan numeros aleatorios asignados a variables que representaran los 7 dias de la semana
+	* para cada linea, para asi poder sacar el promedio de ventas a la semana
+	}
+	cdeboletosl1:= random(300000) + 1;
+	
+		cdeboletosl1d2:= random(300000) + 1;
+		cdeboletosl1d3:= random(300000) + 1;
+		cdeboletosl1d4:= random(300000) + 1;
+		cdeboletosl1d5:= random(300000) + 1;
+		cdeboletosl1d6:= random(300000) + 1;
+		cdeboletosl1d7:= random(300000) + 1;
+	
+	cdeboletosl2:= random(300000) + 1;
+	
+		cdeboletosl2d2:= random(300000) + 1;
+		cdeboletosl2d3:= random(300000) + 1;
+		cdeboletosl2d4:= random(300000) + 1;
+		cdeboletosl2d5:= random(300000) + 1;
+		cdeboletosl2d6:= random(300000) + 1;
+		cdeboletosl2d7:= random(300000) + 1;
+	
+	cdeboletosl3:= random(300000) + 1;
+	
+		cdeboletosl3d2:= random(300000) + 1;
+		cdeboletosl3d3:= random(300000) + 1;
+		cdeboletosl3d4:= random(300000) + 1;
+		cdeboletosl3d5:= random(300000) + 1;
+		cdeboletosl3d6:= random(300000) + 1;
+		cdeboletosl3d7:= random(300000) + 1;
+	
+	cdeboletosl4:= random(300000) + 1;
+	
+		cdeboletosl4d2:= random(300000) + 1;
+		cdeboletosl4d3:= random(300000) + 1;
+		cdeboletosl4d4:= random(300000) + 1;
+		cdeboletosl4d5:= random(300000) + 1;
+		cdeboletosl4d6:= random(300000) + 1;
+		cdeboletosl4d7:= random(300000) + 1;
+	
+	cdeboletosl5:= random(300000) + 1;
+	
+		cdeboletosl5d2:= random(300000) + 1;
+		cdeboletosl5d3:= random(300000) + 1;
+		cdeboletosl5d4:= random(300000) + 1;
+		cdeboletosl5d5:= random(300000) + 1;
+		cdeboletosl5d6:= random(300000) + 1;
+		cdeboletosl5d7:= random(300000) + 1;
+	
+	cdeboletosl6:= random(300000) + 1;
+	
+		cdeboletosl6d2:= random(300000) + 1;
+		cdeboletosl6d3:= random(300000) + 1;
+		cdeboletosl6d4:= random(300000) + 1;
+		cdeboletosl6d5:= random(300000) + 1;
+		cdeboletosl6d6:= random(300000) + 1;
+		cdeboletosl6d7:= random(300000) + 1;
+	
+	cdeboletosl7:= random(300000) + 1;
+	
+		cdeboletosl7d2:= random(300000) + 1;
+		cdeboletosl7d3:= random(300000) + 1;
+		cdeboletosl7d4:= random(300000) + 1;
+		cdeboletosl7d5:= random(300000) + 1;
+		cdeboletosl7d6:= random(300000) + 1;
+		cdeboletosl7d7:= random(300000) + 1;
+	
+	cdeboletosl8:= random(300000) + 1;
+	
+		cdeboletosl8d2:= random(300000) + 1;
+		cdeboletosl8d3:= random(300000) + 1;
+		cdeboletosl8d4:= random(300000) + 1;
+		cdeboletosl8d5:= random(300000) + 1;
+		cdeboletosl8d6:= random(300000) + 1;
+		cdeboletosl8d7:= random(300000) + 1;
+
+
+
 repeat
 subestacionsalidatotal := '';
 subestaciondestinototal := '';
