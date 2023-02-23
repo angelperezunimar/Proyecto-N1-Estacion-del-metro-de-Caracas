@@ -11,7 +11,7 @@ cdeboletosl2d2, cdeboletosl2d3, cdeboletosl2d4, cdeboletosl2d5, cdeboletosl2d6, 
 cdeboletosl3d6, cdeboletosl3d7, cdeboletosl4d2, cdeboletosl4d3, cdeboletosl4d4, cdeboletosl4d5, cdeboletosl4d6, cdeboletosl4d7, cdeboletosl5d2, cdeboletosl5d3,
 cdeboletosl5d4, cdeboletosl5d5, cdeboletosl5d6, cdeboletosl5d7, cdeboletosl6d2, cdeboletosl6d3, cdeboletosl6d4, cdeboletosl6d5, cdeboletosl6d6, 
 cdeboletosl6d7, cdeboletosl7d2, cdeboletosl7d3, cdeboletosl7d4, cdeboletosl7d5, cdeboletosl7d6, cdeboletosl7d7, cdeboletosl8d2, cdeboletosl8d3, cdeboletosl8d4,
-cdeboletosl8d5, cdeboletosl8d6, cdeboletosl8d7:integer;
+cdeboletosl8d5, cdeboletosl8d6, cdeboletosl8d7, pdeventasl1, pdeventasl2, pdeventasl3, pdeventasl4, pdeventasl5, pdeventasl6, pdeventasl7, pdeventasl8:integer;
 
 boletos,nombre,apellido,si, tipodeviaje: char;
  
@@ -481,6 +481,7 @@ readln (a);
 					  gotoxy(15,10);writeln('|-----------------|------------------|-----------------|-----------------|');
 					  writeln('');
 					  textcolor(white);
+					  writeln('La cantidad de personas que han ingresado a esta linea el dia de hoy es: ',cdepersonasl1);
 					  writeln('La cantidad de boletos comprados son ',c);
 					  writeln('');
 					  writeln('Debera asignar una sub estacion de salida y una subestacion de destino por cada boleto que compro');
@@ -542,6 +543,7 @@ readln (a);
 					  gotoxy(15,8);writeln('|--------------------|---------------------|--------------------------|');
 					  writeln('');
 					  textcolor(white);
+					  writeln('La cantidad de personas que han ingresado a esta linea el dia de hoy es: ',cdepersonasl2);
 					  writeln('La cantidad de boletos comprados son ',c);
 					  writeln('');
 					  writeln('Debera asignar una sub estacion de salida y una subestacion de destino por cada boleto que compro');
@@ -600,6 +602,7 @@ readln (a);
 					  gotoxy(15,7);writeln('|----------------------|-----------------------|-----------------------|');
 					  writeln('');
 					  textcolor(white);
+					  writeln('La cantidad de personas que han ingresado a esta linea el dia de hoy es: ',cdepersonasl3);
 					  writeln('La cantidad de boletos comprados son ',c);
 					  writeln('');
 					  writeln('Debera asignar una sub estacion de salida y una subestacion de destino por cada boleto que compro');
@@ -659,6 +662,7 @@ readln (a);
 					  writeln('|----------------------|-----------------------|-----------------------|');
 					  writeln('');
 					  textcolor(white);
+					  writeln('La cantidad de personas que han ingresado a esta linea el dia de hoy es: ',cdepersonasl4);
 					  writeln('La cantidad de boletos comprados son ',c);
 					  writeln('');
 					  writeln('Debera asignar una sub estacion de salida y una subestacion de destino por cada boleto que compro');
@@ -718,6 +722,7 @@ readln (a);
 					  writeln('|----------------------|-----------------------|-----------------------|');
 					  writeln('');
 					  textcolor(white);
+					  writeln('La cantidad de personas que han ingresado a esta linea el dia de hoy es: ',cdepersonasl5);
 					  writeln('La cantidad de boletos comprados son ',c);
 					  writeln('');
 					  writeln('Debera asignar una sub estacion de salida y una subestacion de destino por cada boleto que compro');
@@ -774,6 +779,7 @@ readln (a);
 					  writeln('|----------------------|-----------------------|');
 					  writeln('');
 					  textcolor(white);
+					  writeln('La cantidad de personas que han ingresado a esta linea el dia de hoy es: ',cdepersonasl6);
 					  writeln('La cantidad de boletos comprados son ',c);
 					  writeln('');
 					  writeln('Debera asignar una sub estacion de salida y una subestacion de destino por cada boleto que compro');
@@ -830,6 +836,7 @@ readln (a);
 					  writeln('|--------------------|---------------------|--------------------------|');
 					  writeln('');
 					  textcolor(white);
+					  writeln('La cantidad de personas que han ingresado a esta linea el dia de hoy es: ',cdepersonasl7);
 					  writeln('La cantidad de boletos comprados son ',c);
 					  writeln('');
 					  writeln('Debera asignar una sub estacion de salida y una subestacion de destino por cada boleto que compro');
@@ -887,6 +894,11 @@ readln (a);
 					  writeln('|--------------------|---------------------|--------------------------|');
 					  writeln('');
 					  textcolor(white);
+					  writeln('La cantidad de personas que han ingresado a esta linea el dia de hoy es: ',cdepersonasl8);
+					  writeln('');
+					  
+					  writeln('Esta estacion tiene un promedio de ventas al dia de: ',cdepersonasl8);
+					  writeln('');
 					  writeln('La cantidad de boletos comprados son ',c);
 					  writeln('');
 					  writeln('Debera asignar una sub estacion de salida y una subestacion de destino por cada boleto que compro');
