@@ -7,9 +7,9 @@ a, c, d, e, f, g, h, i, j, k, l, precio, seleccion, seleccionlinea1, codigobanco
 ndeboleto, seleccionsistema, usarboleto, cfinal, faltante, cboletosrestantes, seleccionboletosrestantes, bucletotalseleccion, boletosvendidos, 
 partesistema,cedula2,cedula,cedulacompra:integer;
 
-boletos,nombre,apellido,si, tipodeviaje: char;
+boletos,si, tipodeviaje: char;
  
-subestacionsalida, subestaciondestino, subestacionsalidatotal, subestaciondestinototal, contrasena, clavevs: string;
+subestacionsalida, subestaciondestino, subestacionsalidatotal, subestaciondestinototal, contrasena, clavevs,nombre,apellido: string;
 
  
 
@@ -432,8 +432,12 @@ bucletotalseleccion := a;
 						gotoxy(35,1);writeln('=========================================================');
 						gotoxy(35,2);writeln('El boleto simple tiene una cobertura de: 1 viaje en metro');
 						gotoxy(35,3);writeln('=========================================================');
+						repeat
 						gotoxy(5,4);write('Indique cuantos boletos desea comprar:');
 						readln (c);
+						if c<=0 then
+						writeln ('ingrese una cantidad de boletos valida')
+						until c>0;
 						precio:= c*b;
 						if c>0 then
 						writeln('///Su coste es de:',precio,'-dolares///')
@@ -454,8 +458,13 @@ bucletotalseleccion := a;
 						writeln ('escoga una de las opciones');
 						until (tipodeviaje = 'a') or (tipodeviaje='b');
 						clrscr();
+						repeat
 						write ('///Indique cuantos boletos desea comprar///:');
 						readln (c);
+						if c<=0 then
+						writeln ('ingrese una cantidad de boletos valida')
+						until c>0;
+						
 						precio:=c*p2;
 						if c>0 then  writeln ('Su coste es de:',precio,'-Dolares')
 						else
@@ -465,8 +474,12 @@ bucletotalseleccion := a;
 					    gotoxy(35,1);writeln('================================================================');
 						gotoxy(35,2);writeln('El boleto ida y vuelta tiene una cobertura de: 2 viajes en metro');
 						gotoxy(35,3);writeln('================================================================');
+						repeat
 						gotoxy(5,5);write ('///Indique cuantos boletos desea comprar///:');
 						readln (c);
+						if c<=0 then
+						writeln ('ingrese una cantidad de boletos valida')
+						until c>0;
 						precio:=c*p3;
 						if c>0 then
 						writeln ('Su coste es de:',precio,'-Dolares')
@@ -487,8 +500,12 @@ bucletotalseleccion := a;
 						writeln ('escoga una de las opciones');
 						until (tipodeviaje = 'a') or (tipodeviaje='b');
 						clrscr();
+						repeat
 						write ('///Indique cuantos boletos desea comprar///:');
 						readln (c);
+						if c<=0 then
+						writeln ('ingrese una cantidad de boletos valida')
+						until c>0;
 						precio:=c*p4;
 						if c>0 then
 						writeln ('Su coste es de:',precio,'-Dolares')
@@ -499,8 +516,12 @@ bucletotalseleccion := a;
 						gotoxy(35,1);writeln('===============================================================');
 						gotoxy(35,2);writeln('El boleto multiabono tiene una cobertura de: 10 viajes en metro');
 						gotoxy(35,3);writeln('===============================================================');
+						repeat
 						gotoxy(5,5);write ('///Indique cuantos boletos desea comprar///:');
 						readln (c);
+						if c<=0 then
+						writeln ('ingrese una cantidad de boletos valida')
+						until c>0;
 						precio:=c*p5;
 						if c>0 then
 						writeln ('Su coste es de:',precio,'-Dolares')
@@ -522,8 +543,12 @@ bucletotalseleccion := a;
 						writeln ('escoga una de las opciones');
 						until (tipodeviaje = 'a') or (tipodeviaje='b');
 						clrscr();
+						repeat
 					    write ('///Indique cuantos boletos desea comprar///:');
 						readln (c);
+						if c<=0 then
+						writeln ('ingrese una cantidad de boletos valida')
+						until c>0;
 						precio:=c*p6;
 						if c>0 then
 						writeln ('Su coste es de:',precio,'-Dolares')
@@ -535,8 +560,12 @@ bucletotalseleccion := a;
 						gotoxy(30,1);writeln('=======================================================================');
 						gotoxy(30,2);writeln('El boleto estudiantil simple tiene una cobertura de: 10 viajes en metro');
 						gotoxy(30,3);writeln('=======================================================================');
+						repeat
 						gotoxy(10,5);write ('///Indique cuantos boletos desea comprar///:');
 						readln(c);
+						if c<=0 then
+						writeln ('ingrese una cantidad de boletos valida')
+						until c>0;
 						precio:=c*p7;
 						if c>0 then
 						writeln ('Su coste es de:',precio,'-Dolares')
@@ -557,9 +586,12 @@ bucletotalseleccion := a;
 						writeln ('escoga una de las opciones');
 						until (tipodeviaje = 'a') or (tipodeviaje='b');
 						clrscr();
-						
+						repeat
 						write ('///Indique cuantos boletos desea comprar///:');
 						readln(c);
+						if c<=0 then
+						writeln ('ingrese una cantidad de boletos valida')
+						until c>0;
 						precio:=c*p8;
 						if c>0 then
 						writeln ('Su coste es de:',precio,'-Dolares')
@@ -582,9 +614,12 @@ bucletotalseleccion := a;
 						until (tipodeviaje = 'a') or (tipodeviaje='b') or (tipodeviaje='c');
 						clrscr();
 					
-						
+						repeat
 						write ('///Indique cuantos boletos desea comprar///:');
 						readln(c);
+						if c<=0 then
+						writeln ('ingrese una cantidad de boletos valida')
+						until c>0;
 						precio:=c*p9;
 						if c>0 then
 						writeln('Su coste es de:',precio,'-Dolares')
@@ -609,8 +644,12 @@ bucletotalseleccion := a;
 						writeln ('escoga una de las opciones');
 						until (tipodeviaje = 'a') or (tipodeviaje='b') or (tipodeviaje='c') or (tipodeviaje= 'd') or  (tipodeviaje= 'e') or  (tipodeviaje= 'f');
 						clrscr();
+						repeat
 						write ('///Indique cuantos boletos desea comprar///:');
 						readln(c);
+						if c<=0 then
+						writeln ('ingrese una cantidad de boletos valida')
+						until c>0;
 						precio:=c*p10;
 						if c>0 then
 						writeln ('Su coste es de:',precio,'-Dolares')
@@ -635,7 +674,7 @@ bucletotalseleccion := a;
 					gotoxy(45,3);writeln('Linea 1 (1)');
 					gotoxy(15,4);writeln ('|-----------------|------------------|-----------------|-----------------|');
 					gotoxy(15,5);writeln ('|-Propatria       |-Capitolio        |-Plaza Venezuela |-Miranda         |');
-					gotoxy(15,6);writeln ('|-Perez Bonald    |-La Hoyada        |-Sabana Grande   |-Los Dos Caminos |');
+					gotoxy(15,6);writeln ('|-Perez Bonalde   |-La Hoyada        |-Sabana Grande   |-Los Dos Caminos |');
 					gotoxy(15,7);writeln ('|-Plaza Sucre     |-Parque Carabobo  |-Chacaito        |-Los Cortijos    |');
 					gotoxy(15,8);writeln ('|-Gato Negro      |-Bellas Artes     |-Chacao          |-La California   |');
 					gotoxy(15,9);writeln('|-Agua Salud      |-Colegio de Ing.  |-Altamira        |-Petare          |');
@@ -730,7 +769,7 @@ bucletotalseleccion := a;
 					  writeln('Estas son sus estaciones:');
 					  gotoxy(15,3);writeln('|-----------------|------------------|-----------------|-----------------|');
 					  gotoxy(15,4);writeln('|-Propatria       |-Capitolio        |-Plaza Venezuela |-Miranda         |');
-					  gotoxy(15,5);writeln('|-Perez Bonald    |-La Hoyada        |-Sabana Grande   |-Los Dos Caminos |');
+					  gotoxy(15,5);writeln('|-Perez Bonalde   |-La Hoyada        |-Sabana Grande   |-Los Dos Caminos |');
 					  gotoxy(15,6);writeln('|-Plaza Sucre     |-Parque Carabobo  |-Chacaito        |-Los Cortijos    |');
 					  gotoxy(15,7);writeln('|-Gato Negro      |-Bellas Artes     |-Chacao          |-La California   |');
 					  gotoxy(15,8);writeln('|-Agua Salud      |-Colegio de Ing.  |-Altamira        |-Petare          |');
@@ -755,7 +794,7 @@ bucletotalseleccion := a;
 						writeln('Estas son las estaciones disponibles:');
 						gotoxy(15,3);writeln('|-----------------|------------------|-----------------|-----------------|');
 						gotoxy(15,4);writeln('|-Propatria       |-Capitolio        |-Plaza Venezuela |-Miranda         |');
-						gotoxy(15,5);writeln('|-Perez Bonald    |-La Hoyada        |-Sabana Grande   |-Los Dos Caminos |');
+						gotoxy(15,5);writeln('|-Perez Bonalde   |-La Hoyada        |-Sabana Grande   |-Los Dos Caminos |');
 						gotoxy(15,6);writeln('|-Plaza Sucre     |-Parque Carabobo  |-Chacaito        |-Los Cortijos    |');
 						gotoxy(15,7);writeln('|-Gato Negro      |-Bellas Artes     |-Chacao          |-La California   |');
 					    gotoxy(15,8);writeln('|-Agua Salud      |-Colegio de Ing.  |-Altamira        |-Petare          |');
@@ -765,10 +804,18 @@ bucletotalseleccion := a;
 						textcolor(white);
 						writeln('Para el boleto N°', ndeboleto);
 						writeln('');
+						repeat
 						writeln('Seleccione la sub estación de salida');
 						readln(subestacionsalida);
+						if (subestacionsalida <> 'Propatria') and (subestacionsalida <> 'Perez Bonalde') and (subestacionsalida <> 'Plaza Sucre') and (subestacionsalida <> 'Gato negro') and (subestacionsalida <> 'Agua Salud') and (subestacionsalida <> 'Cano Amarillo') and (subestacionsalida <> 'Capitolio') and (subestacionsalida <> 'La hoyada') and (subestacionsalida <> 'Parque Carabobo') and (subestacionsalida <> 'Bellas Artes') and (subestacionsalida <> 'Colegio de Ing') and (subestacionsalida <> 'Plaza Venezuela') and (subestacionsalida <> 'Sabana Grande')and (subestacionsalida <> 'Chacaito') and (subestacionsalida <> 'Chacao') and (subestacionsalida <> 'Altamira') and (subestacionsalida <> 'Miranda') and (subestacionsalida <> 'Los Dos Caminos') and (subestacionsalida <> 'Los Cartijos') and (subestacionsalida <> 'La California') and (subestacionsalida <> 'Petare') and (subestacionsalida <> 'Palo Verde') then writeln('sub estación de salida incorrecta');
+						until (subestacionsalida = 'Propatria') or (subestacionsalida = 'Perez Bonalde') or (subestacionsalida = 'Plaza Sucre') or (subestacionsalida = 'Gato negro') or (subestacionsalida = 'Agua Salud') or (subestacionsalida = 'Cano Amarillo') or (subestacionsalida = 'Capitolio') or (subestacionsalida = 'La hoyada') or (subestacionsalida = 'Parque Carabobo') or (subestacionsalida = 'Bellas Artes') or (subestacionsalida = 'Colegio de Ing') or (subestacionsalida = 'Plaza Venezuela') or (subestacionsalida = 'Sabana Grande')or (subestacionsalida = 'Chacaito') or (subestacionsalida = 'Chacao') or (subestacionsalida = 'Altamira') or (subestacionsalida = 'Miranda') or (subestacionsalida = 'Los Dos Caminos') or (subestacionsalida = 'Los Cartijos') or (subestacionsalida = 'La California') or (subestacionsalida = 'Petare') or (subestacionsalida = 'Palo Verde');
+						
+						repeat
 						writeln('Seleccione la sub estación de destino');
 						readln(subestaciondestino);
+						if (subestaciondestino <> 'Propatria') and (subestaciondestino <> 'Perez Bonald') and (subestaciondestino <> 'Plaza Sucre') and (subestaciondestino <> 'Gato negro') and (subestaciondestino <> 'Agua Salud') and (subestaciondestino <> 'Cano Amarillo') and (subestaciondestino <> 'Capitolio') and (subestaciondestino <> 'La hoyada') and (subestaciondestino <> 'Parque Carabobo') and (subestaciondestino <> 'Bellas Artes') and (subestaciondestino <> 'Colegio de Ing') and (subestaciondestino <> 'Plaza Venezuela') and (subestaciondestino <> 'Sabana Grande')and (subestaciondestino <> 'Chacaito') and (subestaciondestino <> 'Chacao') and (subestaciondestino <> 'Altamira') and (subestaciondestino <> 'Miranda') and (subestacionsalida <> 'Los Dos Caminos') and (subestaciondestino <> 'Los Cartijos') and (subestaciondestino <> 'La California') and (subestaciondestino <> 'Petare') and (subestaciondestino <> 'Palo Verde') then writeln('sub estación de salida incorrecta');
+						until (subestaciondestino = 'Propatria') or (subestaciondestino = 'Perez Bonald') or (subestaciondestino = 'Plaza Sucre') or (subestaciondestino = 'Gato negro') or (subestaciondestino = 'Agua Salud') or (subestaciondestino = 'Cano Amarillo') or (subestaciondestino = 'Capitolio') or (subestaciondestino = 'La hoyada') or (subestaciondestino = 'Parque Carabobo') or (subestaciondestino = 'Bellas Artes') or (subestaciondestino = 'Colegio de Ing') or (subestaciondestino = 'Plaza Venezuela') or (subestaciondestino = 'Sabana Grande')or (subestaciondestino = 'Chacaito') or (subestaciondestino = 'Chacao') or (subestaciondestino = 'Altamira') or (subestaciondestino = 'Miranda') or (subestacionsalida = 'Los Dos Caminos') or (subestaciondestino = 'Los Cartijos') or (subestaciondestino = 'La California') or (subestaciondestino = 'Petare') or (subestaciondestino = 'Palo Verde');
+						
 						writeln('Estaciones asignadas correctamente');
 						writeln('');
 						writeln('Siguiente boleto');
@@ -830,10 +877,18 @@ bucletotalseleccion := a;
 						textcolor(white);
 						writeln('Para el boleto N°', ndeboleto);
 						writeln('');
+						repeat
 						writeln('Seleccione la sub estación de salida');
 						readln(subestacionsalida);
+						if (subestacionsalida <> 'El Silencio') and (subestacionsalida <> 'Capuchino') and (subestacionsalida <> 'Maternidad') and (subestacionsalida <> 'Artiguas') and (subestacionsalida <> 'La Paz') and (subestacionsalida <> 'La Yaguara') and (subestacionsalida <> 'Carapita') and (subestacionsalida <> 'Antimano') and (subestacionsalida <> 'Mamera') and (subestacionsalida <> 'Caricuao') and (subestacionsalida <> 'Zoologico') and (subestacionsalida <> 'Ruiz Pineda/Las adjuntas') then writeln('sub estacion incorrecta');
+						until (subestacionsalida = 'El Silencio') or (subestacionsalida = 'Capuchino') or (subestacionsalida = 'Maternidad') or (subestacionsalida = 'Artiguas') or (subestacionsalida = 'La Paz') or (subestacionsalida = 'La Yaguara') or (subestacionsalida = 'Carapita') or (subestacionsalida = 'Antimano') or (subestacionsalida = 'Mamera') or (subestacionsalida = 'Caricuao') or (subestacionsalida = 'Zoologico') or (subestacionsalida = 'Ruiz Pineda/Las adjuntas');
+						
+						repeat
 						writeln('Seleccione la sub estación de destino');
 						readln(subestaciondestino);
+						if (subestaciondestino <> 'El Silencio') and (subestaciondestino <> 'Capuchino') and (subestaciondestino <> 'Maternidad') and (subestaciondestino <> 'Artiguas') and (subestaciondestino <> 'La Paz') and (subestaciondestino <> 'La Yaguara') and (subestaciondestino <> 'Carapita') and (subestaciondestino <> 'Antimano') and (subestaciondestino <> 'Mamera') and (subestaciondestino <> 'Caricuao') and (subestaciondestino <> 'Zoologico') and (subestaciondestino <> 'Ruiz Pineda/Las adjuntas') then writeln('sub estacion incorrecta');
+						until (subestaciondestino = 'El Silencio') or (subestaciondestino = 'Capuchino') or (subestaciondestino = 'Maternidad') or (subestaciondestino = 'Artiguas') or (subestaciondestino = 'La Paz') or (subestaciondestino = 'La Yaguara') or (subestaciondestino = 'Carapita') or (subestaciondestino = 'Antimano') or (subestaciondestino = 'Mamera') or (subestaciondestino = 'Caricuao') or (subestaciondestino = 'Zoologico') or (subestaciondestino = 'Ruiz Pineda/Las adjuntas');
+						
 						writeln('Estaciones asignadas correctamente');
 						writeln('');
 						writeln('Siguiente boleto');
@@ -893,10 +948,18 @@ bucletotalseleccion := a;
 						textcolor(white);
 						writeln('Para el boleto N°', ndeboleto);
 						writeln('');
+						repeat
 						writeln('Seleccione la sub estación de salida');
 						readln(subestacionsalida);
+						if (subestacionsalida <> 'Plaza Venezuela') and (subestacionsalida <> 'Ciudad Universitaria') and (subestacionsalida <> 'Los Simbolos') and (subestacionsalida <> 'La Bandera') and (subestacionsalida <> 'El valle') and (subestacionsalida <> 'Los Jardines') and (subestacionsalida <> 'Coche') and (subestacionsalida <> 'Mercado') and (subestacionsalida <> 'La Rinconada')  then writeln('sub estacion incorrecta');
+						until (subestacionsalida = 'Plaza Venezuela') or (subestacionsalida = 'Ciudad Universitaria') or (subestacionsalida = 'Los Simbolos') or (subestacionsalida = 'La Bandera') or (subestacionsalida = 'El Valle') or (subestacionsalida = 'Los Jardines') or (subestacionsalida = 'Coche') or (subestacionsalida = 'Mercado') or (subestacionsalida = 'La Rinconada');
+						
+						repeat
 						writeln('Seleccione la sub estación de destino');
 						readln(subestaciondestino);
+						if (subestaciondestino <> 'Plaza Venezuela') and (subestaciondestino <> 'Ciudad Universitaria') and (subestaciondestino <> 'Los Simbolos') and (subestaciondestino <> 'La Bandera') and (subestaciondestino <> 'El valle') and (subestaciondestino <> 'Los Jardines') and (subestaciondestino <> 'Coche') and (subestaciondestino <> 'Mercado') and (subestaciondestino <> 'La Rinconada')  then writeln('sub estacion incorrecta');
+						until (subestaciondestino = 'Plaza Venezuela') or (subestaciondestino = 'Ciudad Universitaria') or (subestaciondestino = 'Los Simbolos') or (subestaciondestino = 'La Bandera') or (subestaciondestino = 'El Valle') or (subestaciondestino = 'Los Jardines') or (subestaciondestino = 'Coche') or (subestaciondestino = 'Mercado') or (subestaciondestino = 'La Rinconada');
+						
 						writeln('Estaciones asignadas correctamente');
 						writeln('');
 						writeln('Siguiente boleto');
@@ -960,10 +1023,17 @@ bucletotalseleccion := a;
 						textcolor(white);
 						writeln('Para el boleto N°', ndeboleto);
 						writeln('');
+						repeat
 						writeln('Seleccione la sub estación de salida');
 						readln(subestacionsalida);
+						if (subestacionsalida <> 'Zona Rental') and (subestacionsalida <> 'Parque Central') and (subestacionsalida <> 'Nuevo Circo') and (subestacionsalida <> 'Teatros') and (subestacionsalida <> 'Capuchinos') and (subestacionsalida <> 'Maternidad') and (subestacionsalida <> 'Artigas') and (subestacionsalida <> 'La paz') and (subestacionsalida <> 'La Yaragua') and (subestacionsalida <> 'Carapita') and (subestacionsalida <> 'Antiman') and (subestacionsalida <> 'Mamera') and (subestacionsalida <> 'Carapita') and (subestacionsalida = 'Ruiz Pineda/Las Adjuntas') then writeln('sub estacion incorrecta');
+						until (subestacionsalida = 'Zona Rental') or (subestacionsalida = 'Parque Central') or (subestacionsalida = 'Nuevo Circo') or (subestacionsalida = 'Teatros') or (subestacionsalida = 'Capuchinos') or (subestacionsalida = 'Maternidad') or (subestacionsalida = 'Artigas') or (subestacionsalida = 'La paz') or (subestacionsalida = 'La yaragua') or (subestacionsalida = 'Carapita') or (subestacionsalida <> 'Antiman') or (subestacionsalida <> 'Mamera') or (subestacionsalida = 'Ruiz Pineda/Las Adjuntas') ;
+						
+						repeat
 						writeln('Seleccione la sub estación de destino');
 						readln(subestaciondestino);
+						if (subestaciondestino <> 'Zona Rental') and (subestaciondestino <> 'Parque Central') and (subestaciondestino <> 'Nuevo Circo') and (subestaciondestino <> 'Teatros') and (subestaciondestino <> 'Capuchinos') and (subestaciondestino <> 'Maternidad') and (subestaciondestino <> 'Artigas') and (subestaciondestino <> 'La paz') and (subestaciondestino <> 'La Yaragua') and (subestaciondestino <> 'Carapita') and (subestaciondestino <> 'Antiman') and (subestaciondestino <> 'Mamera') and (subestaciondestino <> 'Carapita') and (subestaciondestino = 'Ruiz Pineda/Las Adjuntas') then writeln('sub estacion incorrecta');
+						until (subestaciondestino = 'Zona Rental') or (subestaciondestino = 'Parque Central') or (subestaciondestino = 'Nuevo Circo') or (subestaciondestino = 'Teatros') or (subestaciondestino = 'Capuchinos') or (subestaciondestino = 'Maternidad') or (subestaciondestino = 'Artigas') or (subestaciondestino = 'La paz') or (subestaciondestino = 'La yaragua') or (subestaciondestino = 'Carapita') or (subestaciondestino <> 'Antiman') or (subestaciondestino <> 'Mamera') or (subestaciondestino = 'Carapita') or (subestaciondestino = 'Ruiz Pineda/Las Adjuntas') ;
 						writeln('Estaciones asignadas correctamente');
 						writeln('');
 						writeln('Siguiente boleto');
@@ -1023,10 +1093,17 @@ bucletotalseleccion := a;
 						textcolor(white);
 						writeln('Para el boleto N°', ndeboleto);
 						writeln('');
+						repeat
 						writeln('Seleccione la sub estación de salida');
 						readln(subestacionsalida);
+						if (subestacionsalida <> 'Bello Monte') and (subestacionsalida <> 'Las Mercedes') and (subestacionsalida <> 'Parque Simon Bolivar') and (subestacionsalida <> 'Boleita') and (subestacionsalida <> 'El Marquez') and (subestacionsalida <> 'Warairarepano') and (subestacionsalida <> 'Bello Campo') and (subestacionsalida <> 'Hugo Chavez') and (subestacionsalida <> 'Montecristo')  then writeln('sub estacion incorrecta');
+						until (subestacionsalida = 'Bello Monte') or (subestacionsalida = 'Las Mercedes') or (subestacionsalida = 'Parque Simon Bolivar') or (subestacionsalida = 'Boleita') or (subestacionsalida = 'El Marquez') or (subestacionsalida = 'Warairarepano') or (subestacionsalida = 'Bello Campo') or (subestacionsalida = 'Hugo Chavez') or (subestacionsalida = 'Montecristo');
+						
+						repeat
 						writeln('Seleccione la sub estación de destino');
 						readln(subestaciondestino);
+						if (subestaciondestino <> 'Bello Monte') and (subestaciondestino <> 'Las Mercedes') and (subestaciondestino <> 'Parque Simon Bolivar') and (subestaciondestino <> 'Boleita') and (subestaciondestino <> 'El Marquez') and (subestaciondestino <> 'Warairarepano') and (subestaciondestino <> 'Bello Campo') and (subestaciondestino <> 'Hugo Chavez') and (subestaciondestino <> 'Montecristo')  then writeln('sub estacion incorrecta');
+						until (subestaciondestino = 'Bello Monte') or (subestaciondestino = 'Las Mercedes') or (subestaciondestino = 'Parque Simon Bolivar') or (subestaciondestino = 'Boleita') or (subestaciondestino = 'El Marquez') or (subestaciondestino = 'Warairarepano') or (subestaciondestino = 'Bello Campo') or (subestaciondestino = 'Hugo Chavez') or (subestaciondestino = 'Montecristo');
 						writeln('Estaciones asignadas correctamente');
 						writeln('');
 						writeln('Siguiente boleto');
@@ -1083,10 +1160,18 @@ bucletotalseleccion := a;
 						textcolor(white);
 						writeln('Para el boleto N°', ndeboleto);
 						writeln('');
+						repeat
 						writeln('Seleccione la sub estación de salida');
 						readln(subestacionsalida);
+						if (subestacionsalida <> 'Zoologico') and (subestacionsalida <> 'La Rinconada')  then writeln('sub estacion incorrecta');
+						until (subestacionsalida = 'Zoologico') or (subestacionsalida = 'La Rinconada');
+						
+						Repeat
 						writeln('Seleccione la sub estación de destino');
 						readln(subestaciondestino);
+						if (subestaciondestino<> 'Zoologico') and (subestaciondestino <> 'La Rinconada') then writeln ('sub estacion incorrecta');
+						until (subestaciondestino = 'Zoologico') or (subestaciondestino = 'La Rinconada');
+						
 						writeln('Estaciones asignadas correctamente');
 						writeln('');
 						writeln('Siguiente boleto');
@@ -1148,10 +1233,18 @@ bucletotalseleccion := a;
 						textcolor(white);
 						writeln('Para el boleto N°', ndeboleto);
 						writeln('');
+						repeat
 						writeln('Seleccione la sub estación de salida');
 						readln(subestacionsalida);
+						if (subestacionsalida <> 'Las Flores') and (subestacionsalida <> 'Panteon') and (subestacionsalida <> 'Socorro') and (subestacionsalida <> 'La Hoyada') and (subestacionsalida <> 'El Cristo') and (subestacionsalida <> 'Roca Tarpeya') and (subestacionsalida <> 'Presidente Medina') and (subestacionsalida <> 'INCES') and (subestacionsalida <> 'Roosevelt') and (subestacionsalida <> 'La Bandera') and (subestacionsalida <> 'Los Ilustres') then writeln('sub estacion incorrecta');
+						until (subestacionsalida = 'Las Flores') or (subestacionsalida = 'Panteon') or (subestacionsalida = 'Socorro') or (subestacionsalida = 'La Hoyada') or (subestacionsalida = 'El Cristo') or (subestacionsalida = 'Roca Tarpeya') or (subestacionsalida = 'Presidente Medina') or (subestacionsalida = 'INCES') or (subestacionsalida = 'Roosevelt') or (subestacionsalida = 'La Bandera') or (subestacionsalida <> 'Los Ilustres');
+						
+						Repeat
 						writeln('Seleccione la sub estación de destino');
 						readln(subestaciondestino);
+						if (subestaciondestino <> 'Las Flores') and (subestaciondestino <> 'Panteon') or (subestaciondestino <> 'Socorro') and (subestaciondestino <> 'La Hoyada') and (subestaciondestino <> 'El Cristo') and (subestaciondestino <> 'Roca Tarpeya') and (subestaciondestino <> 'Presidente Medina') and (subestaciondestino <> 'INCES') and (subestaciondestino <> 'Roosevelt') and (subestaciondestino <> 'La Bandera') and (subestaciondestino <> 'Los Ilustres') then writeln('sub estacion incorrecta');
+						until (subestaciondestino = 'Las FLores') or (subestaciondestino = 'Panteon') or (subestaciondestino = 'Socorro') or (subestaciondestino = 'La Hoyada') or (subestaciondestino = 'El Cristo') or (subestaciondestino = 'Roca Tarpeya') or (subestaciondestino = 'Presidente Medina') or (subestaciondestino = 'INCES') or (subestaciondestino = 'Roosevelt') or (subestaciondestino = 'La Bandera') or (subestaciondestino = 'Los Ilustres');
+						
 						writeln('Estaciones asignadas correctamente');
 						writeln('');
 						writeln('Siguiente boleto');
@@ -1213,10 +1306,18 @@ bucletotalseleccion := a;
 						textcolor(white);
 						writeln('Para el boleto N°', ndeboleto);
 						writeln('');
+						repeat
 						writeln('Seleccione la sub estación de salida');
 						readln(subestacionsalida);
+						if (subestacionsalida <> 'Petare 2') and (subestacionsalida <> '19 de Abril') and (subestacionsalida <> '5 de Julio') and (subestacionsalida <> '24 de Julio') and (subestacionsalida <> 'Warairarepano') and (subestacionsalida <> 'Caricuao') then writeln('sub estacion incorrecta');
+						until (subestacionsalida = 'Petare 2') or (subestacionsalida = '19 de Abril') or (subestacionsalida = '5 de Julio') or (subestacionsalida = '24 de Julio') or (subestacionsalida = 'Warairarepano') or (subestacionsalida = 'Caricuao'); 
+						
+						repeat
 						writeln('Seleccione la sub estación de destino');
 						readln(subestaciondestino);
+						if (subestaciondestino <> 'Petare 2') and (subestaciondestino <> '19 de Julio') and (subestaciondestino <> '5 de Julio') and (subestaciondestino <> '24 de Julio') and (subestaciondestino <> 'Warairapenao') and (subestaciondestino <> 'Caricuao') then writeln('sub estacion incorrecta');
+						until (subestaciondestino = 'Petare 2') or (subestaciondestino = '19 de Julio') or (subestaciondestino = '5 de Julio') or (subestaciondestino = '24 de Julio') or (subestaciondestino = 'Warairarepano') or (subestaciondestino = 'Caricuao');
+						
 						writeln('Estaciones asignadas correctamente');
 						writeln('');
 						writeln('Siguiente boleto');
