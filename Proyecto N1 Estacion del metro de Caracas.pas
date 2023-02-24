@@ -1505,9 +1505,10 @@ bucletotalseleccion := a;
 		
 		3:
 		begin
-			writeln ('La cantidad de boletos usados fue de:',cdeboletosusados);
+			writeln ('La cantidad de boletos usados fue de:',cdeboletosusados);  {Se agrego el mensaje de la cantidad de boletos usada}
+	
 			writeln('');
-			writeln('presione enter para continuar');
+			writeln('presione enter para continuar'); 
 			readln();
 		
 		
