@@ -1016,8 +1016,20 @@ readln (a);
 					
 						
 					end;			
-						
-						  writeln(subestacionsalidatotal,', ', subestaciondestinototal);
+						  writeln('D A T O S   D E   L A   C O M P R A');
+						  writeln('|-------------------------------------------------------------------|');
+					      writeln('| Nombre: ', nombre);
+						  writeln('| Apellido: ', apellido);
+						  writeln('| Cedula: ', cedula);
+						  writeln('|-------------------------------------------------------------------|');
+						  writeln('');
+						  writeln('SUB ESTACIONES DE SALIDA ASIGNADAS:');
+						  writeln('');
+						  writeln(subestacionsalidatotal);
+						  writeln('');
+						  writeln('SUB ESTACIONES DE DESTINO ASIGNADAS');
+						  writeln('');
+						  writeln(subestaciondestinototal);
 						
 				END;
 		
