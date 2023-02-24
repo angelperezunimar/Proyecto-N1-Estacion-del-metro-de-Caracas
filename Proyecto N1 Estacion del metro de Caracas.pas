@@ -56,77 +56,77 @@ BEGIN
 	* para cada linea, para asi poder sacar el promedio de ventas a la semana
 	}
 	
-	cdeboletosl1:= random(300000) + 100000;
+	cdeboletosl1:= random(300000) + 150000;
 	
-		cdeboletosl1d2:= random(300000) + 100000;
-		cdeboletosl1d3:= random(300000) + 100000;
-		cdeboletosl1d4:= random(300000) + 100000;
-		cdeboletosl1d5:= random(300000) + 100000;
-		cdeboletosl1d6:= random(300000) + 100000;
-		cdeboletosl1d7:= random(300000) + 100000;
+		cdeboletosl1d2:= random(300000) + 150000;
+		cdeboletosl1d3:= random(300000) + 150000;
+		cdeboletosl1d4:= random(300000) + 150000;
+		cdeboletosl1d5:= random(300000) + 150000;
+		cdeboletosl1d6:= random(300000) + 150000;
+		cdeboletosl1d7:= random(300000) + 150000;
 	
-	cdeboletosl2:= random(300000) + 100000;
+	cdeboletosl2:= random(300000) + 150000;
 	
-		cdeboletosl2d2:= random(300000) + 100000;
-		cdeboletosl2d3:= random(300000) + 100000;
-		cdeboletosl2d4:= random(300000) + 100000;
-		cdeboletosl2d5:= random(300000) + 100000;
-		cdeboletosl2d6:= random(300000) + 100000;
-		cdeboletosl2d7:= random(300000) + 100000;
+		cdeboletosl2d2:= random(300000) + 150000;
+		cdeboletosl2d3:= random(300000) + 150000;
+		cdeboletosl2d4:= random(300000) + 150000;
+		cdeboletosl2d5:= random(300000) + 150000;
+		cdeboletosl2d6:= random(300000) + 150000;
+		cdeboletosl2d7:= random(300000) + 150000;
 	
-	cdeboletosl3:= random(300000) + 100000;
+	cdeboletosl3:= random(300000) + 150000;
 	
-		cdeboletosl3d2:= random(300000) + 100000;
-		cdeboletosl3d3:= random(300000) + 100000;
-		cdeboletosl3d4:= random(300000) + 100000;
-		cdeboletosl3d5:= random(300000) + 100000;
-		cdeboletosl3d6:= random(300000) + 100000;
-		cdeboletosl3d7:= random(300000) + 100000;
+		cdeboletosl3d2:= random(300000) + 150000;
+		cdeboletosl3d3:= random(300000) + 15000;
+		cdeboletosl3d4:= random(300000) + 1500000;
+		cdeboletosl3d5:= random(300000) + 150000;
+		cdeboletosl3d6:= random(300000) + 150000;
+		cdeboletosl3d7:= random(300000) + 150000;
 	
-	cdeboletosl4:= random(300000) + 100000;
+	cdeboletosl4:= random(300000) + 150000;
 	
-		cdeboletosl4d2:= random(300000) + 100000;
-		cdeboletosl4d3:= random(300000) + 100000;
-		cdeboletosl4d4:= random(300000) + 100000;
-		cdeboletosl4d5:= random(300000) + 100000;
-		cdeboletosl4d6:= random(300000) + 100000;
-		cdeboletosl4d7:= random(300000) + 100000;
+		cdeboletosl4d2:= random(300000) + 150000;
+		cdeboletosl4d3:= random(300000) + 150000;
+		cdeboletosl4d4:= random(300000) + 150000;
+		cdeboletosl4d5:= random(300000) + 150000;
+		cdeboletosl4d6:= random(300000) + 150000;
+		cdeboletosl4d7:= random(300000) + 150000;
 	
-	cdeboletosl5:= random(300000) + 100000;
+	cdeboletosl5:= random(300000) + 150000;
 	
-		cdeboletosl5d2:= random(300000) + 100000;
-		cdeboletosl5d3:= random(300000) + 100000;
-		cdeboletosl5d4:= random(300000) + 100000;
-		cdeboletosl5d5:= random(300000) + 100000;
-		cdeboletosl5d6:= random(300000) + 100000;
-		cdeboletosl5d7:= random(300000) + 100000;
+		cdeboletosl5d2:= random(300000) + 150000;
+		cdeboletosl5d3:= random(300000) + 150000;
+		cdeboletosl5d4:= random(300000) + 150000;
+		cdeboletosl5d5:= random(300000) + 150000;
+		cdeboletosl5d6:= random(300000) + 150000;
+		cdeboletosl5d7:= random(300000) + 150000;
 	
-	cdeboletosl6:= random(300000) + 100000;
+	cdeboletosl6:= random(300000) + 150000;
 	
-		cdeboletosl6d2:= random(300000) + 100000;
-		cdeboletosl6d3:= random(300000) + 100000;
-		cdeboletosl6d4:= random(300000) + 100000;
-		cdeboletosl6d5:= random(300000) + 100000;
-		cdeboletosl6d6:= random(300000) + 100000;
-		cdeboletosl6d7:= random(300000) + 100000;
+		cdeboletosl6d2:= random(300000) + 150000;
+		cdeboletosl6d3:= random(300000) + 150000;
+		cdeboletosl6d4:= random(300000) + 150000;
+		cdeboletosl6d5:= random(300000) + 150000;
+		cdeboletosl6d6:= random(300000) + 150000;
+		cdeboletosl6d7:= random(300000) + 150000;
 	
-	cdeboletosl7:= random(300000) + 100000;
+	cdeboletosl7:= random(300000) + 150000;
 	
-		cdeboletosl7d2:= random(300000) + 100000;
-		cdeboletosl7d3:= random(300000) + 100000;
-		cdeboletosl7d4:= random(300000) + 100000;
-		cdeboletosl7d5:= random(300000) + 100000;
-		cdeboletosl7d6:= random(300000) + 100000;
-		cdeboletosl7d7:= random(300000) + 100000;
+		cdeboletosl7d2:= random(300000) + 150000;
+		cdeboletosl7d3:= random(300000) + 150000;
+		cdeboletosl7d4:= random(300000) + 150000;
+		cdeboletosl7d5:= random(300000) + 150000;
+		cdeboletosl7d6:= random(300000) + 150000;
+		cdeboletosl7d7:= random(300000) + 150000;
 	
-	cdeboletosl8:= random(300000) + 100000;
+	cdeboletosl8:= random(300000) + 150000;
 	
-		cdeboletosl8d2:= random(300000) + 100000;
-		cdeboletosl8d3:= random(300000) + 100000;
-		cdeboletosl8d4:= random(300000) + 100000;
-		cdeboletosl8d5:= random(300000) + 100000;
-		cdeboletosl8d6:= random(300000) + 100000;
-		cdeboletosl8d7:= random(300000) + 100000;
+		cdeboletosl8d2:= random(300000) + 150000;
+		cdeboletosl8d3:= random(300000) + 150000;
+		cdeboletosl8d4:= random(300000) + 150000;
+		cdeboletosl8d5:= random(300000) + 150000;
+		cdeboletosl8d6:= random(300000) + 150000;
+		cdeboletosl8d7:= random(300000) + 150000;
 
 	{
 	* Calculos de los promedios de ventas de las lineas
@@ -1224,6 +1224,13 @@ readln (a);
 		1:
 		begin
 		
+		
+		
+		end;
+		
+		2:
+		begin
+		
 		writeln('PROMEDIO DE VENTAS POR LINEA A LA SEMANA'); 
 		writeln(''); 
 		writeln('La "LINEA 1" tiene un promedio de ventas semanales de ', pdeventasl1);
@@ -1244,14 +1251,6 @@ readln (a);
 		writeln('');
 		writeln('Presione Enter para Continuar');
 		readln();
-		
-		
-		end;
-		
-		2:
-		begin
-		
-		
 		
 		end;
 		
