@@ -42,7 +42,7 @@ BEGIN
 	* la cantidad de personas  que han ingresado por línea, el promedio de ventas de cada estación y la 
 	* cantidad de boletos utilizados
 	}
-		randomize;
+		randomize; {Se mejoro el sistema de numeros aleatorios para la simulacion}
 			   
 	cdepersonasl1:= random(300000) + 150000;
 		if cdepersonasl1<0 then
