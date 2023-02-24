@@ -508,7 +508,6 @@ readln (a);
 					  gotoxy(15,9);writeln('|-Cano Amarillo   |                  |                 |-Palo Verde      |');		
 					  gotoxy(15,10);writeln('|-----------------|------------------|-----------------|-----------------|');
 					  writeln('');
-					  writeln('La "LINEA 1" tiene un promedio de ventas semanales de ', pdeventasl1);
 					  textcolor(white);
 					  writeln('La cantidad de personas que han ingresado a esta linea el dia de hoy es: ',cdepersonasl1);
 					  writeln('La cantidad de boletos comprados son ',c);
@@ -576,7 +575,6 @@ readln (a);
 					  gotoxy(15,7);writeln('|-Artiguas           |-Antimano            |-Ruiz Pineda/Las adjuntas |');	
 					  gotoxy(15,8);writeln('|--------------------|---------------------|--------------------------|');
 					  writeln('');
-					  writeln('La "LINEA 2" tiene un promedio de ventas semanales de ', pdeventasl2);
 					  textcolor(white);
 					  writeln('La cantidad de personas que han ingresado a esta linea el dia de hoy es: ',cdepersonasl2);
 					  writeln('La cantidad de boletos comprados son ',c);
@@ -641,7 +639,6 @@ readln (a);
 					  gotoxy(15,6);writeln('|-Los Simbolos         |-Los Jardines          |-La Rinconada          |');
 					  gotoxy(15,7);writeln('|----------------------|-----------------------|-----------------------|');
 					  writeln('');
-					  writeln('La "LINEA 3" tiene un promedio de ventas semanales de ', pdeventasl3);
 					  textcolor(white);
 					  writeln('La cantidad de personas que han ingresado a esta linea el dia de hoy es: ',cdepersonasl3);
 					  writeln('La cantidad de boletos comprados son ',c);
@@ -707,7 +704,6 @@ readln (a);
 					  writeln('|-Capuchinos           |-Carapita              |                       |');
 					  writeln('|----------------------|-----------------------|-----------------------|');
 					  writeln('');
-					  writeln('La "LINEA 4" tiene un promedio de ventas semanales de ', pdeventasl4);
 					  textcolor(white);
 					  writeln('La cantidad de personas que han ingresado a esta linea el dia de hoy es: ',cdepersonasl4);
 					  writeln('La cantidad de boletos comprados son ',c);
@@ -773,7 +769,6 @@ readln (a);
 					  writeln('|-Parque Simon Bolivar |-Montecristo           |-Warairarepano         |');
 					  writeln('|----------------------|-----------------------|-----------------------|');
 					  writeln('');
-					  writeln('La "LINEA 5" tiene un promedio de ventas semanales de ', pdeventasl5);
 					  textcolor(white);
 					  writeln('La cantidad de personas que han ingresado a esta linea el dia de hoy es: ',cdepersonasl5);
 					  writeln('La cantidad de boletos comprados son ',c);
@@ -836,7 +831,6 @@ readln (a);
 					  writeln('|-Zoologico            |-La Rinconada          |');
 					  writeln('|----------------------|-----------------------|');
 					  writeln('');
-					  writeln('La "LINEA 6" tiene un promedio de ventas semanales de ', pdeventasl6);
 					  textcolor(white);
 					  writeln('La cantidad de personas que han ingresado a esta linea el dia de hoy es: ',cdepersonasl6);
 					  writeln('La cantidad de boletos comprados son ',c);
@@ -899,7 +893,6 @@ readln (a);
 					  writeln('|-La Hoyada          |-INCES               |                          |');	
 					  writeln('|--------------------|---------------------|--------------------------|');
 					  writeln('');
-					  writeln('La "LINEA 7" tiene un promedio de ventas semanales de ', pdeventasl7);
 					  textcolor(white);
 					  writeln('La cantidad de personas que han ingresado a esta linea el dia de hoy es: ',cdepersonasl7);
 					  writeln('La cantidad de boletos comprados son ',c);
@@ -963,7 +956,6 @@ readln (a);
 					  writeln('|-19 de Abril        |-24 de Julio         |-Caricuao                 |');
 					  writeln('|--------------------|---------------------|--------------------------|');
 					  writeln('');
-					  writeln('La "LINEA CLABETREN" tiene un promedio de ventas semanales de ', pdeventasl8);
 					  textcolor(white);
 					  writeln('La cantidad de personas que han ingresado a esta linea el dia de hoy es: ',cdepersonasl8);
 					  writeln('');
@@ -1218,28 +1210,55 @@ readln (a);
 		
 		until contrasena = clavevs;
 		
+		clrscr();
 		writeln('¿Cual parte del sistema desea visualizar?');
 		writeln('');
 		writeln('1.Cantidad de personas que han ingresado por linea');
 		writeln('');
-		writeln('2.Promedio de ventas por estacion');
+		writeln('2.Promedio de ventas por linea a la semana');
 		writeln('');
-		writeln('3.Canridad de boletos utilizados');
+		writeln('3.Cantidad de boletos utilizados');
 		readln(partesistema);
 		
 		case partesistema of
 		1:
 		begin
 		
+		writeln('PROMEDIO DE VENTAS POR LINEA A LA SEMANA'); 
+		writeln(''); 
+		writeln('La "LINEA 1" tiene un promedio de ventas semanales de ', pdeventasl1);
+		writeln('');
+		writeln('La "LINEA 2" tiene un promedio de ventas semanales de ', pdeventasl2);
+		writeln('');
+		writeln('La "LINEA 3" tiene un promedio de ventas semanales de ', pdeventasl3);
+		writeln('');
+		writeln('La "LINEA 4" tiene un promedio de ventas semanales de ', pdeventasl4);
+		writeln('');
+		writeln('La "LINEA 5" tiene un promedio de ventas semanales de ', pdeventasl5);
+		writeln('');
+		writeln('La "LINEA 6" tiene un promedio de ventas semanales de ', pdeventasl6);
+		writeln('');
+		writeln('La "LINEA 7" tiene un promedio de ventas semanales de ', pdeventasl7);
+		writeln('');
+		writeln('La "LINEA CLABETREN" tiene un promedio de ventas semanales de ', pdeventasl8);
+		writeln('');
+		writeln('Presione Enter para Continuar');
+		readln();
+		
+		
 		end;
 		
 		2:
 		begin
 		
+		
+		
 		end;
 		
 		3:
 		begin
+		
+		
 		
 		end;
 		
