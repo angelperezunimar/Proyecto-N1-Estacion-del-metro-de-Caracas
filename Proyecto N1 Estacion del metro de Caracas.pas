@@ -12,11 +12,11 @@ cdeboletosl3d6, cdeboletosl3d7, cdeboletosl4d2, cdeboletosl4d3, cdeboletosl4d4, 
 cdeboletosl5d4, cdeboletosl5d5, cdeboletosl5d6, cdeboletosl5d7, cdeboletosl6d2, cdeboletosl6d3, cdeboletosl6d4, cdeboletosl6d5, cdeboletosl6d6, 
 cdeboletosl6d7, cdeboletosl7d2, cdeboletosl7d3, cdeboletosl7d4, cdeboletosl7d5, cdeboletosl7d6, cdeboletosl7d7, cdeboletosl8d2, cdeboletosl8d3, cdeboletosl8d4,
 cdeboletosl8d5, cdeboletosl8d6, cdeboletosl8d7, pdeventasl1, pdeventasl2, pdeventasl3, pdeventasl4, pdeventasl5, pdeventasl6, pdeventasl7, pdeventasl8, 
-cdeboletosusadostotal, boletosvendidos, pdeventasl1t, pdeventasl2t, pdeventasl3t, pdeventasl4t, pdeventasl5t, pdeventasl6t, pdeventasl7t, pdeventasl8t:integer;
+cdeboletosusadostotal, boletosvendidos, pdeventasl1t, pdeventasl2t, pdeventasl3t, pdeventasl4t, pdeventasl5t, pdeventasl6t, pdeventasl7t, pdeventasl8t, partesistema:integer;
 
 boletos,nombre,apellido,si, tipodeviaje: char;
  
-subestacionsalida, subestaciondestino, subestacionsalidatotal, subestaciondestinototal: string;
+subestacionsalida, subestaciondestino, subestacionsalidatotal, subestaciondestinototal, contrasena, clavevs: string;
 
 cedula, cedulacompra, cedula2: real;
 
@@ -34,7 +34,6 @@ p10 = 11;
 
 
 BEGIN
-
 	{
 	* esto generará numeros aleatorios para simular el funcionamiento de un sistema de datos que almacene
 	* la cantidad de personas  que han ingresado por línea, el promedio de ventas de cada estación y la 
@@ -42,15 +41,15 @@ BEGIN
 	}
 		randomize;
 			   
-	cdepersonasl1:= random(300000) + 1;
-	cdepersonasl2:= random(300000) + 1;
-	cdepersonasl3:= random(300000) + 1;
-	cdepersonasl4:= random(300000) + 1;
-	cdepersonasl5:= random(300000) + 1;
-	cdepersonasl6:= random(300000) + 1;
-	cdepersonasl7:= random(300000) + 1;
-	cdepersonasl8:= random(300000) + 1;
-	cdeboletosusados:= random(2000000) + 1;
+	cdepersonasl1:= random(300000) + 150000;
+	cdepersonasl2:= random(300000) + 150000;
+	cdepersonasl3:= random(300000) + 150000;
+	cdepersonasl4:= random(300000) + 150000;
+	cdepersonasl5:= random(300000) + 150000;
+	cdepersonasl6:= random(300000) + 150000;
+	cdepersonasl7:= random(300000) + 150000;
+	cdepersonasl8:= random(300000) + 150000;
+	cdeboletosusados:= random(2000000) + 500000;
 	
 	{
 	* Se generan numeros aleatorios asignados a variables que representaran los 7 dias de la semana
@@ -174,6 +173,9 @@ readln (a);
 			readln(nombre);
 			write('---apellido:');
 			readln(apellido);
+			write('ASIGNE UNA CLAVE A SU USUARIO');
+			write('----Clave:');
+			readln(contrasena);
 			clrscr();
 			end;
 				begin
@@ -1204,7 +1206,46 @@ readln (a);
 		end;
 		
 		3:begin
-		writeln('Tenga buen dia');
+		repeat
+		writeln('Ingrese su clave de usuario:');
+		readln(clavevs);
+		
+		if contrasena <> clavevs then 
+		
+		writeln('Clave incorrecta')
+		
+		else
+		
+		until contrasena = clavevs;
+		
+		writeln('¿Cual parte del sistema desea visualizar?');
+		writeln('');
+		writeln('1.Cantidad de personas que han ingresado por linea');
+		writeln('');
+		writeln('2.Promedio de ventas por estacion');
+		writeln('');
+		writeln('3.Canridad de boletos utilizados');
+		readln(partesistema);
+		
+		case partesistema of
+		1:
+		begin
+		
+		end;
+		
+		2:
+		begin
+		
+		end;
+		
+		3:
+		begin
+		
+		end;
+		
+		
+		end;
+		
 		end;
 		
 		end;
