@@ -423,7 +423,7 @@ bucletotalseleccion := a;
 						end
 						else writeln ('Seleccione el tipo de boleto que desea escribiendo la letra que lo clasifica y pulsando [Enter]');
 												
-						readln(boletos); {agregando boletos}
+						readln(boletos); {agregando boletos} {Se mejoro la seleccion de boletos y viajes}
 						clrscr();
 			        
 			        
