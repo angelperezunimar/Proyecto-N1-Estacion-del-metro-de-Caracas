@@ -4,22 +4,24 @@ uses crt;
 
 var 
 a, c, d, e, f, g, h, i, j, k, l, precio, seleccion, seleccionlinea1, codigobanco, numtelefono, pp, vuelto, seleccionlinea2, seleccionlinea, csub, 
-ndeboleto, seleccionsistema, usarboleto, cfinal, faltante, cboletosrestantes, seleccionboletosrestantes, bucletotalseleccion, cdepersonasl1, cdepersonasl2, 
-cdepersonasl3, cdepersonasl4, cdepersonasl5, cdepersonasl6, cdepersonasl7, cdepersonasl8, cdeboletosusados, cdeboletosl1, cdeboletosl2, cdeboletosl3, 
-cdeboletosl4, cdeboletosl5, cdeboletosl6, cdeboletosl7, cdeboletosl8, cdeboletosl1d2, cdeboletosl1d3, cdeboletosl1d4, cdeboletosl1d5, cdeboletosl1d6, cdeboletosl1d7,
-cdeboletosl2d2, cdeboletosl2d3, cdeboletosl2d4, cdeboletosl2d5, cdeboletosl2d6, cdeboletosl2d7, cdeboletosl3d2, cdeboletosl3d3, cdeboletosl3d4, cdeboletosl3d5, 
-cdeboletosl3d6, cdeboletosl3d7, cdeboletosl4d2, cdeboletosl4d3, cdeboletosl4d4, cdeboletosl4d5, cdeboletosl4d6, cdeboletosl4d7, cdeboletosl5d2, cdeboletosl5d3,
-cdeboletosl5d4, cdeboletosl5d5, cdeboletosl5d6, cdeboletosl5d7, cdeboletosl6d2, cdeboletosl6d3, cdeboletosl6d4, cdeboletosl6d5, cdeboletosl6d6, 
-cdeboletosl6d7, cdeboletosl7d2, cdeboletosl7d3, cdeboletosl7d4, cdeboletosl7d5, cdeboletosl7d6, cdeboletosl7d7, cdeboletosl8d2, cdeboletosl8d3, cdeboletosl8d4,
-cdeboletosl8d5, cdeboletosl8d6, cdeboletosl8d7, pdeventasl1, pdeventasl2, pdeventasl3, pdeventasl4, pdeventasl5, pdeventasl6, pdeventasl7, pdeventasl8, 
-cdeboletosusadostotal, boletosvendidos, pdeventasl1t, pdeventasl2t, pdeventasl3t, pdeventasl4t, pdeventasl5t, pdeventasl6t, pdeventasl7t, pdeventasl8t, 
-partesistema, cdepersonastotal:integer;
+ndeboleto, seleccionsistema, usarboleto, cfinal, faltante, cboletosrestantes, seleccionboletosrestantes, bucletotalseleccion, boletosvendidos, 
+partesistema,cedula2,cedula,cedulacompra:integer;
 
 boletos,nombre,apellido,si, tipodeviaje: char;
  
 subestacionsalida, subestaciondestino, subestacionsalidatotal, subestaciondestinototal, contrasena, clavevs: string;
 
-cedula, cedulacompra, cedula2: real;
+ 
+
+cdepersonasl1, cdepersonasl2, cdepersonasl3, cdepersonasl4, cdepersonasl5, cdepersonasl6, cdepersonasl7, cdepersonasl8, cdeboletosusados, cdeboletosl1, 
+cdeboletosl2, cdeboletosl3, cdeboletosl4, cdeboletosl5, cdeboletosl6, cdeboletosl7, cdeboletosl8, cdeboletosl1d2, cdeboletosl1d3, cdeboletosl1d4, 
+cdeboletosl1d5, cdeboletosl1d6, cdeboletosl1d7, cdeboletosl2d2, cdeboletosl2d3, cdeboletosl2d4, cdeboletosl2d5, cdeboletosl2d6, cdeboletosl2d7, 
+cdeboletosl3d2, cdeboletosl3d3, cdeboletosl3d4, cdeboletosl3d5, cdeboletosl3d6, cdeboletosl3d7, cdeboletosl4d2, cdeboletosl4d3, cdeboletosl4d4, 
+cdeboletosl4d5, cdeboletosl4d6, cdeboletosl4d7, cdeboletosl5d2, cdeboletosl5d3,cdeboletosl5d4, cdeboletosl5d5, cdeboletosl5d6, cdeboletosl5d7, 
+cdeboletosl6d2, cdeboletosl6d3, cdeboletosl6d4, cdeboletosl6d5, cdeboletosl6d6, cdeboletosl6d7, cdeboletosl7d2, cdeboletosl7d3, cdeboletosl7d4, 
+cdeboletosl7d5, cdeboletosl7d6, cdeboletosl7d7, cdeboletosl8d2, cdeboletosl8d3, cdeboletosl8d4, cdeboletosl8d5, cdeboletosl8d6, cdeboletosl8d7, 
+pdeventasl1, pdeventasl2, pdeventasl3, pdeventasl4, pdeventasl5, pdeventasl6, pdeventasl7, pdeventasl8, cdeboletosusadostotal, pdeventasl1t, 
+pdeventasl2t, pdeventasl3t, pdeventasl4t, pdeventasl5t, pdeventasl6t, pdeventasl7t, pdeventasl8t, cdepersonastotal: Longint;
 
 const 
 b = 2;
@@ -43,14 +45,45 @@ BEGIN
 		randomize;
 			   
 	cdepersonasl1:= random(300000) + 150000;
+		if cdepersonasl1<0 then
+		cdepersonasl1 := cdepersonasl1 * -1;
+		
 	cdepersonasl2:= random(300000) + 150000;
+			
+		if cdepersonasl2<0 then
+		cdepersonasl2 := cdepersonasl1 * -1;
+	
 	cdepersonasl3:= random(300000) + 150000;
+	
+		if cdepersonasl1<0 then
+		cdepersonasl3 := cdepersonasl3 * -1;
+		
 	cdepersonasl4:= random(300000) + 150000;
+		if cdepersonasl1<0 then
+		cdepersonasl4 := cdepersonasl4 * -1;
+		
 	cdepersonasl5:= random(300000) + 150000;
+		if cdepersonasl5<0 then
+		cdepersonasl5 := cdepersonasl5 * -1;
+		
 	cdepersonasl6:= random(300000) + 150000;
+		if cdepersonasl6<0 then
+		cdepersonasl6 := cdepersonasl6 * -1;
+		
 	cdepersonasl7:= random(300000) + 150000;
+	
+		if cdepersonasl7<0 then
+		cdepersonasl7 := cdepersonasl7 * -1;
+	
 	cdepersonasl8:= random(300000) + 150000;
+		if cdepersonasl8<0 then
+		cdepersonasl8 := cdepersonasl8 * -1;
+	
 	cdeboletosusados:= random(2000000) + 500000;
+		if cdeboletosusados<0 then
+		cdeboletosusados := cdeboletosusados * -1;
+		
+	
 	
 	{
 	* Se generan numeros aleatorios asignados a variables que representaran los 7 dias de la semana
@@ -58,76 +91,230 @@ BEGIN
 	}
 	
 	cdeboletosl1:= random(300000) + 150000;
+		if cdeboletosl1<0 then
+		cdeboletosl1:= cdeboletosl1*-1;
 	
 		cdeboletosl1d2:= random(300000) + 150000;
+			if cdeboletosl1d2<0 then
+			cdeboletosl1d2:= cdeboletosl1d2*-1;
+		
 		cdeboletosl1d3:= random(300000) + 150000;
+			if cdeboletosl1d3<0 then
+			cdeboletosl1d3:= cdeboletosl1d3*-1;
+			
 		cdeboletosl1d4:= random(300000) + 150000;
+			if cdeboletosl1d4<0 then
+			cdeboletosl1d4:= cdeboletosl1d4*-1;
+		
 		cdeboletosl1d5:= random(300000) + 150000;
+			if cdeboletosl1d5<0 then
+			cdeboletosl1d5:= cdeboletosl1d5*-1;
+		
 		cdeboletosl1d6:= random(300000) + 150000;
+			if cdeboletosl1d6<0 then
+			cdeboletosl1d6:= cdeboletosl1d6*-1;
+			
 		cdeboletosl1d7:= random(300000) + 150000;
+			if cdeboletosl1d7<0 then
+			cdeboletosl1d7:= cdeboletosl1d7*-1;
 	
 	cdeboletosl2:= random(300000) + 150000;
+			if cdeboletosl2<0 then
+			cdeboletosl2:= cdeboletosl2*-1;
 	
 		cdeboletosl2d2:= random(300000) + 150000;
+			if cdeboletosl2d2<0 then
+			cdeboletosl2d2:= cdeboletosl2d2*-1;
+		
 		cdeboletosl2d3:= random(300000) + 150000;
+			if cdeboletosl2d3<0 then
+			cdeboletosl2d3:= cdeboletosl2d3*-1;
+			
 		cdeboletosl2d4:= random(300000) + 150000;
+			if cdeboletosl2d4<0 then
+			cdeboletosl2d4:= cdeboletosl2d4*-1;
+			
 		cdeboletosl2d5:= random(300000) + 150000;
+			if cdeboletosl2d5<0 then
+			cdeboletosl2d5:= cdeboletosl2d5*-1;
+			
 		cdeboletosl2d6:= random(300000) + 150000;
+			if cdeboletosl2d6<0 then
+			cdeboletosl2d6:= cdeboletosl2d6*-1;
+		
 		cdeboletosl2d7:= random(300000) + 150000;
+			if cdeboletosl2d7<0 then
+			cdeboletosl2d7:= cdeboletosl2d7*-1;
 	
 	cdeboletosl3:= random(300000) + 150000;
+			if cdeboletosl3<0 then
+			cdeboletosl3:= cdeboletosl3*-1;
 	
 		cdeboletosl3d2:= random(300000) + 150000;
+			if cdeboletosl3d2<0 then
+			cdeboletosl3d2:= cdeboletosl3d2*-1;
+		
 		cdeboletosl3d3:= random(300000) + 15000;
+			if cdeboletosl3d3<0 then
+			cdeboletosl3d3:= cdeboletosl3d3*-1;
+		
 		cdeboletosl3d4:= random(300000) + 1500000;
+			if cdeboletosl3d4<0 then
+			cdeboletosl3d4:= cdeboletosl3d4*-1;
+			
 		cdeboletosl3d5:= random(300000) + 150000;
+			if cdeboletosl3d5<0 then
+			cdeboletosl3d5:= cdeboletosl3d5*-1;
+			
 		cdeboletosl3d6:= random(300000) + 150000;
+			if cdeboletosl3d6<0 then
+			cdeboletosl3d6:= cdeboletosl3d6*-1;
+			
 		cdeboletosl3d7:= random(300000) + 150000;
+			if cdeboletosl3d7<0 then
+			cdeboletosl3d7:= cdeboletosl3d7*-1;
 	
 	cdeboletosl4:= random(300000) + 150000;
+			if cdeboletosl4<0 then
+			cdeboletosl4:= cdeboletosl4*-1;
 	
 		cdeboletosl4d2:= random(300000) + 150000;
+			if cdeboletosl4d2<0 then
+			cdeboletosl4d2:= cdeboletosl4d2*-1;
+			
+			
 		cdeboletosl4d3:= random(300000) + 150000;
+			if cdeboletosl4d3<0 then
+			cdeboletosl4d3:= cdeboletosl4d3*-1;
+			
 		cdeboletosl4d4:= random(300000) + 150000;
+			if cdeboletosl4d4<0 then
+			cdeboletosl4d4:= cdeboletosl4d4*-1;
+			
 		cdeboletosl4d5:= random(300000) + 150000;
+			if cdeboletosl4d5<0 then
+			cdeboletosl4d5:= cdeboletosl4d5*-1;
+		
 		cdeboletosl4d6:= random(300000) + 150000;
+			if cdeboletosl4d6<0 then
+			cdeboletosl4d6:= cdeboletosl4d6*-1;
+		
 		cdeboletosl4d7:= random(300000) + 150000;
+			if cdeboletosl4d7<0 then
+			cdeboletosl4d7:= cdeboletosl4d7*-1;
 	
 	cdeboletosl5:= random(300000) + 150000;
+			if cdeboletosl5<0 then
+			cdeboletosl5:= cdeboletosl5*-1;
 	
 		cdeboletosl5d2:= random(300000) + 150000;
+			if cdeboletosl5d2<0 then
+			cdeboletosl5d2:= cdeboletosl5d2*-1;
+		
 		cdeboletosl5d3:= random(300000) + 150000;
+			if cdeboletosl5d3<0 then
+			cdeboletosl5d3:= cdeboletosl5d3*-1;
+			
 		cdeboletosl5d4:= random(300000) + 150000;
+			if cdeboletosl5d4<0 then
+			cdeboletosl5d4:= cdeboletosl5d4*-1;
+		
 		cdeboletosl5d5:= random(300000) + 150000;
+			if cdeboletosl5d5<0 then
+			cdeboletosl5d5:= cdeboletosl5d5*-1;
+			
 		cdeboletosl5d6:= random(300000) + 150000;
+			if cdeboletosl5d6<0 then
+			cdeboletosl5d6:= cdeboletosl5d6*-1;
+		
 		cdeboletosl5d7:= random(300000) + 150000;
+			if cdeboletosl5d7<0 then
+			cdeboletosl5d7:= cdeboletosl5d7*-1;
 	
 	cdeboletosl6:= random(300000) + 150000;
-	
-		cdeboletosl6d2:= random(300000) + 150000;
+			if cdeboletosl6<0 then
+			cdeboletosl6:= cdeboletosl6*-1;
+
+	    cdeboletosl6d2:= random(300000) + 150000;
+			if cdeboletosl6d2<0 then
+			cdeboletosl6d2:= cdeboletosl6d2*-1;
+	    
 		cdeboletosl6d3:= random(300000) + 150000;
+			if cdeboletosl6d3<0 then
+			cdeboletosl6d3:= cdeboletosl6d3*-1;
+		
 		cdeboletosl6d4:= random(300000) + 150000;
+			if cdeboletosl6d4<0 then
+			cdeboletosl6d4:= cdeboletosl6d4*-1;
+		
 		cdeboletosl6d5:= random(300000) + 150000;
+			if cdeboletosl6d5<0 then
+			cdeboletosl6d5:= cdeboletosl6d5*-1;
+		
 		cdeboletosl6d6:= random(300000) + 150000;
+			if cdeboletosl6d6<0 then
+			cdeboletosl6d6:= cdeboletosl6d6*-1;
+			
 		cdeboletosl6d7:= random(300000) + 150000;
+			if cdeboletosl6d7<0 then
+			cdeboletosl6d7:= cdeboletosl6d7*-1;
 	
 	cdeboletosl7:= random(300000) + 150000;
+			if cdeboletosl7<0 then
+			cdeboletosl7:= cdeboletosl7*-1;
 	
 		cdeboletosl7d2:= random(300000) + 150000;
+			if cdeboletosl7d2<0 then
+			cdeboletosl7d2:= cdeboletosl7d2*-1;
+			
+		
 		cdeboletosl7d3:= random(300000) + 150000;
+			if cdeboletosl7d3<0 then
+			cdeboletosl7d3:= cdeboletosl7d3*-1;
+		
 		cdeboletosl7d4:= random(300000) + 150000;
+			if cdeboletosl7d4<0 then
+			cdeboletosl7d4:= cdeboletosl7d4*-1;
+		
 		cdeboletosl7d5:= random(300000) + 150000;
+			if cdeboletosl7d5<0 then
+			cdeboletosl7d5:= cdeboletosl7d5*-1;
+		
 		cdeboletosl7d6:= random(300000) + 150000;
+			if cdeboletosl7d6<0 then
+			cdeboletosl7d6:= cdeboletosl7d6*-1;
+		
 		cdeboletosl7d7:= random(300000) + 150000;
+			if cdeboletosl7d7<0 then
+			cdeboletosl7d7:= cdeboletosl7d7*-1;
 	
 	cdeboletosl8:= random(300000) + 150000;
+			if cdeboletosl8<0 then
+			cdeboletosl8:= cdeboletosl8*-1;
 	
 		cdeboletosl8d2:= random(300000) + 150000;
+			if cdeboletosl8d2<0 then
+			cdeboletosl8d2:= cdeboletosl8d2*-1;
+		
 		cdeboletosl8d3:= random(300000) + 150000;
+			if cdeboletosl8d3<0 then
+			cdeboletosl8d3:= cdeboletosl8d3*-1;
+		
 		cdeboletosl8d4:= random(300000) + 150000;
+			if cdeboletosl8d4<0 then
+			cdeboletosl8d4:= cdeboletosl8d4*-1;
+		
 		cdeboletosl8d5:= random(300000) + 150000;
+			if cdeboletosl8d5<0 then
+			cdeboletosl8d5:= cdeboletosl8d5*-1;
+			
 		cdeboletosl8d6:= random(300000) + 150000;
+			if cdeboletosl8d6<0 then
+			cdeboletosl8d6:= cdeboletosl8d6*-1;
+		
 		cdeboletosl8d7:= random(300000) + 150000;
+			if cdeboletosl8d7<0 then
+			cdeboletosl8d7:= cdeboletosl8d7*-1;
 
 	{
 	* Calculos de los promedios de ventas de las lineas
@@ -159,6 +346,8 @@ gotoxy(35,2);writeln('Bienvenido a la estacion de metro de Caracas');
 gotoxy(35,3);writeln('============================================');
 write ('Desea comprar un boleto? teclee el numero 1, de ser el caso contrario teclee el numero 2:');
 readln (a);
+if a = 2 then
+bucletotalseleccion := a;
 	case a of
 	1:  
 		begin
@@ -256,10 +445,16 @@ readln (a);
 						gotoxy(20,2);writeln('El boleto integrado tiene una cobertura de: 1 viaje en metro o 1 viaje en metrobus');
 						gotoxy(20,3);writeln('==================================================================================');
 						gotoxy(5,5);writeln('Que desea hacer?');
+						repeat
+						writeln('eliga una de las opciones.');
 						writeln('a. 1 Viaje en metro');
 						writeln('b. 1 Viaje en metrobus');
 						readln(tipodeviaje);
-						gotoxy(10,9);write ('///Indique cuantos boletos desea comprar///:');
+						if (tipodeviaje<> 'a') or (tipodeviaje<> 'b') then
+						writeln ('escoga una de las opciones');
+						until (tipodeviaje = 'a') or (tipodeviaje='b');
+						clrscr();
+						write ('///Indique cuantos boletos desea comprar///:');
 						readln (c);
 						precio:=c*p2;
 						if c>0 then  writeln ('Su coste es de:',precio,'-Dolares')
@@ -283,10 +478,16 @@ readln (a);
 						writeln ('El boleto ida y vuelta integrado tiene una cobertura de: 2 viajes en metro o 2 viajes en metrobus');
 						writeln('==================================================================================================');
 						gotoxy(10,5);writeln('Que desea hacer?');
-						writeln('a. 2 Viajes en metro');
-						writeln('b. 2 Viajes en metrobus');
+						repeat
+						writeln('eliga una de las opciones.');
+						writeln('a. 2 Viaje en metro');
+						writeln('b. 2 Viaje en metrobus');
 						readln(tipodeviaje);
-						gotoxy(10,9);write ('///Indique cuantos boletos desea comprar///:');
+						if (tipodeviaje<> 'a') or (tipodeviaje<> 'b') then
+						writeln ('escoga una de las opciones');
+						until (tipodeviaje = 'a') or (tipodeviaje='b');
+						clrscr();
+						write ('///Indique cuantos boletos desea comprar///:');
 						readln (c);
 						precio:=c*p4;
 						if c>0 then
@@ -312,10 +513,16 @@ readln (a);
 						gotoxy(15,2);writeln('El boleto multiabono integrado tiene una cobertura de: 10 viajes en metro o 10 viajes en metrobus');
 						gotoxy(15,3);writeln('=================================================================================================');
 						gotoxy(5,5);writeln('Que desea hacer?');
-						writeln('a. 10 Viajes en metro');
-						writeln('b. 10 Viajes en metrobus');
+						repeat
+						writeln('eliga una de las opciones.');
+						writeln('a. 10 Viaje en metro');
+						writeln('b. 10 Viaje en metrobus');
 						readln(tipodeviaje);
-						gotoxy(10,9);write ('///Indique cuantos boletos desea comprar///:');
+						if (tipodeviaje<> 'a') or (tipodeviaje<> 'b') then
+						writeln ('escoga una de las opciones');
+						until (tipodeviaje = 'a') or (tipodeviaje='b');
+						clrscr();
+					    write ('///Indique cuantos boletos desea comprar///:');
 						readln (c);
 						precio:=c*p6;
 						if c>0 then
@@ -341,10 +548,17 @@ readln (a);
 						gotoxy(15,2);writeln('El boleto estudiantil integrado tiene una cobertura de: 10 viajes en metro o 20 viajes en metrobus');
 						gotoxy(15,3);writeln('==================================================================================================');
 						gotoxy(10,5);writeln('Que desea hacer?');
-						writeln('a. 10 Viajes en metro');
-						writeln('b. 20 Viajes en metrobus');
+						repeat
+						writeln('eliga una de las opciones.');
+						writeln('a. 10 Viaje en metro');
+						writeln('b. 20 Viaje en metrobus');
 						readln(tipodeviaje);
-						gotoxy(10,9);write ('///Indique cuantos boletos desea comprar///:');
+						if (tipodeviaje<> 'a') or (tipodeviaje<> 'b') then
+						writeln ('escoga una de las opciones');
+						until (tipodeviaje = 'a') or (tipodeviaje='b');
+						clrscr();
+						
+						write ('///Indique cuantos boletos desea comprar///:');
 						readln(c);
 						precio:=c*p8;
 						if c>0 then
@@ -357,11 +571,19 @@ readln (a);
 						gotoxy(30,2);writeln('El boleto metroTarjeta tiene una cobertura de: 20, 30, o 40 viajes');
 						gotoxy(30,3);writeln('==================================================================');
 						gotoxy(10,5);writeln('Que desea hacer?');
-						writeln('a. 20 Viajes en metro');
-						writeln('b. 30 Viajes en metro');
-						writeln('c. 40 Viajes en metro');
+						repeat
+						writeln('eliga una de las opciones.');
+						writeln('a. 20 Viaje en metro');
+						writeln('b. 30 Viaje en metro');
+						writeln('c. 40 viaje en metro');
 						readln(tipodeviaje);
-						gotoxy(10,10);write ('///Indique cuantos boletos desea comprar///:');
+						if (tipodeviaje<> 'a') or (tipodeviaje<> 'b') or (tipodeviaje<> 'c') then
+						writeln ('escoga una de las opciones');
+						until (tipodeviaje = 'a') or (tipodeviaje='b') or (tipodeviaje='c');
+						clrscr();
+					
+						
+						write ('///Indique cuantos boletos desea comprar///:');
 						readln(c);
 						precio:=c*p9;
 						if c>0 then
@@ -374,14 +596,20 @@ readln (a);
 						gotoxy(15,2);writeln('El boleto metroTarjeta integrado tiene una cobertura de: 20,30 y 40 viajes en metro ademas de metrobus');
 						gotoxy(15,3);writeln('======================================================================================================');
 						gotoxy(10,5);writeln('Que desea hacer?');
-						writeln('a. 20 Viajes en metro');
-						writeln('b. 30 Viajes en metro');
-						writeln('c. 40 Viajes en metro');
+						repeat
+						writeln('eliga una de las opciones.');
+						writeln('a. 20 Viaje en metro');
+						writeln('b. 30 Viaje en metro');
+						writeln('c. 40 viaje en metro');
 						writeln('d. 20 Viajes en metrobus');
 						writeln('e. 30 Viajes en metrobus');
 						writeln('f. 40 Viajes en metrobus');
 						readln(tipodeviaje);
-						gotoxy(10,13);write ('///Indique cuantos boletos desea comprar///:');
+						if (tipodeviaje<> 'a') or (tipodeviaje<> 'b') or (tipodeviaje<> 'c') or  (tipodeviaje<> 'd') or  (tipodeviaje<> 'e') or  (tipodeviaje<> 'f')  then
+						writeln ('escoga una de las opciones');
+						until (tipodeviaje = 'a') or (tipodeviaje='b') or (tipodeviaje='c') or (tipodeviaje= 'd') or  (tipodeviaje= 'e') or  (tipodeviaje= 'f');
+						clrscr();
+						write ('///Indique cuantos boletos desea comprar///:');
 						readln(c);
 						precio:=c*p10;
 						if c>0 then
@@ -1277,7 +1505,10 @@ readln (a);
 		
 		3:
 		begin
-		
+			writeln ('La cantidad de boletos usados fue de:',cdeboletosusados);
+			writeln('');
+			writeln('presione enter para continuar');
+			readln();
 		
 		
 		end;
@@ -1295,7 +1526,11 @@ readln (a);
 	
 	end;
 	
-	2:writeln('hasta luego, tenga feliz dia.'); 
+	2:
+	begin
+	writeln('hasta luego, tenga feliz dia.'); 
+	readln();
+	end;
 		
 end;
 
