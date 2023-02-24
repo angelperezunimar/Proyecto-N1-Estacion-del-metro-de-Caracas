@@ -416,14 +416,12 @@ bucletotalseleccion := a;
 						gotoxy(20,21);writeln('|----------------------------|--------------|----------------------------|');
 			            textcolor(white);
 			            writeln ('Seleccione el tipo de boleto que desea escribiendo la letra que lo clasifica y pulsando [Enter]');
-			            
 						
 						end
 						else writeln ('Seleccione el tipo de boleto que desea escribiendo la letra que lo clasifica y pulsando [Enter]');
 												
 						readln(boletos); {agregando boletos} {Se mejoro la seleccion de boletos y viajes}
 						clrscr();
-			        
 			        
 					case boletos of
 					'a': begin 
@@ -757,7 +755,6 @@ bucletotalseleccion := a;
 						  writeln('');
 						  Readln();
 						  
-						  
 							repeat 
 							begin
 							clrscr();
@@ -803,8 +800,6 @@ bucletotalseleccion := a;
 							
 							writeln('Los boletos han sido asignados con sus subestaciones correctamente');
 						
-							
-							
 						 end;
 						2:begin
 						
@@ -831,7 +826,6 @@ bucletotalseleccion := a;
 						  writeln('Presione [Enter] para iniciar el proceso');
 						  writeln('');
 						  Readln();
-						  
 						  
 							repeat 
 							begin
@@ -876,7 +870,6 @@ bucletotalseleccion := a;
 							
 							writeln('Los boletos han sido asignados con sus subestaciones correctamente');
 						
-						
 						  end;
 						  
 						3:begin
@@ -903,7 +896,6 @@ bucletotalseleccion := a;
 						  writeln('Presione [Enter] para iniciar el proceso');
 						  writeln('');
 						  Readln();
-						  
 						  
 							repeat 
 							begin
@@ -947,7 +939,6 @@ bucletotalseleccion := a;
 							
 							writeln('Los boletos han sido asignados con sus subestaciones correctamente');
 						
-						
 						  end;
 						  
 						4:begin
@@ -976,7 +967,6 @@ bucletotalseleccion := a;
 						  writeln('Presione [Enter] para iniciar el proceso');
 						  writeln('');
 						  Readln();
-						  
 						  
 							repeat 
 							begin
@@ -1021,7 +1011,6 @@ bucletotalseleccion := a;
 							
 							writeln('Los boletos han sido asignados con sus subestaciones correctamente');
 						
-						
 						  end;
 						  
 						5:begin
@@ -1048,7 +1037,6 @@ bucletotalseleccion := a;
 						  writeln('Presione [Enter] para iniciar el proceso');
 						  writeln('');
 						  Readln();
-						  
 						  
 							repeat 
 							begin
@@ -1091,9 +1079,7 @@ bucletotalseleccion := a;
 							
 							writeln('Los boletos han sido asignados con sus subestaciones correctamente');
 						
-						
 						  end;
-						  
 						  
 						6:begin
 						
@@ -1117,7 +1103,6 @@ bucletotalseleccion := a;
 						  writeln('Presione [Enter] para iniciar el proceso');
 						  writeln('');
 						  Readln();
-						  
 						  
 							repeat 
 							begin
@@ -1159,7 +1144,6 @@ bucletotalseleccion := a;
 							
 							writeln('Los boletos han sido asignados con sus subestaciones correctamente');
 						
-						
 						  end;
 						  
 						7:begin
@@ -1187,7 +1171,6 @@ bucletotalseleccion := a;
 						  writeln('Presione [Enter] para iniciar el proceso');
 						  writeln('');
 						  Readln();
-						  
 						  
 							repeat 
 							begin
@@ -1232,7 +1215,6 @@ bucletotalseleccion := a;
 							
 							writeln('Los boletos han sido asignados con sus subestaciones correctamente');
 						
-						
 						  end;
 						  
 						8:begin
@@ -1262,7 +1244,6 @@ bucletotalseleccion := a;
 						  writeln('Presione [Enter] para iniciar el proceso');
 						  writeln('');
 						  Readln();
-						  
 						  
 							repeat 
 							begin
@@ -1305,11 +1286,8 @@ bucletotalseleccion := a;
 							
 							writeln('Los boletos han sido asignados con sus subestaciones correctamente');
 							
-						
-						
 							end;
 						
-							
 						end;			
 						writeln('D A T O S   D E   L A   C O M P R A');
 						writeln('|-------------------------------------------------------------------|');
