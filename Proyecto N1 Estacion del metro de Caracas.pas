@@ -11,7 +11,8 @@ cdeboletosl2d2, cdeboletosl2d3, cdeboletosl2d4, cdeboletosl2d5, cdeboletosl2d6, 
 cdeboletosl3d6, cdeboletosl3d7, cdeboletosl4d2, cdeboletosl4d3, cdeboletosl4d4, cdeboletosl4d5, cdeboletosl4d6, cdeboletosl4d7, cdeboletosl5d2, cdeboletosl5d3,
 cdeboletosl5d4, cdeboletosl5d5, cdeboletosl5d6, cdeboletosl5d7, cdeboletosl6d2, cdeboletosl6d3, cdeboletosl6d4, cdeboletosl6d5, cdeboletosl6d6, 
 cdeboletosl6d7, cdeboletosl7d2, cdeboletosl7d3, cdeboletosl7d4, cdeboletosl7d5, cdeboletosl7d6, cdeboletosl7d7, cdeboletosl8d2, cdeboletosl8d3, cdeboletosl8d4,
-cdeboletosl8d5, cdeboletosl8d6, cdeboletosl8d7, pdeventasl1, pdeventasl2, pdeventasl3, pdeventasl4, pdeventasl5, pdeventasl6, pdeventasl7, pdeventasl8:integer;
+cdeboletosl8d5, cdeboletosl8d6, cdeboletosl8d7, pdeventasl1, pdeventasl2, pdeventasl3, pdeventasl4, pdeventasl5, pdeventasl6, pdeventasl7, pdeventasl8, 
+cdeboletosusadostotal, boletosvendidos, pdeventasl1t, pdeventasl2t, pdeventasl3t, pdeventasl4t, pdeventasl5t, pdeventasl6t, pdeventasl7t, pdeventasl8t:integer;
 
 boletos,nombre,apellido,si, tipodeviaje: char;
  
@@ -126,7 +127,25 @@ BEGIN
 		cdeboletosl8d6:= random(300000) + 1;
 		cdeboletosl8d7:= random(300000) + 1;
 
+{
+* Calculos de los promedios de ventas de las lineas
+}
 
+pdeventasl1 := (cdeboletosl1d2 + cdeboletosl1d3 + cdeboletosl1d4 + cdeboletosl1d5 + cdeboletosl1d6 + cdeboletosl1d7 + cdeboletosl1) div 7;
+
+pdeventasl2 := (cdeboletosl2d2 + cdeboletosl2d3 + cdeboletosl2d4 + cdeboletosl2d5 + cdeboletosl2d6 + cdeboletosl2d7 + cdeboletosl2) div 7;
+
+pdeventasl3 := (cdeboletosl3d2 + cdeboletosl3d3 + cdeboletosl3d4 + cdeboletosl3d5 + cdeboletosl3d6 + cdeboletosl3d7 + cdeboletosl3) div 7;
+
+pdeventasl4 := (cdeboletosl4d2 + cdeboletosl4d3 + cdeboletosl4d4 + cdeboletosl4d5 + cdeboletosl4d6 + cdeboletosl4d7 + cdeboletosl4) div 7;
+
+pdeventasl5 := (cdeboletosl5d2 + cdeboletosl5d3 + cdeboletosl5d4 + cdeboletosl5d5 + cdeboletosl5d6 + cdeboletosl5d7 + cdeboletosl5) div 7;
+
+pdeventasl6 := (cdeboletosl6d2 + cdeboletosl6d3 + cdeboletosl6d4 + cdeboletosl6d5 + cdeboletosl6d6 + cdeboletosl6d7 + cdeboletosl6) div 7;
+
+pdeventasl7 := (cdeboletosl7d2 + cdeboletosl7d3 + cdeboletosl7d4 + cdeboletosl7d5 + cdeboletosl7d6 + cdeboletosl7d7 + cdeboletosl7) div 7;
+
+pdeventasl8 := (cdeboletosl8d2 + cdeboletosl8d3 + cdeboletosl8d4 + cdeboletosl8d5 + cdeboletosl8d6 + cdeboletosl8d7 + cdeboletosl8) div 7;
 
 repeat
 subestacionsalidatotal := '';
@@ -463,13 +482,21 @@ readln (a);
 						
 							readln(seleccionlinea);
 							clrscr();	
-							ndeboleto := 0										
+							ndeboleto := 0;									
 					end;
 					
 					case seleccionlinea of
 					1:begin
+					  
+					  boletosvendidos := c;
+					  pdeventasl1t := pdeventasl1 + boletosvendidos;
+					  pdeventasl1 :=pdeventasl1t;
+					  
 					  textcolor(green);
 					  writeln('Su linea seleccionada ha sido la "LINEA 1"');
+					  writeln('');
+					  writeln('La "LINEA 1" tiene un promedio de ventas semanales de ', pdeventasl1);
+					  writeln('');
 					  writeln('Estas son sus estaciones:');
 					  gotoxy(15,3);writeln('|-----------------|------------------|-----------------|-----------------|');
 					  gotoxy(15,4);writeln('|-Propatria       |-Capitolio        |-Plaza Venezuela |-Miranda         |');
@@ -532,8 +559,16 @@ readln (a);
 						
 					 end;
 					2:begin
+					
+					  boletosvendidos := c;
+					  pdeventasl2t := pdeventasl2 + boletosvendidos;
+					  pdeventasl2 :=pdeventasl2t;
+					
 					  textcolor(green);
 					  writeln('Su linea seleccionada ha sido la "LINEA 2"');
+					  writeln('');
+					  writeln('La "LINEA 2" tiene un promedio de ventas semanales de ', pdeventasl1);
+					  writeln('');
 					  writeln('Estas son sus estaciones:');
 					  gotoxy(15,3);writeln('|--------------------|---------------------|--------------------------|');
 					  gotoxy(15,4);writeln('|-El Silencio        |-La Paz              |-Mamera                   |');
@@ -592,8 +627,16 @@ readln (a);
 					  end;
 					  
 					3:begin
+					
+					boletosvendidos := c;
+					  pdeventasl3t := pdeventasl3 + boletosvendidos;
+					  pdeventasl3 :=pdeventasl3t;
+					
 					  textcolor(green);
 					  writeln('Su linea seleccionada ha sido la "LINEA 3"');
+					  writeln('');
+					  writeln('La "LINEA 3" tiene un promedio de ventas semanales de ', pdeventasl3);
+					  writeln('');
 					  writeln('Estas son sus estaciones:');
 					  gotoxy(15,3);writeln('|----------------------|-----------------------|-----------------------|');
 					  gotoxy(15,4);writeln('|-Plaza Venezuela      |-La Bandera            |-Coche                 |');
@@ -650,8 +693,16 @@ readln (a);
 					  end;
 					  
 					4:begin
+					
+					boletosvendidos := c;
+					  pdeventasl4t := pdeventasl4 + boletosvendidos;
+					  pdeventasl4 :=pdeventasl4t;
+					
 					  textcolor(green);
 					  writeln('Su linea seleccionada ha sido la "LINEA 4"');
+					  writeln('');
+					  writeln('La "LINEA 4" tiene un promedio de ventas semanales de ', pdeventasl4);
+					  writeln('');
 					  writeln('Estas son sus estaciones:');
 					  writeln('|----------------------|-----------------------|-----------------------|');
 					  writeln('|-Zona Rental          |-Maternidad            |-Antiman               |');
@@ -712,8 +763,16 @@ readln (a);
 					  end;
 					  
 					5:begin
+					
+					boletosvendidos := c;
+					  pdeventasl5t := pdeventasl5 + boletosvendidos;
+					  pdeventasl5 :=pdeventasl5t;
+					
 					  textcolor(green);
 					  writeln('Su linea seleccionada ha sido la "LINEA 5"');
+					  writeln('');
+					  writeln('La "LINEA 5" tiene un promedio de ventas semanales de ', pdeventasl5);
+					  writeln('');
 					  writeln('Estas son sus estaciones:');
 					  writeln('|----------------------|-----------------------|-----------------------|');
 					  writeln('|-Bello Monte          |-Bello Campo           |-Boleita               |');
@@ -771,8 +830,16 @@ readln (a);
 					  
 					  
 					6:begin
+					
+					boletosvendidos := c;
+					  pdeventasl6t := pdeventasl6 + boletosvendidos;
+					  pdeventasl6 :=pdeventasl6t;
+					
 					  textcolor(green);
 					  writeln('Su linea seleccionada ha sido la "LINEA 6"');
+					  writeln('');
+					  writeln('La "LINEA 6" tiene un promedio de ventas semanales de ', pdeventasl6);
+					  writeln('');
 					  writeln('Estas son sus estaciones:');
 					  writeln('|----------------------|-----------------------|');
 					  writeln('|-Zoologico            |-La Rinconada          |');
@@ -825,8 +892,16 @@ readln (a);
 					  end;
 					  
 					7:begin
+					
+					boletosvendidos := c;
+					  pdeventasl7t := pdeventasl7 + boletosvendidos;
+					  pdeventasl7 :=pdeventasl7t;
+					
 					  textcolor(green);
 					  writeln('Su linea seleccionada ha sido la "LINEA 7"');
+					  writeln('');
+					  writeln('La "LINEA 7" tiene un promedio de ventas semanales de ', pdeventasl7);
+					  writeln('');
 					  writeln('Estas son sus estaciones:');
 					  writeln('|--------------------|---------------------|--------------------------|');
 					  writeln('|-Las Flores         |-El Cristo           |-Roosevelt                |');
@@ -885,8 +960,16 @@ readln (a);
 					  end;
 					  
 					8:begin
+					
+					boletosvendidos := c;
+					  pdeventasl8t := pdeventasl8 + boletosvendidos;
+					  pdeventasl8 :=pdeventasl8t;
+					
 					textcolor(green);
 					  writeln('Su linea seleccionada ha sido la "CLABETREN"');
+					  writeln('');
+					  writeln('La "LINEA CLABETREN" tiene un promedio de ventas semanales de ', pdeventasl8);
+					  writeln('');
 					  writeln('Estas son sus estaciones:');
 					  writeln('|--------------------|---------------------|--------------------------|');
 					  writeln('|-Petare 2           |-5 de Julio          |-Warairarepano            |');
@@ -1028,7 +1111,13 @@ readln (a);
 		end;
 		
 		2:begin
+		
+		cdeboletosusadostotal := cdeboletosusados + cfinal;
+		cdeboletosusados :=cdeboletosusadostotal;
+		
 		writeln('UTILIZAR BOLETO');
+		writeln('');
+		writeln('El dia de hoy han sido usados ', cdeboletosusados, ' En la estacion de metro de Caracas');
 		writeln('');
 		writeln('¿Desea utilizar un boleto?');
 		writeln('');
