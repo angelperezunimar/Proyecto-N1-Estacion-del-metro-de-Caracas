@@ -1365,17 +1365,8 @@ bucletotalseleccion := a;
 							writeln('Pago efectuado con exito');
 							writeln('Presione [Enter] para continuar');
 							readln();
-							end
-								
-						end;
-						
-						2:
-							begin
-							writeln('hasta luego, tenga feliz dia.');
-							bucletotalseleccion := 2;
 							end;
-					end;
-			
+							
 			   clrscr();
 			   writeln('¿Que desea hacer ahora?');
 			   writeln('');
@@ -1584,6 +1575,15 @@ bucletotalseleccion := a;
 					end;
 			
 				end;
+								
+						end;
+						
+						2:
+							begin
+							writeln('hasta luego, tenga feliz dia.');
+							bucletotalseleccion := 2;
+							end;
+					end;
 
 			end;
 	
