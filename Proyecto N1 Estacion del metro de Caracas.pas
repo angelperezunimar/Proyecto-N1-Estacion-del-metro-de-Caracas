@@ -680,7 +680,7 @@ bucletotalseleccion := a;
 							gotoxy(15,3);writeln('|----------------------|-----------------------|-----------------------|');
 							gotoxy(15,4);writeln('|-Zona Rental          |-Maternidad            |-Antiman               |');
 							gotoxy(15,5);writeln('|-Parque Central       |-Artigas               |-Mamera                |');
-							gotoxy(15,6);writeln('|-Nuevo Circo          |-La Paz                |-Ruiz Pineda/ Las      |');
+							gotoxy(15,6);writeln('|-Nuevo Circo          |-La Paz                |-Ruiz Pineda/Las      |');
 							gotoxy(15,7);writeln('|-Teatros              |-La Yaragua            | Adjuntas              |');
 							gotoxy(15,8);writeln('|-Capuchinos           |-Carapita              |                       |');
 							gotoxy(15,9);writeln('|----------------------|-----------------------|-----------------------|');
@@ -959,7 +959,7 @@ bucletotalseleccion := a;
 						  gotoxy(15,3);writeln('|----------------------|-----------------------|-----------------------|');
 						  gotoxy(15,4);writeln('|-Zona Rental          |-Maternidad            |-Antiman               |');
 						  gotoxy(15,5);writeln('|-Parque Central       |-Artigas               |-Mamera                |');
-						  gotoxy(15,6);writeln('|-Nuevo Circo          |-La Paz                |-Ruiz Pineda/ Las      |');
+						  gotoxy(15,6);writeln('|-Nuevo Circo          |-La Paz                |-Ruiz Pineda/Las      |');
 						  gotoxy(15,7);writeln('|-Teatros              |-La Yaragua            | Adjuntas              |');
 						  gotoxy(15,8);writeln('|-Capuchinos           |-Carapita              |                       |');
 						  gotoxy(15,9);writeln('|----------------------|-----------------------|-----------------------|');
@@ -984,7 +984,7 @@ bucletotalseleccion := a;
 							gotoxy(15,3);writeln('|----------------------|-----------------------|-----------------------|');
 							gotoxy(15,4);writeln('|-Zona Rental          |-Maternidad            |-Antiman               |');
 							gotoxy(15,5);writeln('|-Parque Central       |-Artigas               |-Mamera                |');
-							gotoxy(15,6);writeln('|-Nuevo Circo          |-La Paz                |-Ruiz Pineda/ Las      |');
+							gotoxy(15,6);writeln('|-Nuevo Circo          |-La Paz                |-Ruiz Pineda/Las      |');
 							gotoxy(15,7);writeln('|-Teatros              |-La Yaragua            | Adjuntas              |');
 							gotoxy(15,8);writeln('|-Capuchinos           |-Carapita              |                       |');
 							gotoxy(15,9);writeln('|----------------------|-----------------------|-----------------------|');
@@ -1064,14 +1064,14 @@ bucletotalseleccion := a;
 								repeat
 								writeln('Seleccione la sub estacion de salida');
 								readln(subestacionsalida);
-									if (subestacionsalida <> 'Bello Monte') and (subestacionsalida <> 'Las Mercedes') and (subestacionsalida <> 'Parque Simon Bolivar') and (subestacionsalida <> 'Boleita') and (subestacionsalida <> 'El Marquez') and (subestacionsalida <> 'Warairarepano') and (subestacionsalida <> 'Bello Campo') and (subestacionsalida <> 'Hugo Chavez') and (subestacionsalida <> 'Montecristo')  then writeln('sub estacion incorrecta');
-								until (subestacionsalida = 'Bello Monte') or (subestacionsalida = 'Las Mercedes') or (subestacionsalida = 'Parque Simon Bolivar') or (subestacionsalida = 'Boleita') or (subestacionsalida = 'El Marquez') or (subestacionsalida = 'Warairarepano') or (subestacionsalida = 'Bello Campo') or (subestacionsalida = 'Hugo Chavez') or (subestacionsalida = 'Montecristo');
+									if (subestacionsalida <> 'Bello Monte') and (subestacionsalida <> 'Las Mercedes') and (subestacionsalida <> 'Parque Simon Bolivar') and (subestacionsalida <> 'Boleita') and (subestacionsalida <> 'El Marquez') and (subestacionsalida <> 'Warairarepano') and (subestacionsalida <> 'Bello Campo') and (subestacionsalida <> 'Hugo Chaves') and (subestacionsalida <> 'Montecristo')  then writeln('sub estacion incorrecta');
+								until (subestacionsalida = 'Bello Monte') or (subestacionsalida = 'Las Mercedes') or (subestacionsalida = 'Parque Simon Bolivar') or (subestacionsalida = 'Boleita') or (subestacionsalida = 'El Marquez') or (subestacionsalida = 'Warairarepano') or (subestacionsalida = 'Bello Campo') or (subestacionsalida = 'Hugo Chaves') or (subestacionsalida = 'Montecristo');
 								
 								repeat
 								writeln('Seleccione la sub estacion de destino');
 								readln(subestaciondestino);
-									if (subestaciondestino <> 'Bello Monte') and (subestaciondestino <> 'Las Mercedes') and (subestaciondestino <> 'Parque Simon Bolivar') and (subestaciondestino <> 'Boleita') and (subestaciondestino <> 'El Marquez') and (subestaciondestino <> 'Warairarepano') and (subestaciondestino <> 'Bello Campo') and (subestaciondestino <> 'Hugo Chavez') and (subestaciondestino <> 'Montecristo')  then writeln('sub estacion incorrecta');
-								until (subestaciondestino = 'Bello Monte') or (subestaciondestino = 'Las Mercedes') or (subestaciondestino = 'Parque Simon Bolivar') or (subestaciondestino = 'Boleita') or (subestaciondestino = 'El Marquez') or (subestaciondestino = 'Warairarepano') or (subestaciondestino = 'Bello Campo') or (subestaciondestino = 'Hugo Chavez') or (subestaciondestino = 'Montecristo');
+									if (subestaciondestino <> 'Bello Monte') and (subestaciondestino <> 'Las Mercedes') and (subestaciondestino <> 'Parque Simon Bolivar') and (subestaciondestino <> 'Boleita') and (subestaciondestino <> 'El Marquez') and (subestaciondestino <> 'Warairarepano') and (subestaciondestino <> 'Bello Campo') and (subestaciondestino <> 'Hugo Chaves') and (subestaciondestino <> 'Montecristo')  then writeln('sub estacion incorrecta');
+								until (subestaciondestino = 'Bello Monte') or (subestaciondestino = 'Las Mercedes') or (subestaciondestino = 'Parque Simon Bolivar') or (subestaciondestino = 'Boleita') or (subestaciondestino = 'El Marquez') or (subestaciondestino = 'Warairarepano') or (subestaciondestino = 'Bello Campo') or (subestaciondestino = 'Hugo Chaves') or (subestaciondestino = 'Montecristo');
 							writeln('Estaciones asignadas correctamente');
 							writeln('');
 							writeln('Siguiente boleto');
@@ -1499,6 +1499,12 @@ bucletotalseleccion := a;
 							writeln('');
 							writeln('2.No');
 							readln(bucletotalseleccion);
+								if bucletotalseleccion = 2 then
+									begin
+										Writeln('Tenga un buen dia');
+										Writeln('Presione Enter para finalizar el programa');
+										readln();
+									end;
 
 							end;
 							
@@ -1572,6 +1578,7 @@ bucletotalseleccion := a;
 								textcolor(white);
 								writeln('La cantidad de personas que han ingresado a la "LINEA 5" el dia de hoy es: ',cdepersonasl5);
 								writeln('');
+								textcolor(green);
 								gotoxy(1,14);writeln('|-------------------------------------------------------------------------------------------------|');
 								textcolor(white);
 								writeln('La cantidad de personas que han ingresado a la "LINEA 6" el dia de hoy es: ',cdepersonasl6);
