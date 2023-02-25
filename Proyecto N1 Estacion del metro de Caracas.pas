@@ -1707,3 +1707,10 @@ bucletotalseleccion := a;
 until bucletotalseleccion = 2;
 
 end.
+
+{
+* Programa finalizado :´D
+* 
+* Considero que el programa fue las experiencias que vivimos en el camino...
+}
+
