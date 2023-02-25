@@ -3,13 +3,13 @@ program compra_de_boletos;
 uses crt;
 
 var 
-a, c, d, e, f, g, h, i, j, k, l, precio, seleccion, seleccionlinea1, codigobanco, numtelefono, pp, vuelto, seleccionlinea2, seleccionlinea, csub, 
+a, c, d, e, f, g, h, i, j, k, l, precio, seleccion, seleccionlinea1, codigobanco, pp, vuelto, seleccionlinea2, seleccionlinea, csub, 
 ndeboleto, seleccionsistema, usarboleto, cfinal, faltante, cboletosrestantes, seleccionboletosrestantes, bucletotalseleccion, boletosvendidos, 
-partesistema,cedula2,cedula,cedulacompra:integer;
+partesistema:integer;
 
 boletos,si, tipodeviaje: char;
  
-subestacionsalida, subestaciondestino, subestacionsalidatotal, subestaciondestinototal, contrasena, clavevs,nombre,apellido: string;
+subestacionsalida, subestaciondestino, subestacionsalidatotal, subestaciondestinototal, contrasena, clavevs,nombre,apellido, numtelefono: string;
 
 cdepersonasl1, cdepersonasl2, cdepersonasl3, cdepersonasl4, cdepersonasl5, cdepersonasl6, cdepersonasl7, cdepersonasl8, cdeboletosusados, cdeboletosl1, 
 cdeboletosl2, cdeboletosl3, cdeboletosl4, cdeboletosl5, cdeboletosl6, cdeboletosl7, cdeboletosl8, cdeboletosl1d2, cdeboletosl1d3, cdeboletosl1d4, 
@@ -19,7 +19,7 @@ cdeboletosl4d5, cdeboletosl4d6, cdeboletosl4d7, cdeboletosl5d2, cdeboletosl5d3,c
 cdeboletosl6d2, cdeboletosl6d3, cdeboletosl6d4, cdeboletosl6d5, cdeboletosl6d6, cdeboletosl6d7, cdeboletosl7d2, cdeboletosl7d3, cdeboletosl7d4, 
 cdeboletosl7d5, cdeboletosl7d6, cdeboletosl7d7, cdeboletosl8d2, cdeboletosl8d3, cdeboletosl8d4, cdeboletosl8d5, cdeboletosl8d6, cdeboletosl8d7, 
 pdeventasl1, pdeventasl2, pdeventasl3, pdeventasl4, pdeventasl5, pdeventasl6, pdeventasl7, pdeventasl8, cdeboletosusadostotal, pdeventasl1t, 
-pdeventasl2t, pdeventasl3t, pdeventasl4t, pdeventasl5t, pdeventasl6t, pdeventasl7t, pdeventasl8t, cdepersonastotal, cdeboletosdiadehoy: Longint;
+pdeventasl2t, pdeventasl3t, pdeventasl4t, pdeventasl5t, pdeventasl6t, pdeventasl7t, pdeventasl8t, cdepersonastotal, cdeboletosdiadehoy,cedula2,cedula,cedulacompra : Longint;
 
 const 
 b = 2;
@@ -361,7 +361,7 @@ bucletotalseleccion := a;
 			until cedula>0;
 			write('--Nombre:');
 			readln(nombre);
-			write('---apellido:');
+			write('---Apellido:');
 			readln(apellido);
 			write('ASIGNE UNA CLAVE A SU USUARIO');
 			write('----Clave:');
@@ -956,13 +956,13 @@ bucletotalseleccion := a;
 						  textcolor(green);
 						  writeln('Su linea seleccionada ha sido la "LINEA 4"');
 						  writeln('Estas son sus estaciones:');
-						  writeln('|----------------------|-----------------------|-----------------------|');
-						  writeln('|-Zona Rental          |-Maternidad            |-Antiman               |');
-						  writeln('|-Parque Central       |-Artigas               |-Mamera                |');
-						  writeln('|-Nuevo Circo          |-La Paz                |-Ruiz Pineda/ Las      |');
-						  writeln('|-Teatros              |-La Yaragua            | Adjuntas              |');
-						  writeln('|-Capuchinos           |-Carapita              |                       |');
-						  writeln('|----------------------|-----------------------|-----------------------|');
+						  gotoxy(15,3);writeln('|----------------------|-----------------------|-----------------------|');
+						  gotoxy(15,4);writeln('|-Zona Rental          |-Maternidad            |-Antiman               |');
+						  gotoxy(15,5);writeln('|-Parque Central       |-Artigas               |-Mamera                |');
+						  gotoxy(15,6);writeln('|-Nuevo Circo          |-La Paz                |-Ruiz Pineda/ Las      |');
+						  gotoxy(15,7);writeln('|-Teatros              |-La Yaragua            | Adjuntas              |');
+						  gotoxy(15,8);writeln('|-Capuchinos           |-Carapita              |                       |');
+						  gotoxy(15,9);writeln('|----------------------|-----------------------|-----------------------|');
 						  writeln('');
 						  textcolor(white);
 						  writeln('La cantidad de boletos comprados son ',c);
@@ -981,13 +981,13 @@ bucletotalseleccion := a;
 							textcolor(green);
 							ndeboleto := ndeboleto + 1;
 							writeln('Estas son las estaciones disponibles:');
-							writeln('|----------------------|-----------------------|-----------------------|');
-							writeln('|-Zona Rental          |-Maternidad            |-Antiman               |');
-							writeln('|-Parque Central       |-Artigas               |-Mamera                |');
-							writeln('|-Nuevo Circo          |-La Paz                |-Ruiz Pineda/ Las      |');
-							writeln('|-Teatros              |-La Yaragua            | Adjuntas              |');
-							writeln('|-Capuchinos           |-Carapita              |                       |');
-							writeln('|----------------------|-----------------------|-----------------------|');
+							gotoxy(15,3);writeln('|----------------------|-----------------------|-----------------------|');
+							gotoxy(15,4);writeln('|-Zona Rental          |-Maternidad            |-Antiman               |');
+							gotoxy(15,5);writeln('|-Parque Central       |-Artigas               |-Mamera                |');
+							gotoxy(15,6);writeln('|-Nuevo Circo          |-La Paz                |-Ruiz Pineda/ Las      |');
+							gotoxy(15,7);writeln('|-Teatros              |-La Yaragua            | Adjuntas              |');
+							gotoxy(15,8);writeln('|-Capuchinos           |-Carapita              |                       |');
+							gotoxy(15,9);writeln('|----------------------|-----------------------|-----------------------|');
 							writeln('');
 							textcolor(white);
 							writeln('Para el boleto N°', ndeboleto);
@@ -1029,11 +1029,11 @@ bucletotalseleccion := a;
 						  textcolor(green);
 						  writeln('Su linea seleccionada ha sido la "LINEA 5"');
 						  writeln('Estas son sus estaciones:');
-						  writeln('|----------------------|-----------------------|-----------------------|');
-						  writeln('|-Bello Monte          |-Bello Campo           |-Boleita               |');
-						  writeln('|-Las Mercedes         |-Hugo Chaves           |-El Marquez            |');
-						  writeln('|-Parque Simon Bolivar |-Montecristo           |-Warairarepano         |');
-						  writeln('|----------------------|-----------------------|-----------------------|');
+						  gotoxy(15,3);writeln('|----------------------|-----------------------|-----------------------|');
+						  gotoxy(15,4);writeln('|-Bello Monte          |-Bello Campo           |-Boleita               |');
+						  gotoxy(15,5);writeln('|-Las Mercedes         |-Hugo Chaves           |-El Marquez            |');
+						  gotoxy(15,6);writeln('|-Parque Simon Bolivar |-Montecristo           |-Warairarepano         |');
+						  gotoxy(15,7);writeln('|----------------------|-----------------------|-----------------------|');
 						  writeln('');
 						  textcolor(white);
 						  writeln('La cantidad de boletos comprados son ',c);
@@ -1052,11 +1052,11 @@ bucletotalseleccion := a;
 							textcolor(green);
 							ndeboleto := ndeboleto + 1;
 							writeln('Estas son las estaciones disponibles:');
-							writeln('|----------------------|-----------------------|-----------------------|');
-							writeln('|-Bello Monte          |-Bello Campo           |-Boleita               |');
-							writeln('|-Las Mercedes         |-Hugo Chaves           |-El Marquez            |');
-							writeln('|-Parque Simon Bolivar |-Montecristo           |-Warairarepano         |');
-							writeln('|----------------------|-----------------------|-----------------------|');
+							gotoxy(15,3);writeln('|----------------------|-----------------------|-----------------------|');
+							gotoxy(15,4);writeln('|-Bello Monte          |-Bello Campo           |-Boleita               |');
+							gotoxy(15,5);writeln('|-Las Mercedes         |-Hugo Chaves           |-El Marquez            |');
+							gotoxy(15,6);writeln('|-Parque Simon Bolivar |-Montecristo           |-Warairarepano         |');
+							gotoxy(15,7);writeln('|----------------------|-----------------------|-----------------------|');
 							writeln('');
 							textcolor(white);
 							writeln('Para el boleto N°', ndeboleto);
@@ -1098,9 +1098,9 @@ bucletotalseleccion := a;
 						  textcolor(green);
 						  writeln('Su linea seleccionada ha sido la "LINEA 6"');
 						  writeln('Estas son sus estaciones:');
-						  writeln('|----------------------|-----------------------|');
-						  writeln('|-Zoologico            |-La Rinconada          |');
-						  writeln('|----------------------|-----------------------|');
+						  gotoxy(15,3);writeln('|----------------------|-----------------------|');
+						  gotoxy(15,4);writeln('|-Zoologico            |-La Rinconada          |');
+						  gotoxy(15,5);writeln('|----------------------|-----------------------|');
 						  writeln('');
 						  textcolor(white);
 						  writeln('La cantidad de boletos comprados son ',c);
@@ -1119,9 +1119,9 @@ bucletotalseleccion := a;
 							textcolor(green);
 							ndeboleto := ndeboleto + 1;
 							writeln('Estas son las estaciones disponibles:');
-							writeln('|----------------------|-----------------------|');
-							writeln('|-Zoologico            |-La Rinconada          |');
-							writeln('|----------------------|-----------------------|');
+							gotoxy(15,3);writeln('|----------------------|-----------------------|');
+							gotoxy(15,4);writeln('|-Zoologico            |-La Rinconada          |');
+							gotoxy(15,5);writeln('|----------------------|-----------------------|');
 							writeln('');
 							textcolor(white);
 							writeln('Para el boleto N°', ndeboleto);
@@ -1164,12 +1164,12 @@ bucletotalseleccion := a;
 						  textcolor(green);
 						  writeln('Su linea seleccionada ha sido la "LINEA 7"');
 						  writeln('Estas son sus estaciones:');
-						  writeln('|--------------------|---------------------|--------------------------|');
-						  writeln('|-Las Flores         |-El Cristo           |-Roosevelt                |');
-						  writeln('|-Panteon            |-Roca Tarpeya        |-La Bandera               |');
-						  writeln('|-Socorro            |-Presidente Medina   |-Los Ilustres             |');
-						  writeln('|-La Hoyada          |-INCES               |                          |');	
-						  writeln('|--------------------|---------------------|--------------------------|');
+						  gotoxy(15,3);writeln('|--------------------|---------------------|--------------------------|');
+						  gotoxy(15,4);writeln('|-Las Flores         |-El Cristo           |-Roosevelt                |');
+						  gotoxy(15,5);writeln('|-Panteon            |-Roca Tarpeya        |-La Bandera               |');
+						  gotoxy(15,6);writeln('|-Socorro            |-Presidente Medina   |-Los Ilustres             |');
+						  gotoxy(15,7);writeln('|-La Hoyada          |-INCES               |                          |');	
+						  gotoxy(15,8);writeln('|--------------------|---------------------|--------------------------|');
 						  writeln('');
 						  textcolor(white);
 						  writeln('La cantidad de boletos comprados son ',c);
@@ -1188,12 +1188,12 @@ bucletotalseleccion := a;
 							textcolor(green);
 							ndeboleto := ndeboleto + 1;
 							writeln('Estas son las estaciones disponibles:');
-							writeln('|--------------------|---------------------|--------------------------|');
-							writeln('|-Las Flores         |-El Cristo           |-Roosevelt                |');
-							writeln('|-Panteon            |-Roca Tarpeya        |-La Bandera               |');
-							writeln('|-Socorro            |-Presidente Medina   |-Los Ilustres             |');
-							writeln('|-La Hoyada          |-INCES               |                          |');	
-							writeln('|--------------------|---------------------|--------------------------|');
+							gotoxy(15,3);writeln('|--------------------|---------------------|--------------------------|');
+							gotoxy(15,4);writeln('|-Las Flores         |-El Cristo           |-Roosevelt                |');
+							gotoxy(15,5);writeln('|-Panteon            |-Roca Tarpeya        |-La Bandera               |');
+							gotoxy(15,6);writeln('|-Socorro            |-Presidente Medina   |-Los Ilustres             |');
+							gotoxy(15,7);writeln('|-La Hoyada          |-INCES               |                          |');	
+							gotoxy(15,8);writeln('|--------------------|---------------------|--------------------------|');
 							writeln('');
 							textcolor(white);
 							writeln('Para el boleto N°', ndeboleto);
@@ -1236,10 +1236,10 @@ bucletotalseleccion := a;
 						textcolor(green);
 						  writeln('Su linea seleccionada ha sido la "CLABETREN"');
 						  writeln('Estas son sus estaciones:');
-						  writeln('|--------------------|---------------------|--------------------------|');
-						  writeln('|-Petare 2           |-5 de Julio          |-Warairarepano            |');
-						  writeln('|-19 de Abril        |-24 de Julio         |-Caricuao                 |');
-						  writeln('|--------------------|---------------------|--------------------------|');
+						  gotoxy(15,3);writeln('|--------------------|---------------------|--------------------------|');
+						  gotoxy(15,4);writeln('|-Petare 2           |-5 de Julio          |-Warairarepano            |');
+						  gotoxy(15,5);writeln('|-19 de Abril        |-24 de Julio         |-Caricuao                 |');
+						  gotoxy(15,6);writeln('|--------------------|---------------------|--------------------------|');
 						  writeln('');
 						  textcolor(white);
 						  writeln('La cantidad de boletos comprados son ',c);
@@ -1258,10 +1258,10 @@ bucletotalseleccion := a;
 							textcolor(green);
 							ndeboleto := ndeboleto + 1;
 							writeln('Estas son las estaciones disponibles:');
-							writeln('|--------------------|---------------------|--------------------------|');
-							writeln('|-Petare 2           |-5 de Julio          |-Warairarepano            |');
-							writeln('|-19 de Abril        |-24 de Julio         |-Caricuao                 |');
-							writeln('|--------------------|---------------------|--------------------------|');
+							gotoxy(15,3);writeln('|--------------------|---------------------|--------------------------|');
+							gotoxy(15,4);writeln('|-Petare 2           |-5 de Julio          |-Warairarepano            |');
+							gotoxy(15,5);writeln('|-19 de Abril        |-24 de Julio         |-Caricuao                 |');
+							gotoxy(15,6);writeln('|--------------------|---------------------|--------------------------|');
 							writeln('');
 							textcolor(white);
 							writeln('Para el boleto N°', ndeboleto);
@@ -1297,46 +1297,59 @@ bucletotalseleccion := a;
 						
 						end;			
 						clrscr();
-						writeln('D A T O S   D E   L A   C O M P R A');
-						writeln('|-------------------------------------------------------------------|');
-						writeln('| Nombre: ', nombre);
-						writeln('| Apellido: ', apellido);
-						writeln('| Cedula: ', cedula);
-						writeln('|-------------------------------------------------------------------|');
+						textcolor(green);
+						gotoxy(40,1);writeln('D A T O S   D E   L A   C O M P R A');
+						gotoxy(1,3);writeln('|-------------------------------------------------------------------------------------------------------------|');
+						gotoxy(3,5);writeln('| -Nombre: ', nombre);
+						gotoxy(4,7);writeln('| --Apellido: ', apellido);
+						gotoxy(5,9);writeln('| ---Cedula: ', cedula);
+						gotoxy(1,11);writeln('|-------------------------------------------------------------------------------------------------------------|');
 						writeln('');
-						writeln('SUB ESTACIONES DE SALIDA ASIGNADAS:');
+						gotoxy(5,13);writeln('|-----SUB ESTACIONES DE SALIDA ASIGNADAS:');
 						writeln('');
-						writeln(subestacionsalidatotal);
+						gotoxy(10,14);writeln('**',subestacionsalidatotal,'**');
 						writeln('');
-						writeln('SUB ESTACIONES DE DESTINO ASIGNADAS');
+						gotoxy(5,16);writeln('|-----SUB ESTACIONES DE DESTINO ASIGNADAS:');
 						writeln('');
-						writeln(subestaciondestinototal);
+						gotoxy(10,17);writeln('**',subestaciondestinototal,'**');
+						gotoxy(1,19);writeln('|-------------------------------------------------------------------------------------------------------------|');
 							
 					end;
-			
+					textcolor(white);
 					writeln('');
-					writeln ('esta seguro de su compra? presione 1 si esta de acuerdo, de lo contrario presione 2');
+					writeln ('///Esta seguro de su compra? presione 1 si esta de acuerdo, de lo contrario presione 2///');
 					readln(seleccion);
 					case seleccion of
 						1: 
 							begin 
-							writeln ('el monto total a pagar es de:',precio,'-dolares..');
-							writeln('ingrese sus datos para realizar el pago');
-							writeln('cedula:');
+							writeln ('///El monto total a pagar es de:');
+							textcolor(green);
+							writeln('|-------------|');
+							writeln('***',precio,'-Dolares***');
+							writeln('|-------------|');
+							writeln('=============================================');
+							writeln('===Ingrese sus datos para realizar el pago===');
+							writeln('=============================================');
+							writeln('');
+							write('/Cedula:');
 							readln (cedula2);
-							writeln('ingrese el codigo del banco:');
+							writeln('');
+							write('//Ingrese el codigo del banco:');
 							readln(codigobanco);
-							writeln('ingrese el numero de telefono:');
+							writeln('');
+							write('///Ingrese el numero de telefono:');
 							readln(numtelefono);
-							writeln ('ingrese el monto a pagar:');
+							writeln('');
+							write ('////Ingrese el monto a pagar:');
 							readln(pp);
 							vuelto:=pp-precio;
+							textcolor(white);
 						
 								if precio>pp then
 									begin
 										repeat
 										begin
-										writeln ('saldo insuficiente');
+										writeln ('Saldo insuficiente');
 										writeln('Ingrese el faltante');
 										readln(faltante);
 									
@@ -1368,15 +1381,15 @@ bucletotalseleccion := a;
 							end;
 							
 			   clrscr();
-			   writeln('¿Que desea hacer ahora?');
+			   gotoxy(35,2);writeln('¿Que desea hacer ahora?');
 			   writeln('');
-			   writeln('Seleccione alguna de las siguientes opciones');
+			   gotoxy(35,4);writeln('Seleccione alguna de las siguientes opciones');
 			   writeln('');
-			   writeln('1.Salir del sistema');
+			   gotoxy(35,6);writeln('1.Salir del sistema');
 			   writeln('');
-			   writeln('2.Utilizar Boleto');
+			   gotoxy(35,8);writeln('2.Utilizar Boleto');
 			   writeln('');
-			   writeln('3.Ver sistema');
+			   gotoxy(35,10);writeln('3.Ver sistema');
 			   writeln('');
 			   readln(seleccionsistema);
 				
@@ -1580,7 +1593,7 @@ bucletotalseleccion := a;
 						
 						2:
 							begin
-							writeln('hasta luego, tenga feliz dia.');
+							writeln('Hasta luego, tenga feliz dia.');
 							bucletotalseleccion := 2;
 							end;
 					end;
@@ -1589,7 +1602,7 @@ bucletotalseleccion := a;
 	
 	2:
 		begin
-		writeln('hasta luego, tenga feliz dia.'); 
+		writeln('Hasta luego, tenga feliz dia.'); 
 		readln();
 		end;
 			
