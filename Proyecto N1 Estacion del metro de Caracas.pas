@@ -1511,8 +1511,6 @@ bucletotalseleccion := a;
 						writeln('/===============================/');
 						textcolor(white);
 						write('---Ingrese su clave de usuario:');
-						textcolor(green);
-						writeln('/===============================/');
 						readln(clavevs);
 						textcolor(white);
 						
